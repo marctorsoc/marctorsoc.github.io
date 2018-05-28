@@ -38,4 +38,4 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-pygments: true
+highlighter: rouge
