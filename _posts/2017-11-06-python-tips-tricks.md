@@ -1,14 +1,15 @@
 ---
+title: Python tips & tricks
 id: 326
-title: 'Python tips &#038; tricks'
-date: 2017-11-06T01:51:21+00:00
+date: '2017-11-06 01:51:21 +0000'
 author: admin_mtorrellas
 layout: post
 guid: https://marctorrellas.com/?p=326
-permalink: /python-tips-tricks/
+permalink: "/python-tips-tricks/"
 categories:
-  - Teaching
+- Teaching
 ---
+
 Today I&#8217;m going to explain some of the lessons and tools I&#8217;ve found that could be useful for someone developing data science (and also general purpose projects) in Python:
 
   * Ipython

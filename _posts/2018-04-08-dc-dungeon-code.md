@@ -1,14 +1,15 @@
 ---
+title: 'DC: Dungeon & Code'
 id: 425
-title: 'DC: Dungeon &#038; Code'
-date: 2018-04-08T21:43:44+00:00
+date: '2018-04-08 22:43:44 +0100'
 author: admin_mtorrellas
 layout: post
 guid: https://marctorrellas.com/?p=425
-permalink: /dc-dungeon-code/
+permalink: "/dc-dungeon-code/"
 categories:
-  - Teaching
+- Teaching
 ---
+
 Today I come with a fairly easy but interesting problem. Consider a dungeon grid like this:
 
 [<img class="alignnone size-full wp-image-426" src="https://marctorrellas.com/wp-content/uploads/2018/04/yX1T7D.png" alt="" width="1596" height="900" srcset="https://marctorrellas.com/wp-content/uploads/2018/04/yX1T7D.png 1596w, https://marctorrellas.com/wp-content/uploads/2018/04/yX1T7D-300x169.png 300w, https://marctorrellas.com/wp-content/uploads/2018/04/yX1T7D-768x433.png 768w, https://marctorrellas.com/wp-content/uploads/2018/04/yX1T7D-1024x577.png 1024w" sizes="(max-width: 1596px) 100vw, 1596px" />](https://marctorrellas.com/wp-content/uploads/2018/04/yX1T7D.png)
