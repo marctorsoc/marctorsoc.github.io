@@ -1,0 +1,11 @@
+main:
+  - title: "Home"
+    url: /_pages/home
+  - title: "Academia"
+    url: /_pages/academia
+  - title: "Divulgation"
+    url: /_pages/divulgation
+  - title: "Off-topic"
+    url: /_pages/off-topic
+  - title: "About me"
+    url: /_pages/about-me
