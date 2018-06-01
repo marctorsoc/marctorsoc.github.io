@@ -1,13 +1,12 @@
 ---
 title: Python tips & tricks
-id: 326
+layout: single
+author_profile: true
 date: '2017-11-06 01:51:21 +0000'
-author: admin_mtorrellas
-layout: post
-guid: https://marctorrellas.com/?p=326
+comments: true
 permalink: "/python-tips-tricks/"
 categories:
-- Teaching
+- Divulgation
 ---
 
 Today I&#8217;m going to explain some of the lessons and tools I&#8217;ve found that could be useful for someone developing data science (and also general purpose projects) in Python:
@@ -42,7 +41,7 @@ It&#8217;s not an error, since last versions, apt-get has been simplified to jus
   * Basic UNIX shell integration (you can run simple shell commands such as cp, ls, rm, cp, etc. directly from the IPython command line)
   * Help to commands directly from terminal, e.g:
 
-[<img class=" wp-image-327 aligncenter" src="https://marctorrellas.com/wp-content/uploads/2017/11/ipython_help.png" alt="" width="540" height="290" srcset="https://marctorrellas.com/wp-content/uploads/2017/11/ipython_help.png 1034w, https://marctorrellas.com/wp-content/uploads/2017/11/ipython_help-300x161.png 300w, https://marctorrellas.com/wp-content/uploads/2017/11/ipython_help-768x413.png 768w, https://marctorrellas.com/wp-content/uploads/2017/11/ipython_help-1024x551.png 1024w" sizes="(max-width: 540px) 100vw, 540px" />](https://marctorrellas.com/wp-content/uploads/2017/11/ipython_help.png)
+[<img class=" wp-image-327 aligncenter" src="/content/2017/11/ipython_help.png" alt="" width="540" height="290" srcset="/content/2017/11/ipython_help.png 1034w, /content/2017/11/ipython_help-300x161.png 300w, /content/2017/11/ipython_help-768x413.png 768w, /content/2017/11/ipython_help-1024x551.png 1024w" sizes="(max-width: 540px) 100vw, 540px" />](/content/2017/11/ipython_help.png)
 
 <span style="font-size: 12pt;"><strong>Profiles</strong></span>
 
@@ -56,14 +55,14 @@ Isn&#8217;t it possible to load them automatically? The answer is ipython profil
 
   1. Create a profile with: <span style="font-family: 'courier new', courier, monospace;">ipython profile create name_profile<br /> </span>
 
-[<img class="alignnone size-full wp-image-329" src="https://marctorrellas.com/wp-content/uploads/2017/11/ipython_profile_test.png" alt="" width="1646" height="782" srcset="https://marctorrellas.com/wp-content/uploads/2017/11/ipython_profile_test.png 1646w, https://marctorrellas.com/wp-content/uploads/2017/11/ipython_profile_test-300x143.png 300w, https://marctorrellas.com/wp-content/uploads/2017/11/ipython_profile_test-768x365.png 768w, https://marctorrellas.com/wp-content/uploads/2017/11/ipython_profile_test-1024x486.png 1024w" sizes="(max-width: 1646px) 100vw, 1646px" />](https://marctorrellas.com/wp-content/uploads/2017/11/ipython_profile_test.png)
+[<img class="alignnone size-full wp-image-329" src="/content/2017/11/ipython_profile_test.png" alt="" width="1646" height="782" srcset="/content/2017/11/ipython_profile_test.png 1646w, /content/2017/11/ipython_profile_test-300x143.png 300w, /content/2017/11/ipython_profile_test-768x365.png 768w, /content/2017/11/ipython_profile_test-1024x486.png 1024w" sizes="(max-width: 1646px) 100vw, 1646px" />](/content/2017/11/ipython_profile_test.png)
 
 2. Modify the profile config file, e.g. with vim (see image above for location), as follows:
 
-[<img class="alignnone wp-image-328" src="https://marctorrellas.com/wp-content/uploads/2017/11/ipython_profile_config.png" alt="" width="578" height="366" srcset="https://marctorrellas.com/wp-content/uploads/2017/11/ipython_profile_config.png 1122w, https://marctorrellas.com/wp-content/uploads/2017/11/ipython_profile_config-300x190.png 300w, https://marctorrellas.com/wp-content/uploads/2017/11/ipython_profile_config-768x486.png 768w, https://marctorrellas.com/wp-content/uploads/2017/11/ipython_profile_config-1024x648.png 1024w" sizes="(max-width: 578px) 100vw, 578px" />](https://marctorrellas.com/wp-content/uploads/2017/11/ipython_profile_config.png)
+[<img class="alignnone wp-image-328" src="/content/2017/11/ipython_profile_config.png" alt="" width="578" height="366" srcset="/content/2017/11/ipython_profile_config.png 1122w, /content/2017/11/ipython_profile_config-300x190.png 300w, /content/2017/11/ipython_profile_config-768x486.png 768w, /content/2017/11/ipython_profile_config-1024x648.png 1024w" sizes="(max-width: 578px) 100vw, 578px" />](/content/2017/11/ipython_profile_config.png)
 
 3. Launch ipython using the profile with: <span style="font-family: 'courier new', courier, monospace;">ipython &#8211;profile=profile_name</span>.
-  
+
 You can see in the first image how pd and np are understood without the need of importing. Notice that WordPress render the double dash as one large dash, so in this case there is a double &#8220;-&#8221; before profile, and similar for other cases below.
 
 Ok, so once you have the profile created you can save the time to import those packages that you&#8217;re always using at the cost of using <span style="font-family: 'courier new', courier, monospace;">&#8211;profile=profile_name</span> after ipython. Not bad&#8230; but can this be ever more simplified? There are two options:
@@ -126,7 +125,7 @@ Remember that when editing the bash config files, you must source them, or close
 
 These alias just create shortcuts to save time, e.g:
 
-[<img class="wp-image-330 aligncenter" src="https://marctorrellas.com/wp-content/uploads/2017/11/i_ipython.png" alt="" width="460" height="100" srcset="https://marctorrellas.com/wp-content/uploads/2017/11/i_ipython.png 960w, https://marctorrellas.com/wp-content/uploads/2017/11/i_ipython-300x65.png 300w, https://marctorrellas.com/wp-content/uploads/2017/11/i_ipython-768x166.png 768w" sizes="(max-width: 460px) 100vw, 460px" />](https://marctorrellas.com/wp-content/uploads/2017/11/i_ipython.png)
+[<img class="wp-image-330 aligncenter" src="/content/2017/11/i_ipython.png" alt="" width="460" height="100" srcset="/content/2017/11/i_ipython.png 960w, /content/2017/11/i_ipython-300x65.png 300w, /content/2017/11/i_ipython-768x166.png 768w" sizes="(max-width: 460px) 100vw, 460px" />](/content/2017/11/i_ipython.png)
 
 Specially interesting is the last one, with which you can automate the directory opened for notebooks, and also the terminal can still be used while the notebook is running. Notice however that if you close the terminal, the notebook system is gonna break down, so take care. Also take care when copying the command, you probably will have to rewrite the double quotes and also for some reason WordPress writes the double dash (-) as one, so it&#8217;s: (double-dash)notebook(dash)dir. Apart from this, it should work both in Mac and Linux.
 
@@ -144,7 +143,7 @@ Finally, some shortcuts useful when running ipython in a unix terminal. I&#8217;
 Today we have reviewed some tips and tricks for working with Python in a more agile way.  There are many many other things that I could recommend, but they&#8217;ll probably be matter of future posts. Mainly, we have reviewed the usefulness of ipython as a better interface to run python commands rather than the classical shell; notebooks as an innovate way of working and presenting work with Python; and finally some tips and tricks for using Python and related tools in a terminal.
 
 I hope you enjoy this post and found something useful in it.None of the tools presented here are strictly necessary, but they make our life easier 🙂
-  
+
 As always, any recommendation, suggestion or improvement, please welcome. Thanks for reading!
 
 <div id="wp-ulike-post-326" class="wpulike wpulike-default " >

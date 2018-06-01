@@ -1,16 +1,16 @@
 ---
-id: 233
-title: Football Radio Sync
-date: 2017-05-30T16:04:28+00:00
-author: admin_mtorrellas
-layout: post
-guid: https://marctorrellas.com/?p=233
+title:  Football Radio Sync
+layout: single
+author_profile: true
+date: 2017-05-30T16:04:03+00:00
+comments: true
 permalink: /football-radio-sync/
 categories:
   - Off-topic
 ---
+
 <p style="text-align: justify;">
-  I&#8217;m very fan of Barcelona, and like watching matches wherever I am. This is <strong>not</strong> a guide on how to watch sports through the Internet. I&#8217;m not going to give links to good pages for live streaming. I&#8217;m going to assume that you know how to get the sources, or otherwise google and good luck 🙂
+  I&#8217;m very fan of Barcelona, and like watching matches wherever I am. This is <strong>not</strong> a guide on how to watch sports through the Internet. I&#8217;m not going to give links to good pages for live streaming. I&#8217;m going to assume that you know how to get the sources, otherwise google and good luck 🙂
 </p>
 
 <p style="text-align: justify;">
@@ -44,7 +44,7 @@ categories:
 </p>
 
 <p style="text-align: justify;">
-  <a href="https://marctorrellas.com/wp-content/uploads/2017/09/easyradiodelayer.png"><img class="alignnone size-full wp-image-267" src="https://marctorrellas.com/wp-content/uploads/2017/09/easyradiodelayer.png" alt="" width="1398" height="464" srcset="https://marctorrellas.com/wp-content/uploads/2017/09/easyradiodelayer.png 1398w, https://marctorrellas.com/wp-content/uploads/2017/09/easyradiodelayer-300x100.png 300w, https://marctorrellas.com/wp-content/uploads/2017/09/easyradiodelayer-768x255.png 768w, https://marctorrellas.com/wp-content/uploads/2017/09/easyradiodelayer-1024x340.png 1024w" sizes="(max-width: 1398px) 100vw, 1398px" /></a>
+  <a href="/content/2017/09/easyradiodelayer.png"><img class="alignnone size-full wp-image-267" src="/content/2017/09/easyradiodelayer.png" alt="" width="1398" height="464" srcset="/content/2017/09/easyradiodelayer.png 1398w, /content/2017/09/easyradiodelayer-300x100.png 300w, /content/2017/09/easyradiodelayer-768x255.png 768w, /content/2017/09/easyradiodelayer-1024x340.png 1024w" sizes="(max-width: 1398px) 100vw, 1398px" /></a>
 </p>
 
 <p style="text-align: justify;">
@@ -56,7 +56,7 @@ categories:
 </p>
 
 <p style="text-align: justify;">
-  <a href="https://marctorrellas.com/wp-content/uploads/2017/09/audiohijack.png"><img class="alignnone size-full wp-image-268" src="https://marctorrellas.com/wp-content/uploads/2017/09/audiohijack.png" alt="" width="1080" height="254" srcset="https://marctorrellas.com/wp-content/uploads/2017/09/audiohijack.png 1080w, https://marctorrellas.com/wp-content/uploads/2017/09/audiohijack-300x71.png 300w, https://marctorrellas.com/wp-content/uploads/2017/09/audiohijack-768x181.png 768w, https://marctorrellas.com/wp-content/uploads/2017/09/audiohijack-1024x241.png 1024w" sizes="(max-width: 1080px) 100vw, 1080px" /></a>
+  <a href="/content/2017/09/audiohijack.png"><img class="alignnone size-full wp-image-268" src="/content/2017/09/audiohijack.png" alt="" width="1080" height="254" srcset="/content/2017/09/audiohijack.png 1080w, /content/2017/09/audiohijack-300x71.png 300w, /content/2017/09/audiohijack-768x181.png 768w, /content/2017/09/audiohijack-1024x241.png 1024w" sizes="(max-width: 1080px) 100vw, 1080px" /></a>
 </p>
 
 <p style="text-align: justify;">

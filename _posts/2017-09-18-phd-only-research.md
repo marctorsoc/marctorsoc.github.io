@@ -1,14 +1,12 @@
 ---
-id: 400
 title: 'PhD: only research?'
+layout: single
+author_profile: true
 date: 2017-09-18T23:03:30+00:00
-author: admin_mtorrellas
-layout: post
-guid: https://marctorrellas.com/?p=400
+comments: true
 permalink: /phd-only-research/
 categories:
-  - PhD
-  - Teaching
+  - Academia
 ---
 <p style="text-align: justify;">
   In addition to the research, during my university days I had some experiences related to teaching and education.
