@@ -4,7 +4,7 @@ layout: single
 author_profile: true
 date: 2017-12-20T22:43:43+00:00
 comments: true
-permalink: /christmas-routes/
+permalink: /posts/christmas-routes/
 categories:
   - Divulgation
 ---

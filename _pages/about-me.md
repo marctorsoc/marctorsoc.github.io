@@ -1,9 +1,10 @@
 ---
 date: 2016-11-04T17:55:16+00:00
 layout: archive
+permalink: /about-me
+header:
+  image: "/content/2016/11/llac.jpg"
 ---
-
-<img class="aligncenter" src="/content/2016/11/llac.jpg" alt="" width="100%" height="300">
 
 Some information to know more about me:
 

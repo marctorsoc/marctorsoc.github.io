@@ -4,7 +4,7 @@ layout: single
 author_profile: true
 date: 2017-12-17T02:10:45+00:00
 comments: true
-permalink: /the-survivor-frog/
+permalink: /posts/the-survivor-frog/
 categories:
   - Divulgation
 ---

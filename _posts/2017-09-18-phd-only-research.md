@@ -4,7 +4,7 @@ layout: single
 author_profile: true
 date: 2017-09-18T23:03:30+00:00
 comments: true
-permalink: /phd-only-research/
+permalink: /posts/phd-only-research/
 categories:
   - Academia
 ---

@@ -1,11 +1,9 @@
 main:
-  - title: "Home"
-    url: /_pages/home
   - title: "Academia"
-    url: /_pages/academia
+    url: /academia
   - title: "Divulgation"
-    url: /_pages/divulgation
+    url: /divulgation
   - title: "Off-topic"
-    url: /_pages/off-topic
+    url: /off-topic
   - title: "About me"
-    url: /_pages/about-me
+    url: /about-me

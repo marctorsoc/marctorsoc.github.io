@@ -14,8 +14,8 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+#remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 
 # Site settings
@@ -34,7 +34,7 @@ github_username		       : marctorrellas
 github                   : [metadata]
 repository               : marctorrellas/marctorrellas.github.io
 words_per_minute         : 200
-
+search                   : true
 
 
 
@@ -83,8 +83,8 @@ analytics:
 # Site Author
 author:
   name             : "Marc Torrellas Socastro"
-  avatar           : /wp-content/marc_CV2015_transp.png # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Science, Teaching & Music"
+  avatar           : /content/marc_CV2015_transp.png # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Maths, Tech, Teaching & Music"
   location         : "Barcelona & London"
   email            :
   uri              :
@@ -95,7 +95,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : https://github.com/marctorrellas
+  github           : marctorrellas
   gitlab           :
   google_plus      :
   keybase          :

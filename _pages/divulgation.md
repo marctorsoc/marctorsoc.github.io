@@ -1,9 +1,10 @@
 ---
 date: 2017-02-05T12:57:13+00:00
 layout: archive
+permalink: /divulgation
+header:
+  image: "/content/2017/12/academia_msg-1-940x198.png"
 ---
-
-<img class="aligncenter" src="/content/2017/12/academia_msg-1-940x198.png" alt="" width="100%" height="300">
 
 <p style="text-align: justify;">
   In this section, I will post different resources that may be useful in your undergrad days or in your work, to review something from the past, or to teach to someone else, including my findings in data science / coding, thanks to my current work and thirst for knowledge.
