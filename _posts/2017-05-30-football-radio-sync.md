@@ -10,11 +10,11 @@ categories:
 ---
 
 <p style="text-align: justify;">
-  I&#8217;m very fan of Barcelona, and like watching matches wherever I am. This is <strong>not</strong> a guide on how to watch sports through the Internet. I&#8217;m not going to give links to good pages for live streaming. I&#8217;m going to assume that you know how to get the sources, otherwise google and good luck 🙂
+  I'm very fan of Barcelona, and like watching matches wherever I am. This is <strong>not</strong> a guide on how to watch sports through the Internet. I'm not going to give links to good pages for live streaming. I'm going to assume that you know how to get the sources, otherwise google and good luck 🙂
 </p>
 
 <p style="text-align: justify;">
-  When watching football (and any other sport), there are two pieces to enjoy the show: audio and video. Also, since I moved to Cambridge, it&#8217;s been easier to not get spoiled about the results, so I can watch the match at my own pace. Hence, we can also watch it live or recorded, whereas usually recorded matches include many ads, and the chance of getting spoilers is really high. I have two great sources for getting matches recorded and not being spoiled, if interested e-mail me.
+  When watching football (and any other sport), there are two pieces to enjoy the show: audio and video. Also, since I moved to Cambridge, it's been easier not to get spoiled about the results, so I can watch the game at my own pace. Hence, we can also watch it live or recorded, whereas usually recorded matches include many ads, and the chance of getting spoilers is really high. I have two great sources for getting matches recorded and not being spoiled, if interested e-mail me.
 </p>
 
 **Video**
@@ -24,7 +24,7 @@ categories:
 </p>
 
 <p style="text-align: justify;">
-  Acestream allows to get streaming channels, and works reasonably well. To the best of my knowledge, it only exists for Windows, so if you have a Mac you will need to use Wine, or another player like SodaPlayer. I don&#8217;t know about alternatives in Linux, but probably if you use Linux you&#8217;ll be able to circumvent OS limitations.
+  Acestream allows to get streaming channels, and works reasonably well. To the best of my knowledge, it only exists for Windows, so if you have a Mac you will need to use Wine, or another player like SodaPlayer. I don't know about alternatives in Linux, but probably if you use Linux you'll be able to circumvent OS limitations.
 </p>
 
 <p style="text-align: justify;">
@@ -32,7 +32,7 @@ categories:
 </p>
 
 <p style="text-align: justify;">
-  For 90% of the people I talk watching a match is basically the video, but for me is more than that. And to be honest, English comentators are really boring. One option one could do is to turn on the radio, or connect to the radio via browser. I specially like <a href="http://www.ccma.cat/catradio/la-transmissio-den-puyal/">La transmissió d&#8217;en Puyal</a> of Catalunya Ràdio. However, there will be a problem of synchronization, i.e. audio will come sooner than image. And this is really a problem when you are watching a game. Imagine a goal explained 20 secs before you can ever watch it!
+  For 90% of the people I talk watching a match is basically the video, but for me is more than that. And to be honest, English commentators are really boring. One option one could do is to turn on the radio, or connect to the radio via browser. I specially like <a href="http://www.ccma.cat/catradio/la-transmissio-den-puyal/">La transmissió d'en Puyal</a> of Catalunya Ràdio. However, there will be a problem of synchronization, i.e. audio will come sooner than image. And this is really a problem when you are watching a game. Imagine a goal explained 20 secs before you can ever watch it!
 </p>
 
 <p style="text-align: justify;">
@@ -43,32 +43,26 @@ categories:
   Later on, I found an alternative in the form of Android application called Easy radio delayer.
 </p>
 
-<p style="text-align: justify;">
-  <a href="/content/2017/09/easyradiodelayer.png"><img class="alignnone size-full wp-image-267" src="/content/2017/09/easyradiodelayer.png" alt="" width="1398" height="464" srcset="/content/2017/09/easyradiodelayer.png 1398w, /content/2017/09/easyradiodelayer-300x100.png 300w, /content/2017/09/easyradiodelayer-768x255.png 768w, /content/2017/09/easyradiodelayer-1024x340.png 1024w" sizes="(max-width: 1398px) 100vw, 1398px" /></a>
+<p style="text-align: center;">
+  <img class="alignnone size-full wp-image-267" src="/content/2017/09/easyradiodelayer.png" alt="" width="60%" srcset="/content/2017/09/easyradiodelayer.png 1398w, /content/2017/09/easyradiodelayer-300x100.png 300w, /content/2017/09/easyradiodelayer-768x255.png 768w, /content/2017/09/easyradiodelayer-1024x340.png 1024w" sizes="(max-width: 1398px) 100vw, 1398px" />
 </p>
 
 <p style="text-align: justify;">
-  It was really comfortable since you can control the sync from your mobile, and with only one screen in your laptop you don&#8217;t need to change window every time. However, and contrary to what Google Play says, this app is no more compatible with my device.
+  It was really comfortable since you can control the sync from your mobile, and with only one screen in your laptop you don't need to change window every time. However, and contrary to what Google Play says, this app is no more compatible with my device.
 </p>
 
 <p style="text-align: justify;">
   Finally, I found something that works well with my Mac: Audio Hijack. The idea is basically the following: take all the audio generated in your Mac and before passing it to the output device, delay it a number of seconds.
 </p>
 
-<p style="text-align: justify;">
-  <a href="/content/2017/09/audiohijack.png"><img class="alignnone size-full wp-image-268" src="/content/2017/09/audiohijack.png" alt="" width="1080" height="254" srcset="/content/2017/09/audiohijack.png 1080w, /content/2017/09/audiohijack-300x71.png 300w, /content/2017/09/audiohijack-768x181.png 768w, /content/2017/09/audiohijack-1024x241.png 1024w" sizes="(max-width: 1080px) 100vw, 1080px" /></a>
+<p style="text-align: center;">
+  <img class="alignnone size-full wp-image-268" src="/content/2017/09/audiohijack.png" width="60%" srcset="/content/2017/09/audiohijack.png 1080w, /content/2017/09/audiohijack-300x71.png 300w, /content/2017/09/audiohijack-768x181.png 768w, /content/2017/09/audiohijack-1024x241.png 1024w" sizes="(max-width: 1080px) 100vw, 1080px" />
 </p>
 
 <p style="text-align: justify;">
-  For example, in this case I&#8217;m delaying the audio for 3 seconds. Another good thing is that it adapts to the output device, so if you are connecting to laptop to a TV, you&#8217;ll see Samsung **** rather than Internal Speakers. Indeed, having another screen is really useful to not losing minutes of the game before getting the perfect sync.
+  For example, in this case I'm delaying the audio for 3 seconds. Another good thing is that it adapts to the output device, so if you are connecting your laptop to a TV, you'll see a different device, e.g. Samsung ****, rather than Internal Speakers. Indeed, having another screen is really useful not to lose minutes of the game before getting the perfect sync.
 </p>
 
 <p style="text-align: justify;">
-  And that&#8217;s all folks! I hope you enjoyed the post and if any question arises just comment or contact me 🙂
+  And that's all folks! I hope you enjoyed the post and if any question arises just comment or contact me 🙂
 </p>
-
-<div id="wp-ulike-post-233" class="wpulike wpulike-default " >
-  <div class="wp_ulike_general_class wp_ulike_is_unliked">
-    <a data-ulike-id="233" data-ulike-nonce="c6b87aab1f" data-ulike-type="likeThis" data-ulike-status="3" class="wp_ulike_btn wp_ulike_put_image"> </a> <span class="count-box">2+</span>
-  </div>
-</div>
