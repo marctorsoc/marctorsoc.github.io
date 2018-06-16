@@ -9,24 +9,6 @@ categories:
   - Academia
 ---
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-      inlineMath: [ ['$','$'], ['\\(', '\\)'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true,
-    }
-  });
-</script>
-<script type="text/javascript"
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
 <p style="text-align: justify;">In the <a href="/posts/background/">last blog post</a>, I explained the concept of Zero Forcing, either at the transmitter (also known as null steering) or the receiver. Mathematically, it is based on computing the null space of some matrix, whose existence (for completely random entries as in this case) depends on the dimensions of that matrix. In turn, the matrix dimensions depend on the number of antennas at the transmitter and the receiver. Therefore, Zero Forcing will only be feasible for antenna settings where the corresponding null space exists. Otherwise, other approaches may be used:</p>
 <ul>
  	<li>Use less antennas at the transmitter or the receiver. Obviously, this is usually non-optimal.</li>
