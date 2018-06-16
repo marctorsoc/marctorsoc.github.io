@@ -2,6 +2,7 @@
 title:  Background
 date: 2017-05-30T16:04:03+00:00
 permalink: /posts/background/
+comments: true
 categories:
   - Academia
 ---
@@ -47,13 +48,13 @@ Then, each $\mathbf{v}_j$ appears in $K-1$ equations, written in matrix form as:
 <p style="text-align: justify;">such that all the interference is removed when decoding each signal. To do so, the rows of the receiving filter (in this case only one since we are decoding a single message) should be contained on the left null space of the channels, similarly to the case of null steering explained above. A generalization to the case of general $K=M$ users is straightforward following the same approach as for null steering.</p>
 
 <h3><strong>Degrees of Freedom</strong></h3>
-<p style="text-align: justify;">During this post I have talked about efficiency, referring to what rigorously is denoted as the *degrees of freedom* (DoF) of the channel. I'm not going to explain in detail this concept, because I think it's the less interesting part for common people who don't have passion for maths.</p>
+<p style="text-align: justify;">During this post I have talked about efficiency, referring to what rigorously is denoted as the <it>degrees of freedom</it> (DoF) of the channel. I'm not going to explain in detail this concept, because I think it's the less interesting part for common people who don't have passion for maths.</p>
 
-<p style="text-align: justify;">To put it simply, think about the DoF as the number of messages that can be transmitted per time unit, received without interference. For each scenario (topology, number of users, and distribution of antennas), there is a value which is the optimal. This means that it's not feasible to obtain more than this. I will refer to this as the *optimal* DoF, or just the *DoF of the channel*.</p>
+<p style="text-align: justify;">To put it simple, think about the DoF as the number of messages that can be transmitted per time unit, received without interference. For each scenario (topology, number of users, and distribution of antennas), there is a value which is the optimal. This means that it's not feasible to obtain more than this. I will refer to this as the <it>optimal</it> DoF, or just the <it>DoF of the channel</it>.</p>
 
-<p style="text-align: justify;">In addition to this, based on (usually) complicated Information Theory tools, it is possible to bound the DoF of the channel, such that we know that more than this is not possible to achieve. This is known as DoF *upper bound* or *outer bound*.</p>
+<p style="text-align: justify;">In addition to this, based on (usually) complicated Information Theory tools, it is possible to bound the DoF of the channel, such that we know that more than this is not possible to achieve. This is known as DoF <it>upper bound</it> or <it>outer bound</it>.</p>
 
-<p style="text-align: justify;">Finally, for each proposed transmission technique we can analyze how many DoF are achieved, leading to a DoF *inner bound*. Therefore, the only way to derive the DoF of the channel is to find the DoF of the channel is to find a DoF inner bound coinciding with a DoF upper bound.</p>
+<p style="text-align: justify;">Finally, for each proposed transmission technique we can analyze how many DoF are achieved, leading to a DoF <it>inner bound</it>. Therefore, the only way to derive the DoF of the channel is to find the DoF of the channel is to find a DoF inner bound coinciding with a DoF upper bound.</p>
 
 <h3><strong>Conclusion</strong></h3>
 <p style="text-align: justify;">In this first post, we have seen the ideas of zero forcing and null steering. In short, the idea in the former is to make use of multiple antennas to transmit in such a way that no interference is generated to other users. Likewise, for the latter all signals received through directions corresponding to other users' channels are filtered out. Both techniques are formulated in mathematical terms by referring to the concept of <em>null space </em>of a matrix.</p>

@@ -200,8 +200,11 @@ whitelist:
   - jekyll-feed
   - jemoji
 
- comments:
-   provider: "disqus"
+
+# Comments
+comments:
+  provider: disqus
+disqus: marctorrellas-github-io
 # Archives
 #  Type
 #  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
