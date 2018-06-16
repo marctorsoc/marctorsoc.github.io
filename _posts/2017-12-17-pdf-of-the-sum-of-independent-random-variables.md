@@ -8,6 +8,9 @@ permalink: /posts/pdf-of-the-sum-of-independent-random-variables/
 categories:
   - Divulgation
 ---
+
+<i> If latex formulas are not shown in your browser, please make sure you allow loading insecure scripts from this page. Right hand side of the address bar in chrome you will see a placeholder where this can be enabled.</i>
+
 <p style="text-align: justify;">
   Today I review a result that I'm gonna use in other posts, e.g. the <a href="/posts/the-survivor-frog/">survivor frog problem</a>. Also, it can be useful for you to solve mathematical problems, or to remember a simple but elegant proof. I'll give a simple but intuitive proof for the derivation of the <a href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a> (pdf) of the sum of independent random variables.
 </p>

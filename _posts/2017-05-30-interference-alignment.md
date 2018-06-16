@@ -9,6 +9,8 @@ categories:
   - Academia
 ---
 
+<i> If latex formulas are not shown in your browser, please make sure you allow loading insecure scripts from this page. Right hand side of the address bar in chrome you will see a placeholder where this can be enabled.</i>
+
 <p style="text-align: justify;">In the <a href="/posts/background/">last blog post</a>, I explained the concept of Zero Forcing, either at the transmitter (also known as null steering) or the receiver. Mathematically, it is based on computing the null space of some matrix, whose existence (for completely random entries as in this case) depends on the dimensions of that matrix. In turn, the matrix dimensions depend on the number of antennas at the transmitter and the receiver. Therefore, Zero Forcing will only be feasible for antenna settings where the corresponding null space exists. Otherwise, other approaches may be used:</p>
 <ul>
  	<li>Use less antennas at the transmitter or the receiver. Obviously, this is usually non-optimal.</li>

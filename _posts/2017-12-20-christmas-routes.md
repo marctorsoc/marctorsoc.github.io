@@ -8,6 +8,8 @@ permalink: /posts/christmas-routes/
 categories:
   - Divulgation
 ---
+<i> If latex formulas are not shown in your browser, please make sure you allow loading insecure scripts from this page. Right hand side of the address bar in chrome you will see a placeholder where this can be enabled.</i>
+
 Hi all!
 
 <p style="text-align: justify;">Last Christmas I was told about this problem and think it's quite interesting. Santa needs to deliver presents to all kids in a bunch of cities. To do so, he needs to design routes for his 8 reindeers to visit each city almost once.</p>

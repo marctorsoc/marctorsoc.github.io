@@ -8,7 +8,7 @@ permalink: /posts/the-trigonotable/
 categories:
   - Divulgation
 ---
-<p style="text-align: justify;">At some point during the high school, one is required to memorize the value of some trigonometric functions. In this post, I'm going to show an easy trick to memorize the following table:</p>
+<i> If latex formulas are not shown in your browser, please make sure you allow loading insecure scripts from this page. Right hand side of the address bar in chrome you will see a placeholder where this can be enabled.</i>
 
 <div style="text-align: center">
   <img src="/content/2017/10/trigotable.png" alt="" width="357" height="291" />

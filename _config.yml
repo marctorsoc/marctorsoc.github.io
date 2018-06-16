@@ -200,7 +200,8 @@ whitelist:
   - jekyll-feed
   - jemoji
 
-
+ comments:
+   provider: "disqus"
 # Archives
 #  Type
 #  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
