@@ -9,7 +9,6 @@ categories:
 - Divulgation
 ---
 
-
 Today I come with a fairly easy but interesting problem. Consider a dungeon grid like this:
 
 <div style="text-align: center">

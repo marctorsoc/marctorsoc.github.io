@@ -8,6 +8,9 @@ header:
 
 <p style="text-align: justify;">
 In my free time, I like to work on mini-projects, usually to solve little problems or to automate or ease tasks I used to do. While sometimes they are simpler than others, I see them as an opportunity for learning something. This is usually more important than the final objective, since most tasks manually would have been more time-efficient 🙂
+
+In this section, I will post projects and stuff not that related to my job:
+music, tech, or anything else.
 </p>
 <!--&nbsp;
 

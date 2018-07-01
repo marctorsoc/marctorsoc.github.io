@@ -9,7 +9,7 @@ categories:
   - Divulgation
 ---
 
-<i> If latex formulas are not shown in your browser, please make sure you allow loading insecure scripts from this page. Right hand side of the address bar in chrome you will see a placeholder where this can be enabled.</i>
+#<i> If latex formulas are not shown in your browser, please make sure you allow loading insecure scripts from this page. Right hand side of the address bar in chrome you will see a placeholder where this can be enabled.</i>
 
 <p style="text-align: justify;">In this maths puzzle, a frog is trying to escape from [introduce your preferred evil force]. In an attempt to catch the frog, a trap is positioned occupying $x \in (p,1)$, with the frog initially located at $x=0$, see figure.</p>
 

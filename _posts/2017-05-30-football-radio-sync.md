@@ -10,7 +10,7 @@ categories:
 ---
 
 <p style="text-align: justify;">
-  I'm very fan of Barcelona, and like watching matches wherever I am. This is <strong>not</strong> a guide on how to watch sports through the Internet. I'm not going to give links to good pages for live streaming. I'm going to assume that you know how to get the sources, otherwise google and good luck 🙂
+  I'm very fan of the Barcelona football team, and like watching matches wherever I am. This is <strong>not</strong> a guide on how to watch sports through the Internet. I'm not going to give links to good pages for live streaming. I'm going to assume that you know how to get the sources, otherwise google and good luck 🙂
 </p>
 
 <p style="text-align: justify;">
