@@ -7,7 +7,7 @@ categories:
   - Academia
 ---
 
-#<i> If latex formulas are not shown in your browser, please make sure you allow loading insecure scripts from this page. Right hand side of the address bar in chrome you will see a placeholder where this can be enabled.</i>
+<!-- <i> If latex formulas are not shown in your browser, please make sure you allow loading insecure scripts from this page. Right hand side of the address bar in chrome you will see a placeholder where this can be enabled.</i> -->
 
 <p style="text-align: justify;">Sometimes I get my mind back to 2009, when Prof. Josep Vidal came to me with <a href="https://arxiv.org/abs/0707.0323">this</a> then recently published amazing paper. At that moment, I had never imagined that <a href="http://www.ece.uci.edu/~syed/">Jafar</a>, a name that I related more to Disney Aladdin's <a href="https://en.wikipedia.org/wiki/List_of_Disney%27s_Aladdin_characters#Jafar">antagonist</a>, would be the origin of my PhD. In short, the thing is that two (very smart) guys: Syed Ali Jafar and his PhD student Viveck Cadambe, ideated an innovative an disruptive way of communicating nodes in a wireless network.</p>
 <p style="text-align: justify;">The main achievement is that, regardless the number of active nodes located in a network, each achieves the same performance! To be practical, consider a room with 2 pairs of people, all communicating by turns. This means that to understand each other, each pair can only talk during half the time. So we say that the <em>efficiency </em>is of 50% per pair or 0.5 per pair. What this incredible result claims is that, if we now put 100 pairs in the same room, this same per-pair efficiency can be maintained, so there is way to transmit information where they don't mind how many people there is in the room!
@@ -15,7 +15,7 @@ categories:
 <p style="text-align: justify;">To understand the idea, probably it is necessary some background. I will try to make things simpler than they are, but obviously some maths are needed.</p>
 
 <div style="text-align: center">
-<img src="/content/2016/11/BC-300x85.png" width="40%"/>
+<img src="/content/BC-300x85.png" width="40%"/>
 <p> <span style="font-size: 10pt;">Figure 1: The Broadcast Channel (BC)</span> </p>
 </div>
 
@@ -35,7 +35,7 @@ Then, each $\mathbf{v}_j$ appears in $K-1$ equations, written in matrix form as:
 <p style="text-align: justify;">The design above is usually referred to as <em>Null Steering</em>, since each transmitter steers its signal along the direction where the receivers have nulls in their antenna pattern diagram. Moreover, notice that the vector $\mathbf{v}_j$ lies on the <em>null space</em> of $\tilde{\mathbf{H}}_j$, denoted as <span style="font-family: 'courier new', courier, monospace;">null</span>$\left(\tilde{\mathbf{H}}\right)$. This null space may not always exists, and actually depends on the parameters of the system $M$ and $K$.</p>
 
 <div style="text-align: center">
-  <img src="/content/2016/11/2MAC-300x89.png" width="40%" />
+  <img src="/content/2MAC-300x89.png" width="40%" />
   <p> <span style="font-size: 10pt;">Figure 2: The two-user multiple-access channel (MAC)</span> </p>
 </div>
 

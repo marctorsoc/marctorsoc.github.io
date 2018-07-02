@@ -3,7 +3,7 @@ date: 2017-02-05T12:57:13+00:00
 layout: archive
 permalink: /divulgation
 header:
-  image: "/content/2017/12/academia_msg-1-940x198.png"
+  image: "/content/academia-940x198.png"
 ---
 
 <p style="text-align: justify;">

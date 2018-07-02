@@ -23,7 +23,7 @@ categories:
 </p>
 
 <div style="text-align: center">
-  <img src="/content/uke2.png" alt="" width="40%"/>
+  <img src="/content/uke.jpg" alt="" width="40%"/>
 </div> <p> </p>
 
 <p style="text-align: justify;">
@@ -34,7 +34,7 @@ categories:
 </p>
 
 <div style="text-align: center">
-  <img src="/content/uke_chords.png" alt="" width="60%" />
+  <img src="/content/uke_chords.jpg" alt="" width="60%" />
 </div> <p> </p>
 
 <p style="text-align: justify;">

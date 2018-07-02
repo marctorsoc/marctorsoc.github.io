@@ -3,7 +3,7 @@ date: 2016-10-23T21:36:20+00:00
 layout: archive
 permalink: /academia
 header:
-  image: "/content/2017/02/TUCAN3G_UPCPlanningTeam_edited-940x198.jpg"
+  image: "/content/TUCAN3G_UPCPlanningTeam.jpg"
 ---
 
 <p style="text-align: justify;">
@@ -12,7 +12,7 @@ I developed a PhD in Wireless Communications during four years (2011-2015). Prio
 </p>
 
 <div style="text-align: justify;">
-All papers produced during my PhD, as well as my thesis, can be easily found, see <a href="https://spcom.upc.edu/index.php?user=marc">here</a>, also available in my <a href="/content/2016/11/CV_MarcTorrellas.pdf">CV</a>, and in <a href="https://scholar.google.es/citations?user=__4XCdYAAAAJ&hl=en">Google Scholar</a>. Some of them can also be obtained from <a href="https://arxiv.org/">arXiv</a>.
+All papers produced during my PhD, as well as my thesis, can be easily found, see <a href="https://spcom.upc.edu/index.php?user=marc">here</a>, also available in <a href="https://scholar.google.es/citations?user=__4XCdYAAAAJ&hl=en">Google Scholar</a>. Some of them can also be obtained from <a href="https://arxiv.org/">arXiv</a>.
 </div>
 
 {% for post in site.posts %}

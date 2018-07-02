@@ -9,7 +9,7 @@ categories:
   - Academia
 ---
 
-#<i> If latex formulas are not shown in your browser, please make sure you allow loading insecure scripts from this page. Right hand side of the address bar in chrome you will see a placeholder where this can be enabled.</i>
+<!-- <i> If latex formulas are not shown in your browser, please make sure you allow loading insecure scripts from this page. Right hand side of the address bar in chrome you will see a placeholder where this can be enabled.</i> -->
 
 <p style="text-align: justify;">In the <a href="/posts/background/">last blog post</a>, I explained the concept of Zero Forcing, either at the transmitter (also known as null steering) or the receiver. Mathematically, it is based on computing the null space of some matrix, whose existence (for completely random entries as in this case) depends on the dimensions of that matrix. In turn, the matrix dimensions depend on the number of antennas at the transmitter and the receiver. Therefore, Zero Forcing will only be feasible for antenna settings where the corresponding null space exists. Otherwise, other approaches may be used:</p>
 <ul>
@@ -21,7 +21,7 @@ categories:
 <strong>Interference Channel</strong>
 
 <p style="text-align: justify;">Let's then review this scenario, since it is the first one where IA was shown to provide a boost in the DoF.</p>
-<p style="text-align: center;"><a href="/content/2017/09/IC.png"><img class="alignnone wp-image-309" src="/content/2017/09/IC.png" alt="" width="350" height="186" /></a></p>
+<p style="text-align: center;"><img src="/content/IC.png" alt="" width="350" height="186" /></p>
 <p style="text-align: justify;">Now there are $K$ transmitter-receivers, who only communicate with each other, so they receive interference containing messages intended to other users. They can be equipped with multiple antennas and then apply linear transformations via precoding and receiving filter as shown for null-steering and zero-forcing techniques.</p>
 
 <strong>Results</strong>
@@ -48,7 +48,7 @@ categories:
 <p style="text-align: justify;">Let's consider that the values for the precoding vectors are randomly chosen. Then we would have the following situation:</p>
 
 <div style="text-align: center">
-  <img src="/content/2017/09/IA_random.png" alt="" width="357" height="291" />
+  <img src="/content/IA_random.png" alt="" width="357" height="291" />
 </div> <p> </p>
 
 <p style="text-align: justify;">This is problematic, since we have to resolve 3 messages, but we only have 2 equations (one for each receiving antenna).</p>
@@ -56,7 +56,7 @@ categories:
 <p style="text-align: justify;">The interesting idea here is that we are not actually interesting in resolving all the messages at all the receivers, only one. Then, it's not a problem for us if the two interference symbols are observed mixed. So, a let's assume that there is a way to transmit the symbols such that they are received as follows:</p>
 
 <div style="text-align: center">
-  <img src="/content/2017/09/IA_CJ.png" alt="" width="357" height="291" />
+  <img src="/content/IA_CJ.png" alt="" width="357" height="291" />
 </div> <p> </p>
 
 <p style="text-align: justify;">In this situation, we can resolve at each receiver the desired symbol, and also a combination of the interference, which is not interesting and we can just drop it. Intrinsically, we have been able to resolve the desired messages, thanks to the fact that the interference is \textit{aligned}. In other words, the two vectors representing the interference at each receiver, are collapsed to a subspace of one dimension, or a line. Since we have two dimensions to allocate 3 signals, compressing the two interference signals to one dimension leaves one dimension free to allocate the desired signal.</p>
@@ -80,7 +80,7 @@ but in general would be
 \mathsf{span} \left\( \mathbf{H}\_{32} \mathbf{V}_2 \right\)  
 \end{equation}
 
-<p style="text-align: justify;">where $\mathsf{span}$ refers to the subspace generated, so we actually only need that the subspace generated is the same, but it's easier  to equate the operands to find a closed-form solution. Since the objective of these posts is to see the main ideas and concepts behind my research in academia, I'm not going to enter into mathematical details, and I refer you to my <a href="/content/2016/11/marcPhd.pdf">thesis</a> and the original <a href="https://arxiv.org/abs/0707.0323">paper</a> by Cadambe and Jafar.</p>
+<p style="text-align: justify;">where $\mathsf{span}$ refers to the subspace generated, so we actually only need that the subspace generated is the same, but it's easier  to equate the operands to find a closed-form solution. Since the objective of these posts is to see the main ideas and concepts behind my research in academia, I'm not going to enter into mathematical details, and I refer you to my <a href="/content/marcPhd.pdf">thesis</a> and the original <a href="https://arxiv.org/abs/0707.0323">paper</a> by Cadambe and Jafar.</p>
 
 <strong>Conclusion</strong>
 

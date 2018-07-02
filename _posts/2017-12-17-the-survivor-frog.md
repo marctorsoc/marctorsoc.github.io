@@ -9,12 +9,11 @@ categories:
   - Divulgation
 ---
 
-#<i> If latex formulas are not shown in your browser, please make sure you allow loading insecure scripts from this page. Right hand side of the address bar in chrome you will see a placeholder where this can be enabled.</i>
 
 <p style="text-align: justify;">In this maths puzzle, a frog is trying to escape from [introduce your preferred evil force]. In an attempt to catch the frog, a trap is positioned occupying $x \in (p,1)$, with the frog initially located at $x=0$, see figure.</p>
 
 <div style="text-align: center">
-  <img src="/content/2017/12/amphibian-1295172_640.png" alt="" width="60%" />
+  <img src="/content/amphibian-1295172_640.png" alt="" width="60%" />
 </div> <p> </p>
 
 <p style="text-align: justify;">Ok, cheese is for mouses, not frogs, but was a really intuitive way of illustrating the scenario :-)</p>

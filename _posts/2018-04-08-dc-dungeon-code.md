@@ -12,7 +12,7 @@ categories:
 Today I come with a fairly easy but interesting problem. Consider a dungeon grid like this:
 
 <div style="text-align: center">
-  <img src="/content/2018/04/yX1T7D.png" alt="" width="100%"/>
+  <img src="/content/yX1T7D.png" alt="" width="100%"/>
 </div> <p> </p>
 
 Ok, we will have something much more simplified, e.g:
@@ -38,7 +38,7 @@ Ok, we will have something much more simplified, e.g:
 Consider we have a graph like the one next:
 
 <div style="text-align: center">
-  <img src="/content/2018/04/spa1.png" alt="" width="100%"/>
+  <img src="/content/spa1.png" alt="" width="100%"/>
 </div> <p> </p>
 
 <p style="text-align: justify;">
@@ -54,7 +54,7 @@ Consider we have a graph like the one next:
 </p>
 
 <div style="text-align: center">
-  <img src="/content/2018/04/spa2.png" alt="" width="100%"/>
+  <img src="/content/spa2.png" alt="" width="100%"/>
 </div> <p> </p>
 
 <p style="text-align: justify;">
@@ -66,7 +66,7 @@ Consider we have a graph like the one next:
 </p>
 
 <div style="text-align: center">
-  <img src="/content/2018/04/spa3.png" alt="" width="100%"/>
+  <img src="/content/spa3.png" alt="" width="100%"/>
 </div> <p> </p>
 
 <p style="text-align: justify;">
@@ -74,7 +74,7 @@ Consider we have a graph like the one next:
 </p>
 
 <div style="text-align: center">
-  <img src="/content/2018/04/spa4.png" alt="" width="100%"/>
+  <img src="/content/spa4.png" alt="" width="100%"/>
 </div> <p> </p>
 
 <p style="text-align: justify;">
@@ -82,13 +82,13 @@ Consider we have a graph like the one next:
 </p>
 
 <div style="text-align: center">
-  <img src="/content/2018/04/spa5.png" alt="" width="100%"/>
+  <img src="/content/spa5.png" alt="" width="100%"/>
 </div> <p> </p>
 
 After that, we select E:
 
 <div style="text-align: center">
-  <img src="/content/2018/04/spa6.png" alt="" width="100%"/>
+  <img src="/content/spa6.png" alt="" width="100%"/>
 </div> <p> </p>
 
 <p style="text-align: justify;">
@@ -96,15 +96,15 @@ After that, we select E:
 </p>
 
 <div style="text-align: center">
-  <img src="/content/2018/04/spa7.png" alt="" width="100%"/>
+  <img src="/content/spa7.png" alt="" width="100%"/>
 </div> <p> </p>
 
 <div style="text-align: center">
-  <img src="/content/2018/04/spa8.png" alt="" width="100%"/>
+  <img src="/content/spa8.png" alt="" width="100%"/>
 </div> <p> </p>
 
 <div style="text-align: center">
-  <img src="/content/2018/04/spa9.png" alt="" width="100%"/>
+  <img src="/content/spa9.png" alt="" width="100%"/>
 </div> <p> </p>
 
 <p style="text-align: justify;">

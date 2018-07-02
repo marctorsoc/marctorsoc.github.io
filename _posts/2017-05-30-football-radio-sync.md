@@ -44,7 +44,7 @@ categories:
 </p>
 
 <p style="text-align: center;">
-  <img class="alignnone size-full wp-image-267" src="/content/2017/09/easyradiodelayer.png" alt="" width="60%" srcset="/content/2017/09/easyradiodelayer.png 1398w, /content/2017/09/easyradiodelayer-300x100.png 300w, /content/2017/09/easyradiodelayer-768x255.png 768w, /content/2017/09/easyradiodelayer-1024x340.png 1024w" sizes="(max-width: 1398px) 100vw, 1398px" />
+  <img src="/content/easyradiodelayer.png" alt="" width="60%" />
 </p>
 
 <p style="text-align: justify;">
@@ -56,7 +56,7 @@ categories:
 </p>
 
 <p style="text-align: center;">
-  <img class="alignnone size-full wp-image-268" src="/content/2017/09/audiohijack.png" width="60%" srcset="/content/2017/09/audiohijack.png 1080w, /content/2017/09/audiohijack-300x71.png 300w, /content/2017/09/audiohijack-768x181.png 768w, /content/2017/09/audiohijack-1024x241.png 1024w" sizes="(max-width: 1080px) 100vw, 1080px" />
+  <img src="/content/audiohijack.png" width="60%" />
 </p>
 
 <p style="text-align: justify;">

@@ -42,7 +42,7 @@ In case you are in Ubuntu, you can also run
   * <p style="text-align: justify;">Help to commands directly from terminal, e.g:</p>
 
   <div style="text-align: center">
-    <img src="/content/2017/11/ipython_help.png" alt="" width="80%" />
+    <img src="/content/ipython_help.png" alt="" width="80%" />
   </div> <p> </p>
 
 <span style="font-size: 12pt;"><strong>Profiles</strong></span>
@@ -58,13 +58,13 @@ In case you are in Ubuntu, you can also run
   1. Create a profile with: <span style="font-family: 'courier new', courier, monospace;">ipython profile create name_profile<br /> </span>
 
   <div style="text-align: center">
-    <img src="/content/2017/11/ipython_profile_test.png" alt="" width="80%" />
+    <img src="/content/ipython_profile_test.png" alt="" width="80%" />
   </div> <p> </p>
 
 2. Modify the profile config file, e.g. with vim (see image above for location), as follows:
 
 <div style="text-align: center">
-  <img src="/content/2017/11/ipython_profile_config.png" alt="" width="80%" />
+  <img src="/content/ipython_profile_config.png" alt="" width="80%" />
 </div> <p> </p>
 
 3. Launch ipython using the profile with: <span style="font-family: 'courier new', courier, monospace;">ipython &#8211;profile=profile_name</span>.
@@ -132,7 +132,7 @@ and you can run it by
 These alias just create shortcuts to save time, e.g:
 
 <div style="text-align: center">
-  <img src="/content/2017/11/i_ipython.png" alt="" width="80%"/>
+  <img src="/content/i_ipython.png" alt="" width="80%"/>
 </div> <p> </p>
 
 <p style="text-align: justify;">Specially interesting is the last one, with which you can automate the directory opened for notebooks, and also the terminal can still be used while the notebook is running. Notice however that if you close the terminal, the notebook system is gonna break down, so take care. Also take care when copying the command, you probably will have to rewrite the double quotes and also for some reason WordPress writes the double dash (-) as one, so it's: (double-dash)notebook(dash)dir. Apart from this, it should work both in Mac and Linux.</p>
