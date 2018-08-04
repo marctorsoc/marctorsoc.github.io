@@ -3,7 +3,7 @@ date: 2016-10-24T19:06:28+00:00
 layout: archive
 permalink: /off-topic
 header:
-  image: "/content/evolution-940x198.png"
+  image: "/content/offtopic.png"
 ---
 
 <p style="text-align: justify;">
