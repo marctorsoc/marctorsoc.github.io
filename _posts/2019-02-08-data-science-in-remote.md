@@ -70,11 +70,11 @@ A way to just synchronise is using rsync:
 
 The main application of having a server is not only to run experiments when you're connected, but to leave it the whole night, so that you don't have to wait. However, if you close the ssh connection, you'll lose everything you had. A workaround for that is running the processes on background, or using a terminal multiplexer. While I started with `screen`, I've finally adopted `tmux`, as my favorite one. A short cheatsheet next:
 
-* <p class="icode">tmux ls</p>
-* <p class="icode">tmux new -s name</p>
-* <p class="icode">tmux attach -t name</p>
+* <span class="icode">tmux ls</span> <br>
+* <span class="icode">tmux new -s name</span><br>
+* <span class="icode">tmux attach -t name</span><br>
 * control + b, and then d => detach
-* <p class="icode">killall tmux</p>
+* <span class="icode">killall tmux</span><br>
 
 **Notebooks**
 
