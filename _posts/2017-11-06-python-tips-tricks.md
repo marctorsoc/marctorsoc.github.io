@@ -33,7 +33,7 @@ In case you are in Ubuntu, you can also run
   <span style="font-family: 'courier new', courier, monospace;">sudo apt install python-ipython</span>
 </p>
 
-<p style="text-align: justify;">It's not an error, since last versions, apt-get has been simplified to just [apt](https://itsfoss.com/apt-vs-apt-get-difference/). The advantages of ipython w.r.t. classical python shell are many, let's enumerate some:</p>
+<p style="text-align: justify;">Hey, it's not a mistake. , since last versions, apt-get has been simplified to just <a href="https://itsfoss.com/apt-vs-apt-get-difference/">apt</a>. The advantages of ipython w.r.t. classical python shell are many, let's enumerate some:</p>
 
   * <p style="text-align: justify;">As in a unix terminal, you can autocomplete and see suggestions using the tab command. Something really appreciated when introducing filenames, names of variables, etc.</p>
   * <p style="text-align: justify;">Using the alt key, ipython allows to move the cursor word by word. This feature is not available (at least in my Mac) when using the classical python shell</p>
@@ -78,7 +78,7 @@ In case you are in Ubuntu, you can also run
 
 **Notebooks**
 
-<p style="text-align: justify;">Jupyter notebooks are really powerful environments where you can develop applications not only in Python, but also other programming languages such as R . They are a complete world, and I'm not gonna explain the entire list of features they have. See an example <a href="https://nbviewer.jupyter.org/github/marctorrellas/christmas_routes/blob/master/christmas_routes.ipynb">here</a>. As you can see they can be useful to present work to other people, but also to have a more dynamic environment where you can run just some pieces of the code, so standing as an intermediate player between the terminal an running code in IDEs.</p>
+<p style="text-align: justify;">Jupyter notebooks are really powerful environments where you can develop applications not only in Python, but also other programming languages such as R. They are a complete world, and I'm not gonna explain the entire list of features they have. See an example <a href="https://nbviewer.jupyter.org/github/marctorrellas/christmas_routes/blob/master/christmas_routes.ipynb">here</a>. As you can see they might be useful to present work to other people, but also to have a more dynamic environment where you can run just some pieces of the code, so standing as an intermediate player between the terminal an running code in IDEs.</p>
 
 Installing the notebook feature is as easy as
 
@@ -135,16 +135,16 @@ These alias just create shortcuts to save time, e.g:
   <img src="/content/i_ipython.png" alt="" width="80%"/>
 </div> <p> </p>
 
-<p style="text-align: justify;">Specially interesting is the last one, with which you can automate the directory opened for notebooks, and also the terminal can still be used while the notebook is running. Notice however that if you close the terminal, the notebook system is gonna break down, so take care. Also take care when copying the command, you probably will have to rewrite the double quotes and also for some reason WordPress writes the double dash (-) as one, so it's: (double-dash)notebook(dash)dir. Apart from this, it should work both in Mac and Linux.</p>
+<p style="text-align: justify;">Specially interesting is the last one, with which you can automate the directory opened for notebooks, and also the terminal can still be used while the notebook is running. Notice however that if you close the terminal, the notebook system is gonna break down, so take care. Also take care when copying the command, you probably will have to rewrite the double quotes (blogging issues...), so it's: (double-dash)notebook(dash)dir. Apart from this, it should work both in Mac and Linux.</p>
 
-<p style="text-align: justify;">Another interesting resource I want to share is using a better terminal client than the one natively provided. In Mac I use <a href="https://www.iterm2.com/features.html">iTerm2</a>, whereas in Ubuntu one might use <a href="https://apps.ubuntu.com/cat/applications/precise/terminator/">Terminator</a>. In addition to some better color scheme, the main advantage for me is that you can split the window in two terminals, and move from one to the other with control+tab. This is specially useful when building client-server applications, where you need two terminals at the same time.</p>
+<p style="text-align: justify;">Another interesting resource I want to share is using a better terminal client than the one natively provided. In Mac I use <a href="https://www.iterm2.com/features.html">iTerm2</a>, whereas in Ubuntu one might use <a href="https://apps.ubuntu.com/cat/applications/precise/terminator/">Terminator</a>. In addition to some better color scheme, the main advantage for me is that you can split the window into two terminals, and move from one to the other with control+tab, or the shortcut of your choice. This is specially useful when building client-server applications, where you need two terminals at the same time.</p>
 
 <p style="text-align: justify;">Finally, some shortcuts useful when running ipython in a unix terminal. I'm not gonna be rigorous with the terminology, just explain what they do in plain English:</p>
 
   * <p style="text-align: justify;">control+c: kills the current process. When you are in Python terminal, it's useful to delete the current line, so saving time specially if it's long.</p>
   * <p style="text-align: justify;">control+d: when pressed in Python terminal, you are asked to type yes or no to confirm exiting. The default is yes, so if you press intro the python shell ends. This saves you some (mili)seconds at the end of a week by pressing control+d+enter.</p>
   * <p style="text-align: justify;">control+z: send to sleep (background) current process. This can be useful if you want to try something in terminal without losing your workspace in Python. Or if you want to work with two different python environments at the same time, since typing Python will start a new and completely independent environment. To return to the last slept process, run <span style="font-family: 'courier new', courier, monospace;">fg</span> (foreground). A list of the current processes in a terminal can be obtained by running <span style="font-family: 'courier new', courier, monospace;">jobs</span>. More info about this <a href="http://www.thegeekstuff.com/2010/05/unix-background-job/">here</a>.</p>
-  * <p style="text-align: justify;">I love using _home_ and _end_ buttons, but in my Mac I don't have them, and first days I was really disappointed. In some applications, such as in the browser, you can move cursor to beginning and end of line by pressing cmd+left/right cursor, but it doesn't work in the terminal. In such a case, the default shortcut is control+a and control+e. This works for the ipython shell as well.</p>
+  * <p style="text-align: justify;">I love using *home* and *end* buttons, but in my Mac I don't have them, and first days I was really disappointed. In some applications, such as in the browser, you can move cursor to beginning and end of line by pressing cmd+left/right cursor, but it doesn't work in the terminal. In such a case, the default shortcut is control+a and control+e. This works for the ipython shell as well.</p>
 
  **Conclusion**
 
