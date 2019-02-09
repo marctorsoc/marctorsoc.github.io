@@ -34,13 +34,13 @@ there via ssh.</p>
 
 Accessing to the cluster usually is as easy as:
 
-  <p class="ccode">ssh username@ip
+  <p class="ccode">ssh username@ip</p>
 
 <p class="justify;">This will require you to write your password, but there is a solution to avoid writing your password all the time (all from your local,  [source](http://www.linuxproblem.org/art_9.html)):</p>
 
-1. <span class="icode">ssh-keygen -t rsa
-2. <span class="icode">ssh username@ip mkdir -p .ssh
-3. <span class="icode">cat .ssh/id_rsa.pub | ssh username@ip 'cat >> .ssh/authorized_keys'
+1. <span class="icode">ssh-keygen -t rsa</p>
+2. <span class="icode">ssh username@ip mkdir -p .ssh</p>
+3. <span class="icode">cat .ssh/id_rsa.pub | ssh username@ip 'cat >> .ssh/authorized_keys'</p>
 
 <p class="justify;">In addition to this, I like to define my alias to access to it, so adding to the .bashrc file something like:</p>
 
@@ -70,23 +70,22 @@ A way to just synchronise is using rsync:
 
 The main application of having a server is not only to run experiments when you're connected, but to leave it the whole night, so that you don't have to wait. However, if you close the ssh connection, you'll lose everything you had. A workaround for that is running the processes on background, or using a terminal multiplexer. While I started with `screen`, I've finally adopted `tmux`, as my favorite one. A short cheatsheet next:
 
-* <span class="icode">tmux ls
-* <span class="icode">tmux new -s name
-* <span class="icode">tmux attach -t name
-
+* <span class="icode">tmux ls</span>
+* <span class="icode">tmux new -s name</span>
+* <span class="icode">tmux attach -t name</span>
 * control + b, and then d => detach
-* <span class="icode">killall tmux
+* <span class="icode">killall tmux</span>
 
 **Notebooks**
 
 <p class"justify;">As explained in
 <a href="https://marctorrellas.github.io/posts/python-tips-tricks/">this post</a>, Jupyter notebooks are very powerful tools for Python easy prototyping, but also for intensive development. However, one typically runs the notebook in local, and connect via browser. How do we do this when we want the Python to run in our remote box?</p>
 
-1. Install Jupyter in the remote box to be able to run the notebook server: <span class="icode">pip install jupyter</span> or <span class="icode">conda install jupyter
+1. Install Jupyter in the remote box to be able to run the notebook server: <span class="icode">pip install jupyter</span> or <span class="icode">conda install jupyter</span>
 
-2. <span class="icode">jupiter notebook password
+2. <span class="icode">jupiter notebook password</span>
 
-3. <span class="icode">jupyter notebook --no-browser --port=8089.
+3. <span class="icode">jupyter notebook --no-browser --port=8089.</span>
 
 3. Go to your local box and run:  <span class="icode">ssh -N -L 8000:localhost:8089 marc@172.16.6.32</span>. There will be no answer, just leave this open.
 This creates a tunnel from your port 8000 to the port 8089 in the server (these ports are examples and can be changes by any number), where the notebook server is listening. Note that if you
@@ -128,11 +127,11 @@ To make it effective either restart terminal or <span class="icode">source ~/.ba
   [Install]<br>
   WantedBy=multi-user.target<br>
 
-2. <span class="icode">sudo systemctl enable jupyter.service
-3. <span class="icode">sudo systemctl daemon-reload
-4. <span class="icode">jupyter notebook --generate-config
-5. <span class="icode">jupyter notebook password
-6. <span class="icode">sudo systemctl restart jupyter.service
+2. <span class="icode">sudo systemctl enable jupyter.service</span>
+3. <span class="icode">sudo systemctl daemon-reload</span>
+4. <span class="icode">jupyter notebook --generate-config</span>
+5. <span class="icode">jupyter notebook password</span>
+6. <span class="icode">sudo systemctl restart jupyter.service</span>
 
 
 **Notebook tips and tricks**

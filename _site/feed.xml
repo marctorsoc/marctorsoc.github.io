@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-04T14:50:43+01:00</updated><id>http://localhost:4000/</id><title type="html">The idea is to die young as late as possible</title><subtitle>The idea is to die young as late as possible</subtitle><author><name>Marc Torrellas Socastro</name></author><entry><title type="html">Ukelele learning material</title><link href="http://localhost:4000/posts/uke-chords/" rel="alternate" type="text/html" title="Ukelele learning material" /><published>2018-07-01T17:04:03+01:00</published><updated>2018-07-01T17:04:03+01:00</updated><id>http://localhost:4000/posts/uke-chords</id><content type="html" xml:base="http://localhost:4000/posts/uke-chords/">&lt;p style=&quot;text-align: justify;&quot;&gt;
+  I love music. I would say is in my top 3 passions in life, and learning to play a song
+  is something that makes me feel really proud. I've played the guitar for almost
+  15 years, and even though I'm not a good guitarist I would say I'm good enough for someone who has no idea to think I master it 😆
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  Recently, I came up with the idea of started learning ukelele, with the objective of
+  bringing music with me when I travel, as usually you can bring this little instrument
+  at no extra cost. So I looked for a second hand ukelele and found this precious little
+  one:
+&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/uke.jpg&quot; alt=&quot;&quot; width=&quot;40%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  In this process of learning, even though I'm coming from guitar I developed
+  and found some resources, and I think could be useful for anyone else out there,
+  so let's share! here you have a table I have compiled based on other sources
+  and collecting the more typical chords:
+&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/uke_chords.jpg&quot; alt=&quot;&quot; width=&quot;60%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  As you can see, I have selected only some of the many many chords you can do. Also,
+  I give below a small list of some covers that have been useful and inspiration
+   for learning more. Enjoy!
+&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=r4TRitkv7Sc&quot;&gt;Hey Jude - The Beatles&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Ng-Gm2Ukocg&quot;&gt;Isn’t she lovely - Stevie Wonder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=J0nko6kl_40&quot;&gt;Shape of you - Ed Sheeran&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5-nPmRm-DvI&quot;&gt;El tren del temps - Txarango&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=Rthta-fmGvw&quot;&gt;La dansa del vestit - Txarango&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=V70_KgNWPYU&quot;&gt;Paris - La oreja de Van Gogh&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=1uX6zquw5Us&quot;&gt;Cómo hablar - Amaral&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=SG5TeFKrSg4&quot;&gt;Lady Madrid - Pereza&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Marc Torrellas Socastro</name></author><summary type="html">I love music. I would say is in my top 3 passions in life, and learning to play a song is something that makes me feel really proud. I've played the guitar for almost 15 years, and even though I'm not a good guitarist I would say I'm good enough for someone who has no idea to think I master it 😆</summary></entry><entry><title type="html">DC: Dungeon &amp;amp; Code</title><link href="http://localhost:4000/posts/dc-dungeon-code/" rel="alternate" type="text/html" title="DC: Dungeon &amp; Code" /><published>2018-04-08T22:43:44+01:00</published><updated>2018-04-08T22:43:44+01:00</updated><id>http://localhost:4000/posts/dc-dungeon-code</id><content type="html" xml:base="http://localhost:4000/posts/dc-dungeon-code/">&lt;p&gt;Today I come with a fairly easy but interesting problem. Consider a dungeon grid like this:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/yX1T7D.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Ok, we will have something much more simplified, e.g:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  XXXXXXXXX..e..XXXXXXXX&lt;br /&gt; XXXXX&amp;#8230;&amp;#8230;&amp;#8230;&amp;#8230;&amp;#8230;&amp;#8230;&amp;#8230;&amp;#8230;XXXXX&lt;br /&gt; XXX&amp;#8230;&amp;#8230;&amp;#8230;&amp;#8230;.XXX&amp;#8230;&amp;#8230;.s&amp;#8230;..XXX&lt;br /&gt; XXXXX&amp;#8230;&amp;#8230;&amp;#8230;&amp;#8230;&amp;#8230;&amp;#8230;&amp;#8230;&amp;#8230;XXXXX&lt;br /&gt; XXXXXXXXXXXXXXXXXXX
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  This array of strings can represent somehow the previous dungeon, where each character is a position, &amp;#8220;s&amp;#8221; is the starting position, &amp;#8220;e&amp;#8221; the ending one, and &amp;#8220;X&amp;#8221; the obstacles, so positions that cannot be landed.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  The objective will be to find an algorithm to get the shortest path from start to end positions. Instantly, when we see shortest path we think on &lt;a href=&quot;https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm&quot;&gt;Dijkstra algorithm&lt;/a&gt;, basically because is the first result when googling it. The problem is that we don't have a graph. Hence, once transformed to a graph this problem is fairly easy. I refer you to &lt;a href=&quot;https://github.com/marctorrellas/dungeon-code&quot;&gt;my code&lt;/a&gt; in Github for this conversion and the rest of this post will be devoted to the Dijkstra algorithm through an example. As always any doubts about the code, more than happy to help.
+&lt;/p&gt;
+
+&lt;h3 id=&quot;dijsktra-algorithm-an-example&quot;&gt;&lt;strong&gt;Dijsktra Algorithm: an example&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  I'm not going to create a new long tutorial on this algorithm, because there are thousands over the Internet. Just give a visual example of how this works.
+&lt;/p&gt;
+
+&lt;p&gt;Consider we have a graph like the one next:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/spa1.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  where every node initially is at a big distance from A except A itself. Number in edges represent the distance between each pair of nodes. Note than in our example distance is one for each pair of positions, so this example addresses a more general case.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  To solve the shortest path from A to G, we need a &lt;a href=&quot;https://en.wikipedia.org/wiki/Heap_(data_structure)&quot;&gt;heap&lt;/a&gt;. A heap is data structure very useful in computer science where items are appended in such a way that you can get the maximum or minimum of the list in constant time (i.e. independent of the list length). This strictly doesn't mean that the list is ordered (as noted in the image), though I will show it ordered to simplify.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  On the right hand side I have the code with the algorithm. So let's try to follow it. In the first iteration we select A and for each of its neighbors compute the distance to A, obtaining:
+&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/spa2.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  Notice that I've saved the best way to arrive from A to B and from A to C, together with the distance (in the code this is saved in the attribute parent).
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  Then, the following minimum becomes C, so for each neighbor we compute the distance from A to this node by summing 2 (the distance from A to C) plus the distance from C to this node. This is done for all neighbors except A, which is no more in the heap. This is a way to save computation time, omitting the nodes already visited. The graph after processing C looks as follows:
+&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/spa3.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  Now a human probably would go with E, because it's closer to G and has a reasonable short distance of 4. However, following the algorithm the following node to extract is B. This ensures that all possibles paths are explored so that the solution is optimal.
+&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/spa4.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  This is an interesting iteration, since we can see that node E has not been modified as it's faster moving there from C than from B. Next move could be either of H or E, but in this case we select H and nothing changes.
+&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/spa5.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;After that, we select E:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/spa6.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  But notice that we need to end up with the elements in the heap, even though nothing changes, to ensure there are no better solutions. I just show you the state of the graph for all those iterations.
+&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/spa7.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/spa8.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/spa9.png&quot; alt=&quot;&quot; width=&quot;100%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  Ta-da! So we have it, now we can use a loop to get the path by using the attribute parent saved in each node.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  Hope you enjoyed, and see you in the next post!
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  PS: these images are part of one huge &lt;a href=&quot;https://docs.google.com/presentation/d/1EhUGzJlXeU0T1RZiDByrt9szTwanSFvTtFziHTyVFCk/edit?usp=sharing&quot;&gt;Google slides document&lt;/a&gt; I manage. It's about Algorithms and tips and tricks and concepts for coding, especially to deal with coding exercises for interviews. Check it out if you have interest 🙂
+&lt;/p&gt;</content><author><name>Marc Torrellas Socastro</name></author><summary type="html">Today I come with a fairly easy but interesting problem. Consider a dungeon grid like this:</summary></entry><entry><title type="html">Christmas routes</title><link href="http://localhost:4000/posts/christmas-routes/" rel="alternate" type="text/html" title="Christmas routes" /><published>2017-12-20T22:43:43+00:00</published><updated>2017-12-20T22:43:43+00:00</updated><id>http://localhost:4000/posts/christmas-routes</id><content type="html" xml:base="http://localhost:4000/posts/christmas-routes/">&lt;p&gt;Hi all!&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Last Christmas I was told about this problem and think it's quite interesting. Santa needs to deliver presents to all kids in a bunch of cities. To do so, he needs to design routes for his 8 reindeers to visit each city almost once.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;To make it easy, it is assumed that the reindeers just need to get to the city and presents are distributed instantly (yes, not realistic, but we are only interested in maths and coding). The objective is to find the minimum speed at which they have to travel to visit all the cities, assuming a constant speed, and a maximum time of 10 hours. Hence, assuming that 30.000 km are travelled by one reindeer, its speed would be 3000 kmph.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;We are provided with a matrix of distances, i.e. each position $(i,j)$ in the matrix is the distance from city $i$ to city $j$, and of course there is some redundancy in the matrix since almost half of the numbers are repeated.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;I have solved this in a Python &lt;a href=&quot;https://nbviewer.jupyter.org/github/marctorrellas/christmas_routes/blob/master/christmas_routes.ipynb&quot;&gt;notebook&lt;/a&gt; to explain while coding. I have no clue whether this is the best solution, but at least is quite fast to compute and as you'll see I have improved after trying different ideas 🙂&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;I hope you enjoy this problem (please like in such a case!) and I wish you a merry Christmas!&lt;/p&gt;
+
+&lt;p&gt;PS: if anyone finds a better solution, please let me know!&lt;/p&gt;</content><author><name>Marc Torrellas Socastro</name></author><summary type="html">Hi all!</summary></entry><entry><title type="html">The survivor frog</title><link href="http://localhost:4000/posts/the-survivor-frog/" rel="alternate" type="text/html" title="The survivor frog" /><published>2017-12-17T02:10:45+00:00</published><updated>2017-12-17T02:10:45+00:00</updated><id>http://localhost:4000/posts/the-survivor-frog</id><content type="html" xml:base="http://localhost:4000/posts/the-survivor-frog/">&lt;p style=&quot;text-align: justify;&quot;&gt;In this maths puzzle, a frog is trying to escape from [introduce your preferred evil force]. In an attempt to catch the frog, a trap is positioned occupying $x \in (p,1)$, with the frog initially located at $x=0$, see figure.&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/amphibian-1295172_640.png&quot; alt=&quot;&quot; width=&quot;60%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Ok, cheese is for mouses, not frogs, but was a really intuitive way of illustrating the scenario :-)&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;We assume that our green friend jumps a distance $d \in (0,1)$ with uniform probability, and it jumps an infinite number of times unless it's caught. Our mission here is to compute the &lt;strong&gt;probability of catching the frog&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;Caught probability for one jump&lt;/strong&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Using the fact that the jump size follows a distance uniform between 0 and 1, it is easy to see that:&lt;/p&gt;
+&lt;p&gt;\begin{align} \text{Prob}(\text{caught} | x = t) = 1 - p, \quad \forall t \le p. \end{align}&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Consequently, if the frog is at position $x \leq p$,  it does not matter where the frog is, the probability is always $1-p$. Otherwise, the prob. is simply 0. This result will be quite useful next.&lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;Divide jumps and conquer&lt;/strong&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;We can split the problem in many subproblems by considering the different jumps. Thus,  the probability of get caught starting from position $x=0$ can be written as follows:&lt;/p&gt;
+&lt;p&gt;\begin{align}
+\text{Prob}(\text{caught} | x = 0) &amp;amp;= \text{Prob}(\text{caught 1st jump} | x = 0)+  \\ &amp;amp;  \text{Prob}(\text{caught 2nd jump} | x = 0) + \ldots \\
+&amp;amp;= \sum_{i=0}^{\infty} \text{Prob} \left(\text{caught $n$th jump} | x = 0 \right)  \\
+&amp;amp;= \sum_{i=0}^{\infty} \text{Prob} \left(\sum_{i=1}^{n-1} s_i \le p  \cap \sum_{i=1}^{n} s_i \in (p,1) \right) \\
+&amp;amp;= (1-p) \sum_{i=0}^{\infty} \text{Prob}\left(\sum_{i=1}^{n-1} s_i \le p \right).
+\end{align}&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;where $s_i$ is the $i$th jump size. In words, the probability of get caught is the sum of probs for the 1st, 2nd, 3rd jump, and so on, and there is no intersection because the frog cannot get caught in two different jumps. The next step states that getting caught in the $n$th jump means that the frog is still before the threshold point $x=p$, and it is caught in the trap exactly at the $n$th jump. Using the result in (1) we can finally simplify the expression.&lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;Distribution of the sum of jumps&lt;/strong&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;In (2) we have concluded that everything just depends on the prob. of being at position $x \le p$ after $n$ jumps. Hence, since all jumps have the same distribution, we face a problem involving the sum of &lt;a href=&quot;https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables&quot;&gt;i.i.d.&lt;/a&gt; random variables. Indeed, those variables are independent, i.e. one jump does not depend on the last one (unless the frog gets caught). If needed, you can check my &lt;a href=&quot;/posts/pdf-of-the-sum-of-independent-random-variables/&quot;&gt;post&lt;/a&gt; about how to compute the pdf for the sum of random variables. The main result is that the pdf of $Z= X+Y$ can be expressed as a convolution:&lt;/p&gt;
+&lt;p&gt;\begin{align}
+f_{Z}(z) =f_{X}(z) * f_{Y}(z) = \int_{-\infty}^{\infty} \!\!\!\!\! f_{X}(x) f_{Y}(z-x) \partial x.
+\end{align}&lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;And... all pieces together&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;The prob. of being before the trap after the first jump is trivial: $\text{Prob}(s_1  \le p) = p $. Let's calculate the prob. of being before the trap after 2 jumps:&lt;/p&gt;
+&lt;p&gt;\begin{align}
+\text{Prob}(s_1 + s_2 \le p) &amp;amp;= \int_{0}^{p} \partial x \int_{-\infty}^{\infty} \!\!\!\!\! f_{S_1}\!(\tau) \,\, f_{S_2}\!(x-\tau)\,\, \partial \tau  \\
+&amp;amp;= \int_{0}^{p}\partial x \int_{0}^{x} \!\!\!\!\! 1 \cdot 1 \,\, \partial \tau  \\
+&amp;amp;=\int_{0}^{p} x\,\, \partial x  = \frac{p^2}{2}.
+\end{align}&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Similarly, for 3 jumps we get $\text{Prob}(s_1 + s_2 \le p) = \frac{p^3}{6}$, and so on. Consequently:&lt;/p&gt;
+&lt;p&gt;\begin{align}
+\text{Prob}(\text{caught}) &amp;amp;= (1-p) \left( 1 + p + \frac{p^2}{2} + \ldots \right) \\
+&amp;amp;= (1-p) \sum_{i=0}^{\infty} \frac{p^n}{n} = (1-p) e^p.
+\end{align}&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;where I have applied the &lt;a href=&quot;https://en.wikipedia.org/wiki/Taylor_series#Exponential_function&quot;&gt;Taylor series&lt;/a&gt; of the exponential. This result, apart from being so elegant, makes sense at extreme values. On the one hand, for $p=1$, i.e. there is no trap, there is 0 probability of get caught. On the other hand, if $p=0$, the frog will get caught with probability 1 in the first jump, since the trap occupies the whole range  of the frog potential jump.&lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/h3&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Today I have presented a puzzle involving a frog trying to avoid a fixed trap. This problem has been the perfect excuse to review concepts in probability theory, such as the probability of the union and the distribution of the sum of random variables.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;And that's it, folks! If you enjoyed this post please like, and in case of any suggestion, do not hesitate to comment!&lt;/p&gt;</content><author><name>Marc Torrellas Socastro</name></author><summary type="html">In this maths puzzle, a frog is trying to escape from [introduce your preferred evil force]. In an attempt to catch the frog, a trap is positioned occupying $x \in (p,1)$, with the frog initially located at $x=0$, see figure.</summary></entry><entry><title type="html">PDF of the sum of independent random variables</title><link href="http://localhost:4000/posts/pdf-of-the-sum-of-independent-random-variables/" rel="alternate" type="text/html" title="PDF of the sum of independent random variables" /><published>2017-12-17T01:02:19+00:00</published><updated>2017-12-17T01:02:19+00:00</updated><id>http://localhost:4000/posts/pdf-of-the-sum-of-independent-random-variables</id><content type="html" xml:base="http://localhost:4000/posts/pdf-of-the-sum-of-independent-random-variables/">&lt;p style=&quot;text-align: justify;&quot;&gt;
+  Today I review a result that I'm gonna use in other posts, e.g. the &lt;a href=&quot;/posts/the-survivor-frog/&quot;&gt;survivor frog problem&lt;/a&gt;. Also, it can be useful for you to solve mathematical problems, or to remember a simple but elegant proof. I'll give a simple but intuitive proof for the derivation of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Probability_density_function&quot;&gt;probability density function&lt;/a&gt; (pdf) of the sum of independent random variables.
+&lt;/p&gt;
+
+&lt;p&gt;Imagine you have two random variables:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{matrix}
+X \sim f_X(x) \\ Y \sim f_Y(y) 
+\end{matrix}&lt;/script&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  This notation denotes that each random variable follows a different probability distribution. We will assume that these two variables are independent, and our purpose is to compute the pdf of its sum $Z = X+Y$. To do so, I will start from the &lt;a href=&quot;https://en.wikipedia.org/wiki/Cumulative_distribution_function&quot;&gt;cumulative distribution function&lt;/a&gt; (cdf):
+&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align}
+F_Z(z) &amp;= \text{Prob}\left( Z \le z \right)   \nonumber \\
+&amp;=\text{Prob}\left( X+Y \le z \right) \nonumber \\ &amp;= \text{Prob}\left( Y \le z - X \right) \nonumber\\
+&amp;= \int_{-\infty}^{\infty} \!\!\!\!\! \partial x \int_{-\infty}^{z - x} \!\!\!\!\! f_{XY}(x,y) \partial y \nonumber\\
+&amp;= \int_{-\infty}^{\infty} \!\!\!\!\! f_{X}(x) \partial x \int_{-\infty}^{z - x} \!\!\!\!\! f_{Y}(y) \partial y \nonumber
+\end{align} %]]&gt;&lt;/script&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  Now, we want to compute the pdf, i.e. the derivative of the cdf. Some people will freak out here, since we have to derive an integral. No worries, fortunately we have the &lt;a href=&quot;https://en.wikipedia.org/wiki/Leibniz_integral_rule&quot;&gt;Leibniz rule&lt;/a&gt;, coming into play:
+&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;f_{Z}(z) = \frac{\partial}{\partial z} F_Z(z) = \int_{-\infty}^{\infty} \!\!\!\!\! f_{X}(x) f_{Y}(z-x) \partial x = f_{X}(z) * f_{Y}(z)&lt;/script&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  For those not familiar, the operator * is extensively used as the &lt;a href=&quot;https://en.wikipedia.org/wiki/Convolution&quot;&gt;convolution&lt;/a&gt;. This operation is quite important in signal processing, since the output of &lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_time-invariant_theory&quot;&gt;linear system&lt;/a&gt; is the convolution of the output by the impulse response of the system, and it becomes the product in case of working in the frequency domain (after Fourier transforms). So, to conclude, the result can be read as follows:
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &amp;#8220;&lt;em&gt;The pdf of the sum of two independent random variables is given by the&lt;br /&gt; convolution of the two pdf's of those variables&amp;#8221;&lt;/em&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  And that's it, folks! If you enjoyed this (short) post please like, and in case of any suggestion, do not hesitate to comment!
+&lt;/p&gt;</content><author><name>Marc Torrellas Socastro</name></author><summary type="html">Today I review a result that I'm gonna use in other posts, e.g. the survivor frog problem. Also, it can be useful for you to solve mathematical problems, or to remember a simple but elegant proof. I'll give a simple but intuitive proof for the derivation of the probability density function (pdf) of the sum of independent random variables.</summary></entry><entry><title type="html">Python tips &amp;amp; tricks</title><link href="http://localhost:4000/posts/python-tips-tricks/" rel="alternate" type="text/html" title="Python tips &amp; tricks" /><published>2017-11-06T01:51:21+00:00</published><updated>2017-11-06T01:51:21+00:00</updated><id>http://localhost:4000/posts/python-tips-tricks</id><content type="html" xml:base="http://localhost:4000/posts/python-tips-tricks/">&lt;p style=&quot;text-align: justify;&quot;&gt;Today I'm going to explain some of the lessons and tools I've found that could be useful for someone developing data science (and also general purpose projects) in Python:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ipython&lt;/li&gt;
+  &lt;li&gt;Notebooks&lt;/li&gt;
+  &lt;li&gt;Tricks for python in a terminal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;For the readers already working in Python, probably some of these items are already known. But I love shortcuts and ways to save time, so maybe you can still find something useful in what follows.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IPython&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;An improved version of the typical python shell. Actually the &quot;i&quot; comes from &quot;interactive&quot;, but I would rather say that it's more an improved version.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Installing ipython is as easy as any other package in python:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;pip install ipython&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p&gt;In case you are in Ubuntu, you can also run&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;sudo apt install python-ipython&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;It's not an error, since last versions, apt-get has been simplified to just [apt](https://itsfoss.com/apt-vs-apt-get-difference/). The advantages of ipython w.r.t. classical python shell are many, let's enumerate some:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p style=&quot;text-align: justify;&quot;&gt;As in a unix terminal, you can autocomplete and see suggestions using the tab command. Something really appreciated when introducing filenames, names of variables, etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p style=&quot;text-align: justify;&quot;&gt;Using the alt key, ipython allows to move the cursor word by word. This feature is not available (at least in my Mac) when using the classical python shell&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p style=&quot;text-align: justify;&quot;&gt;More explicit and colour-highlighted error messages&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p style=&quot;text-align: justify;&quot;&gt;Basic UNIX shell integration (you can run simple shell commands such as cp, ls, rm, cp, etc. directly from the IPython command line)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p style=&quot;text-align: justify;&quot;&gt;Help to commands directly from terminal, e.g:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;img src=&quot;/content/ipython_help.png&quot; alt=&quot;&quot; width=&quot;80%&quot; /&gt;
+  &lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;strong&gt;Profiles&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Have you ever been programming in your favorite IDE and thought: &quot;Is numpy/pandas accepting this? I'm gonna try in a terminal a toy example, just to be sure&quot;. Then you go to a terminal, write &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;[i]python &lt;/span&gt;and you have to write, for 334th time in a week, the famous:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;import numpy as np&lt;br /&gt; import pandas as pd&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Isn't it possible to load them automatically? The answer is ipython profiles. So you can create a profile with your preferred libraries, and automatically import them from start. Step by step:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create a profile with: &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;ipython profile create name_profile&lt;br /&gt; &lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+    &lt;img src=&quot;/content/ipython_profile_test.png&quot; alt=&quot;&quot; width=&quot;80%&quot; /&gt;
+  &lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Modify the profile config file, e.g. with vim (see image above for location), as follows:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/ipython_profile_config.png&quot; alt=&quot;&quot; width=&quot;80%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Launch ipython using the profile with: &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;ipython –profile=profile_name&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;You can see in the first image how pd and np are understood without the need of importing. Notice that WordPress render the double dash as one large dash, so in this case there is a double &quot;-&quot; before profile, and similar for other cases below.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Ok, so once you have the profile created you can save the time to import those packages that you're always using at the cost of using &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;&amp;#8211;profile=profile_name&lt;/span&gt; after ipython. Not bad&amp;#8230; but can this be ever more simplified? There are two options:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Modify the default profile, found in the same directory as the profiles we create&lt;/li&gt;
+  &lt;li&gt;Create an alias, see last section in this post&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Notebooks&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Jupyter notebooks are really powerful environments where you can develop applications not only in Python, but also other programming languages such as R . They are a complete world, and I'm not gonna explain the entire list of features they have. See an example &lt;a href=&quot;https://nbviewer.jupyter.org/github/marctorrellas/christmas_routes/blob/master/christmas_routes.ipynb&quot;&gt;here&lt;/a&gt;. As you can see they can be useful to present work to other people, but also to have a more dynamic environment where you can run just some pieces of the code, so standing as an intermediate player between the terminal an running code in IDEs.&lt;/p&gt;
+
+&lt;p&gt;Installing the notebook feature is as easy as&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;pip install jupyter&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p&gt;and you can run it by&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;jupyter notebook&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;This will open a tab in your browser, and you'll be able to work in it. If you have conda installed, this same thing can be installed with&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;conda install notebook&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;I love keyboard shortcuts (more in the next section), and notebooks have many. The ones I more often use are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;intro (when a cell is selected): enter edit mode&lt;/li&gt;
+  &lt;li&gt;esc (when editing a cell): exit edit mode&lt;/li&gt;
+  &lt;li&gt;control+intro: execute current cell&lt;/li&gt;
+  &lt;li&gt;shift+intro: execute current cell, and move to next cell&lt;/li&gt;
+  &lt;li&gt;d twice: remove current cell&lt;/li&gt;
+  &lt;li&gt;z: undo deletion&lt;/li&gt;
+  &lt;li&gt;a/b: insert cell above/below&lt;/li&gt;
+  &lt;li&gt;h: show help for other shortcuts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Another feature I like is notebook &lt;a href=&quot;https://github.com/dunovank/jupyter-themes&quot;&gt;themes&lt;/a&gt;. Some of us don't like to code in a black on white schema (white background, black fonts) , though there is a lot of controversy about this. To be honest, before writing this post I always thought that it was healthier for my eyes, but it turns out that it depends on the environment light, and also everyone eyesight. In any case, if you feel better or at least the same with dark themes, you can do your bit and saving battery and energy, which is both good for your pocket and your planet. Instructions can be found at the link.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Python in a terminal&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;I highly recommend working in an Integrated Development Environment (IDE) to develop code and use Version Control System (VCS). My favorites are &lt;a href=&quot;https://www.jetbrains.com/pycharm/&quot;&gt;Pycharm&lt;/a&gt; and &lt;a href=&quot;http://rogerdudler.github.io/git-guide/&quot;&gt;Git&lt;/a&gt;, respectively. They are free, popular, and enough for almost any task. However, in some situations we prefer/have to work in a python shell. Here I give you some tips and tricks to improve your experience in that situation.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;The first resource I'm gonna share has worked for me in MacOS and Ubuntu, and I think it should do for all Unix-based systems as well. The idea is to save time when launching the python shell by the use of alias. To do so, edit the bash config file with&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;sudo vim ~/.bash_profile&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;and introduce your own aliases. Depending on your &lt;a href=&quot;https://www.cyberciti.biz/faq/ubuntu-linux-user-profile-bash-configuration/&quot;&gt;system&lt;/a&gt; you should edit the .bashrc file in the system location. Here some examples of aliases I currently use:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;alias i=ipython&lt;br /&gt; alias id=ipython &amp;#8211;profile=dscience&lt;/span&gt;&lt;br /&gt; &lt;span style=&quot;font-family: 'courier new', courier, monospace; font-size: 10pt;&quot;&gt;alias notebook=&quot;ipython notebook &amp;#8211;notebook-dir=~/Dropbox/PycharmProjects/notebooks &amp;gt;/dev/null 2&amp;gt;&amp;amp;1 &amp;amp;&quot;&lt;/span&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Remember that when editing the bash config files, you must source them, or close and open a new terminal to reload the config.&lt;/p&gt;
+
+&lt;p&gt;These alias just create shortcuts to save time, e.g:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/i_ipython.png&quot; alt=&quot;&quot; width=&quot;80%&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Specially interesting is the last one, with which you can automate the directory opened for notebooks, and also the terminal can still be used while the notebook is running. Notice however that if you close the terminal, the notebook system is gonna break down, so take care. Also take care when copying the command, you probably will have to rewrite the double quotes and also for some reason WordPress writes the double dash (-) as one, so it's: (double-dash)notebook(dash)dir. Apart from this, it should work both in Mac and Linux.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Another interesting resource I want to share is using a better terminal client than the one natively provided. In Mac I use &lt;a href=&quot;https://www.iterm2.com/features.html&quot;&gt;iTerm2&lt;/a&gt;, whereas in Ubuntu one might use &lt;a href=&quot;https://apps.ubuntu.com/cat/applications/precise/terminator/&quot;&gt;Terminator&lt;/a&gt;. In addition to some better color scheme, the main advantage for me is that you can split the window in two terminals, and move from one to the other with control+tab. This is specially useful when building client-server applications, where you need two terminals at the same time.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Finally, some shortcuts useful when running ipython in a unix terminal. I'm not gonna be rigorous with the terminology, just explain what they do in plain English:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p style=&quot;text-align: justify;&quot;&gt;control+c: kills the current process. When you are in Python terminal, it's useful to delete the current line, so saving time specially if it's long.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p style=&quot;text-align: justify;&quot;&gt;control+d: when pressed in Python terminal, you are asked to type yes or no to confirm exiting. The default is yes, so if you press intro the python shell ends. This saves you some (mili)seconds at the end of a week by pressing control+d+enter.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p style=&quot;text-align: justify;&quot;&gt;control+z: send to sleep (background) current process. This can be useful if you want to try something in terminal without losing your workspace in Python. Or if you want to work with two different python environments at the same time, since typing Python will start a new and completely independent environment. To return to the last slept process, run &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;fg&lt;/span&gt; (foreground). A list of the current processes in a terminal can be obtained by running &lt;span style=&quot;font-family: 'courier new', courier, monospace;&quot;&gt;jobs&lt;/span&gt;. More info about this &lt;a href=&quot;http://www.thegeekstuff.com/2010/05/unix-background-job/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p style=&quot;text-align: justify;&quot;&gt;I love using _home_ and _end_ buttons, but in my Mac I don't have them, and first days I was really disappointed. In some applications, such as in the browser, you can move cursor to beginning and end of line by pressing cmd+left/right cursor, but it doesn't work in the terminal. In such a case, the default shortcut is control+a and control+e. This works for the ipython shell as well.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Today we have reviewed some tips and tricks for working with Python in a more agile way.  There are many many other things that I could recommend, but they'll probably be matter of future posts. Mainly, we have reviewed the usefulness of ipython as a better interface to run python commands rather than the classical shell; notebooks as an innovate way of working and presenting work with Python; and finally some tips and tricks for using Python and related tools in a terminal.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;I hope you enjoy this post and found something useful in it.None of the tools presented here are strictly necessary, but they make our life easier 🙂&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;As always, any recommendation, suggestion or improvement, please welcome. Thanks for reading!&lt;/p&gt;</content><author><name>Marc Torrellas Socastro</name></author><summary type="html">Today I'm going to explain some of the lessons and tools I've found that could be useful for someone developing data science (and also general purpose projects) in Python:</summary></entry><entry><title type="html">The trigonotable</title><link href="http://localhost:4000/posts/the-trigonotable/" rel="alternate" type="text/html" title="The trigonotable" /><published>2017-10-09T01:15:01+01:00</published><updated>2017-10-09T01:15:01+01:00</updated><id>http://localhost:4000/posts/the-trigonotable</id><content type="html" xml:base="http://localhost:4000/posts/the-trigonotable/">&lt;p style=&quot;text-align: justify;&quot;&gt;At some point during the high school, one is required to memorize the value of some trigonometric functions. In this post, I'm going to show an easy trick to memorize the following table:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/trigotable.png&quot; alt=&quot;&quot; width=&quot;357&quot; height=&quot;291&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;and also some intuition if our memory fails for some value. To do so, we need to remember what the sine and cosine mean. While the tagent has its own meaning, today let's just simplify to the formula:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\tan(x) = \frac{\sin(x)}{\cos(x)}&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Build by pieces – memorization method&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Everyone has its own methods for memorizing. Here I'm going to explain one that has been really useful to me. I've never read any book explaining this, but I suspect that probably it is a standard and well-known method.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;When I was going to the high school, I had to memorize the features of textual genres. At that degree of maturity, I remember that all that information was completely meaningless to me, but I needed to somehow put it all in my mind. What I finally did (and luckily it worked) was to build words and sentences, or stories from the initials of the features I needed to remember. This way, since I knew where I had to end up, it was a way to deduce or better remember the different pieces, i.e. the feature of e.g the argumentative genre.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;In the problem at hand we have something similar. We have a table, and we are going to deduce a way to build it, so that at the end we get it built with little effort. First, we will write a symbolic &quot;divided by two&quot; in every cell, like this:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/trigotable01.png&quot; alt=&quot;&quot; width=&quot;357&quot; height=&quot;291&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Easy isn't it? Ok, now write from left to right the square root of the numbers from 0 to 4 in every cell of the sine, and the other way around for the cosine:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/trigotable02.png&quot; alt=&quot;&quot; width=&quot;357&quot; height=&quot;291&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Simplifying the numbers, you'll discover that you end up with the first table at the beginning of the post, and the tangent can be obtained just dividing the first row by the second row.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Height and width of circles – intuition method&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;The last method is useful to keep the knowledge in mind, but we actually understand nothing about what the sine and cosine are. To this end, consider the following image:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/Sin-cos-defn-I.png&quot; alt=&quot;&quot; width=&quot;357&quot; height=&quot;291&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;In plain words, for each possible angle, the cosine means the length of the triangle base, whereas the sine represents its length. This interpretation allows us to understand many things:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In the first quadrant, when the angle is small the cosine is large, and the sine is small. The other way around when the angle approaches 90. This explains why the sine grows with the angle, and the cosine decreases.&lt;/li&gt;
+  &lt;li&gt;The angle of 45º is the only one where the sine and cosine have the same value and it’s a kind of inflection value. While it’s difficult to memorize the values of the tangent, the value of 45º it’s easy because it’s just equal to 1.&lt;/li&gt;
+  &lt;li&gt;While they are not in the table, angles larger than 90º lead to sine or cosine (or both) negative. Specifically, in the second quadrant the cosine is negative, in the third both, and in the fourth the sine is negative.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Today we have reviewed a well-known table of the values of sine and cosine for typical angle values. While it may look complicated to memorize, I have shown a method to build the table, and also an intuition that can help us during this process or to validate our memory. While the level of this post is for high school students, I think that a review for mature students is always good just to keep fresh these easy concepts. If you liked this post please click on like, thanks!&lt;/p&gt;</content><author><name>Marc Torrellas Socastro</name></author><summary type="html">At some point during the high school, one is required to memorize the value of some trigonometric functions. In this post, I'm going to show an easy trick to memorize the following table:</summary></entry><entry><title type="html">PhD: only research?</title><link href="http://localhost:4000/posts/phd-only-research/" rel="alternate" type="text/html" title="PhD: only research?" /><published>2017-09-19T00:03:30+01:00</published><updated>2017-09-19T00:03:30+01:00</updated><id>http://localhost:4000/posts/phd-only-research</id><content type="html" xml:base="http://localhost:4000/posts/phd-only-research/">&lt;p style=&quot;text-align: justify;&quot;&gt;
+  In addition to the research, during my university days I had some experiences related to teaching and education.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  First, I had the pleasure to help more than 10 students as private teacher at first courses university level, mainly in subjects related to maths. Teaching is one of the things I enjoy the most in life, specially with students who work hard, and just need someone to take their hand and make them think the proper questions. Because usually they already know the answers, and I don&amp;#8217;t try to be a guru, but just a guide to unveil their potential. I am so glad of having helped many students to deal with subjects in the areas of maths, engineering, and computer science, but also learning to play the guitar.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  I also had the opportunity to serve as teaching assistant for the Pattern Recognition course. This optative module, which I took when being a student, allows telecom students to have a vision of many applications of their knowledge to practical problems. At the same time, Machine Learning and Data Science has been my occupation since I finished my PhD.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  Finally, in the context of the European Project &lt;a href=&quot;http://www.ict-tucan3g.eu/&quot;&gt;TUCAN3G&lt;/a&gt;, I supervised during several months a group of students (see the pic in the PhD section) for the development of a network planning tool for rural areas. In this case, I acted as the link between my PhD advisor, the project coordinator, and the students developing the tool.
+&lt;/p&gt;
+
+&lt;div id=&quot;wp-ulike-post-400&quot; class=&quot;wpulike wpulike-default &quot;&gt;
+  &lt;div class=&quot;wp_ulike_general_class wp_ulike_is_unliked&quot;&gt;
+    &lt;a data-ulike-id=&quot;400&quot; data-ulike-nonce=&quot;7de565b905&quot; data-ulike-type=&quot;likeThis&quot; data-ulike-status=&quot;3&quot; class=&quot;wp_ulike_btn wp_ulike_put_image&quot;&gt; &lt;/a&gt; &lt;span class=&quot;count-box&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</content><author><name>Marc Torrellas Socastro</name></author><summary type="html">In addition to the research, during my university days I had some experiences related to teaching and education.</summary></entry><entry><title type="html">Interference Alignment</title><link href="http://localhost:4000/posts/interference-alignment/" rel="alternate" type="text/html" title="Interference Alignment" /><published>2017-05-30T17:04:03+01:00</published><updated>2017-05-30T17:04:03+01:00</updated><id>http://localhost:4000/posts/interference-alignment</id><content type="html" xml:base="http://localhost:4000/posts/interference-alignment/">&lt;!-- &lt;i&gt; If latex formulas are not shown in your browser, please make sure you allow loading insecure scripts from this page. Right hand side of the address bar in chrome you will see a placeholder where this can be enabled.&lt;/i&gt; --&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;In the &lt;a href=&quot;/posts/background/&quot;&gt;last blog post&lt;/a&gt;, I explained the concept of Zero Forcing, either at the transmitter (also known as null steering) or the receiver. Mathematically, it is based on computing the null space of some matrix, whose existence (for completely random entries as in this case) depends on the dimensions of that matrix. In turn, the matrix dimensions depend on the number of antennas at the transmitter and the receiver. Therefore, Zero Forcing will only be feasible for antenna settings where the corresponding null space exists. Otherwise, other approaches may be used:&lt;/p&gt;
+&lt;ul&gt;
+ 	&lt;li&gt;Use less antennas at the transmitter or the receiver. Obviously, this is usually non-optimal.&lt;/li&gt;
+ 	&lt;li&gt;Time-sharing: use a &lt;a href=&quot;https://en.wikipedia.org/wiki/Round-robin&quot;&gt;round-robin&lt;/a&gt; scheme to alleviate the number of users to be removed per round&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;For the Broadcast and Multiple Access channels introduced in the last post, the tools we have reviewed so far are enough to obtain the optimal degrees of freedom. However, there exist other scenarios where this is not always true, and it is when &lt;strong&gt;Interference Alignment (IA) &lt;/strong&gt;gives us the opportunity to attain (or at least approach to) the channel DoF.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Interference Channel&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Let's then review this scenario, since it is the first one where IA was shown to provide a boost in the DoF.&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/content/IC.png&quot; alt=&quot;&quot; width=&quot;350&quot; height=&quot;186&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Now there are $K$ transmitter-receivers, who only communicate with each other, so they receive interference containing messages intended to other users. They can be equipped with multiple antennas and then apply linear transformations via precoding and receiving filter as shown for null-steering and zero-forcing techniques.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Results&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Surprisingly, the IA approach shows that considering an arbitrary number of pairs of users $K$ with the same number of antennas $M$ at transmitters and receivers, the DoF sum is $KM/2$. This means that independently of the number of users, we can achieve the same performance per user!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ok, nice…but how?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;I'm going to explain the simplest scenario where IA can be applied, in which there are 3 users, each node is equipped with 2 antennas, and every user will be able to transmit one message.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;If you are interested, it's interesting to see that with ZF concepts we cannot achieve more than 2 DoF, by turning off one of the pairs, and one receiving antenna per user. However, neglecting resources is not usually a good idea.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Let's assume that each transmitter $i$ uses a 2x1 precoding vector $\mathbf{v}_i$ to transmit the symbol ${x_i}$. Then, the signal obtained at receiver $j$ can be written as:&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;
+\begin{equation} \displaystyle \mathbf{y}_i =
+\mathbf{H}_{j1} \mathbf{v}_1 x_1 +
+\mathbf{H}_{j2} \mathbf{v}_2 x_2 +
+\mathbf{H}_{j3} \mathbf{v}_3 x_3
++ \mathbf{n}_i   
+\end{equation}
+&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;where $\mathbf{H}_{ji}$ is the 2x2 matrix whose entries are channel gains from each antenna of transmitter $i$ to receiver $j$, and $\mathbf{n}_i$ is the noise term.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;Let's consider that the values for the precoding vectors are randomly chosen. Then we would have the following situation:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/IA_random.png&quot; alt=&quot;&quot; width=&quot;357&quot; height=&quot;291&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;This is problematic, since we have to resolve 3 messages, but we only have 2 equations (one for each receiving antenna).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;The interesting idea here is that we are not actually interesting in resolving all the messages at all the receivers, only one. Then, it's not a problem for us if the two interference symbols are observed mixed. So, a let's assume that there is a way to transmit the symbols such that they are received as follows:&lt;/p&gt;
+
+&lt;div style=&quot;text-align: center&quot;&gt;
+  &lt;img src=&quot;/content/IA_CJ.png&quot; alt=&quot;&quot; width=&quot;357&quot; height=&quot;291&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;In this situation, we can resolve at each receiver the desired symbol, and also a combination of the interference, which is not interesting and we can just drop it. Intrinsically, we have been able to resolve the desired messages, thanks to the fact that the interference is \textit{aligned}. In other words, the two vectors representing the interference at each receiver, are collapsed to a subspace of one dimension, or a line. Since we have two dimensions to allocate 3 signals, compressing the two interference signals to one dimension leaves one dimension free to allocate the desired signal.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;The mathematical formulation for IA in this case is as simple as&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}    \begin{matrix}        &lt;br /&gt;
+  \mathbf{H}_{12} \mathbf{V}_2 = \mathbf{H}_{13} \mathbf{V}_3 \\        &lt;br /&gt;
+  \mathbf{H}_{21} \mathbf{V}_1 = \mathbf{H}_{23} \mathbf{V}_3 \\        &lt;br /&gt;
+  \mathbf{H}_{31} \mathbf{V}_1 = \mathbf{H}_{32} \mathbf{V}_2     &lt;br /&gt;
+  \end{matrix} \end{equation}&lt;/p&gt;
+
+&lt;p&gt;but in general would be&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+\mathsf{span} \left( \mathbf{H}_{12} \mathbf{V}_2 \right) =
+\mathsf{span} \left( \mathbf{H}_{13} \mathbf{V}_3 \right) \\
+\mathsf{span} \left( \mathbf{H}_{21} \mathbf{V}_1\right) =
+\mathsf{span} \left( \mathbf{H}_{23} \mathbf{V}_3\right) \\
+\mathsf{span} \left( \mathbf{H}_{31} \mathbf{V}_1\right) =
+\mathsf{span} \left( \mathbf{H}_{32} \mathbf{V}_2 \right)  
+\end{equation}&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;where $\mathsf{span}$ refers to the subspace generated, so we actually only need that the subspace generated is the same, but it's easier  to equate the operands to find a closed-form solution. Since the objective of these posts is to see the main ideas and concepts behind my research in academia, I'm not going to enter into mathematical details, and I refer you to my &lt;a href=&quot;/content/marcPhd.pdf&quot;&gt;thesis&lt;/a&gt; and the original &lt;a href=&quot;https://arxiv.org/abs/0707.0323&quot;&gt;paper&lt;/a&gt; by Cadambe and Jafar.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;In this post I have introduced the idea of Interference Alignment, as a way of looking at the wireless transmissions from a different perspective. The main idea is that we need to reduce the number of variables to resolve the equations we have, and consequently obtain the desired variables. In our case the equations are observations at each receiving antenna, and the variables are the messages transmitted to the different users. To reduce variables, we transmit the signals in such a way the interference is mixed (aligned) at the receivers, thus releasing enough spatial dimensions for desired signals to be resolved without interference.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;While this has been a very introductory description of Interference Alignment, I think that it's enough to catch the concept, and could motivate you to continue this journey in the study of wireless communications. After 10 years, there are still many research papers using IA, and many questions still to be answered in the research community where IA could have a principal role.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;IA as explained here was the main topic in my Master thesis. However, it is assumed that we know the channels perfect and instantaneously, which is something not really realistic, specially in scenarios where the terminals are moving, e.g. travelling in a train. In the next posts I will explain how this concept can be applied to the case where we have delayed information of the channel, which is the door to understand a bit more about my Phd thesis. Likes and comments welcome!&lt;/p&gt;</content><author><name>Marc Torrellas Socastro</name></author><summary type="html"></summary></entry><entry><title type="html">Football Radio Sync</title><link href="http://localhost:4000/posts/football-radio-sync/" rel="alternate" type="text/html" title="Football Radio Sync" /><published>2017-05-30T17:04:03+01:00</published><updated>2017-05-30T17:04:03+01:00</updated><id>http://localhost:4000/posts/football-radio-sync</id><content type="html" xml:base="http://localhost:4000/posts/football-radio-sync/">&lt;p style=&quot;text-align: justify;&quot;&gt;
+  I'm very fan of the Barcelona football team, and like watching matches wherever I am. This is &lt;strong&gt;not&lt;/strong&gt; a guide on how to watch sports through the Internet. I'm not going to give links to good pages for live streaming. I'm going to assume that you know how to get the sources, otherwise google and good luck 🙂
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  When watching football (and any other sport), there are two pieces to enjoy the show: audio and video. Also, since I moved to Cambridge, it's been easier not to get spoiled about the results, so I can watch the game at my own pace. Hence, we can also watch it live or recorded, whereas usually recorded matches include many ads, and the chance of getting spoilers is really high. I have two great sources for getting matches recorded and not being spoiled, if interested e-mail me.
+&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Video&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  If you want to watch sports in live, just one keyword: Acestream. I used to employ Sopcast but for some reason since some years ago the number of links for it has decreased a lot. You can find also webpages with flash players integrated in it, but usually the quality and stability of the game are really bad.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  Acestream allows to get streaming channels, and works reasonably well. To the best of my knowledge, it only exists for Windows, so if you have a Mac you will need to use Wine, or another player like SodaPlayer. I don't know about alternatives in Linux, but probably if you use Linux you'll be able to circumvent OS limitations.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  &lt;strong&gt;Audio&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  For 90% of the people I talk watching a match is basically the video, but for me is more than that. And to be honest, English commentators are really boring. One option one could do is to turn on the radio, or connect to the radio via browser. I specially like &lt;a href=&quot;http://www.ccma.cat/catradio/la-transmissio-den-puyal/&quot;&gt;La transmissió d'en Puyal&lt;/a&gt; of Catalunya Ràdio. However, there will be a problem of synchronization, i.e. audio will come sooner than image. And this is really a problem when you are watching a game. Imagine a goal explained 20 secs before you can ever watch it!
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  The first approach I used to solve this problem was a Windows application called &lt;a href=&quot;http://www.clacsoft.com/clacradio-para-pc-escucha-la-radio-online-facilmente/&quot;&gt;ClacRadio&lt;/a&gt;. It was really easy to use, but every time I had to advance or delay one second, I had to restart the count. Also there was no version for Mac AFAIK.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  Later on, I found an alternative in the form of Android application called Easy radio delayer.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/content/easyradiodelayer.png&quot; alt=&quot;&quot; width=&quot;60%&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  It was really comfortable since you can control the sync from your mobile, and with only one screen in your laptop you don't need to change window every time. However, and contrary to what Google Play says, this app is no more compatible with my device.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  Finally, I found something that works well with my Mac: Audio Hijack. The idea is basically the following: take all the audio generated in your Mac and before passing it to the output device, delay it a number of seconds.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;
+  &lt;img src=&quot;/content/audiohijack.png&quot; width=&quot;60%&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  For example, in this case I'm delaying the audio for 3 seconds. Another good thing is that it adapts to the output device, so if you are connecting your laptop to a TV, you'll see a different device, e.g. Samsung ****, rather than Internal Speakers. Indeed, having another screen is really useful not to lose minutes of the game before getting the perfect sync.
+&lt;/p&gt;
+
+&lt;p style=&quot;text-align: justify;&quot;&gt;
+  And that's all folks! I hope you enjoyed the post and if any question arises just comment or contact me 🙂
+&lt;/p&gt;</content><author><name>Marc Torrellas Socastro</name></author><summary type="html">I'm very fan of the Barcelona football team, and like watching matches wherever I am. This is not a guide on how to watch sports through the Internet. I'm not going to give links to good pages for live streaming. I'm going to assume that you know how to get the sources, otherwise google and good luck 🙂</summary></entry></feed>
