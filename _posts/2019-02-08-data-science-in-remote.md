@@ -93,7 +93,7 @@ have multiple servers, they can all listen in the same port, but you have to tun
 
 Open a browser and go to localhost:8000. The password in step2 will be asked, and you should be able to work as in local.
 
-6. Optional: add the tunnel as in
+Optional: add the tunnel as in
 
 <p class="ccode">
     ssh -fN -L 8000:localhost:8089 marc@172.16.6.32
@@ -108,7 +108,7 @@ To make it effective either restart terminal or <span class="icode">source ~/.ba
 <p class="justify;">After previous section, you're able to run notebooks on the server, and accessing to them via browser. So, even though it says localhost:8000, you're in the server! (tunnels dark magic). However, it's really annoying going to the server and run the notebook every time. This can be automated by running the notebook as a service (source: https://aichamp.wordpress.com/2017/06/13/setting-up-jupyter-notebook-server-as-service-in-ubuntu-16-04/):</p>
 
 
-1. Set the service file <span class="icode">/usr/lib/systemd/system/jupyter.service</span> (yes, you probably need to create some dirs) as in
+* Set the service file <span class="icode">/usr/lib/systemd/system/jupyter.service</span> (yes, you probably need to create some dirs) as in
 
   [Unit]<br>
   Description=Jupyter Notebook<br>
@@ -127,11 +127,11 @@ To make it effective either restart terminal or <span class="icode">source ~/.ba
   [Install]<br>
   WantedBy=multi-user.target<br>
 
-2. <p class="icode">sudo systemctl enable jupyter.service</p>
-3. <p class="icode">sudo systemctl daemon-reload</p>
-4. <p class="icode">jupyter notebook --generate-config</p>
-5. <p class="icode">jupyter notebook password</p>
-6. <p class="icode">sudo systemctl restart jupyter.service</p>
+* <p class="icode">sudo systemctl enable jupyter.service</p>
+* <p class="icode">sudo systemctl daemon-reload</p>
+* <p class="icode">jupyter notebook --generate-config</p>
+* <p class="icode">jupyter notebook password</p>
+* <p class="icode">sudo systemctl restart jupyter.service</p>
 
 
 **Notebook tips and tricks**
