@@ -9,13 +9,6 @@ categories:
 - Divulgation
 ---
 
-<style type='text/css'>
-a { text-decoration: none; }
-a:hover { text-decoration: underline; }
-.ccode {text-align: center; font-family: 'courier new'}
-.icode {font-family: 'courier new'}
-</style>
-
 Long time since my last post! But decided to come
 back to explain some of typical tips and tricks when working (but not only) on
 remote. This is typical in a data scientist life as layman laptops, at some point,
@@ -23,9 +16,9 @@ and especially if you work with big data, present limitations in memory and/or
 speed.
 
 In most companies or in academia, when you need
-to run huge process you are given a remote machine, either in AWS or in a company/uni
+to run a huge process you are given a remote machine, either in AWS or in a company/uni
 cluster. This means that you won't have physical access, and you can only connect
-there via ssh.
+there remotely.
 
  **Disclaimer**: all info written in this post assumes a Mac as your local, and Ubuntu as remote. Most of it should work also with other combinations of these two.
 
@@ -87,9 +80,7 @@ As explained in
 
 3. `jupyter notebook --no-browser --port=8089.`
 
-3. Go to your local box and run:
-
-`ssh -N -L 8000:localhost:8089 marc@172.16.6.32`.
+3. Go to your local box and run: `ssh -N -L 8000:localhost:8089 marc@172.16.6.32`.
 
 There will be no answer, just leave this open.
 This creates a tunnel from your port 8000 to the port 8089 in the server (these ports are examples and can be changes by any number), where the notebook server is listening. Note that if you
@@ -97,12 +88,7 @@ have multiple servers, they can all listen in the same port, but you have to tun
 
 Open a browser and go to localhost:8000. The password in step2 will be asked, and you should be able to work as in local.
 
-Optional: add the tunnel as in
-
-`
-    ssh -fN -L 8000:localhost:8089 marc@172.16.6.32
-`
-
+Optional: add the tunnel as in `ssh -fN -L 8000:localhost:8089 marc@172.16.6.32`
 to your `~/.bashrc`, and it will be active but in the background. So no need to have a terminal blocked (but do not close it!).
 To make it effective either restart terminal or `source ~/.bashrc`.
 
