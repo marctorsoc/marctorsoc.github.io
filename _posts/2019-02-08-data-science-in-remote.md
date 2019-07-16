@@ -12,41 +12,40 @@ categories:
 <style type='text/css'>
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
-.justify { text-align: justify; }
 .ccode {text-align: center; font-family: 'courier new'}
 .icode {font-family: 'courier new'}
 </style>
 
-<p class="justify">Long time since my last post! But decided to come
+Long time since my last post! But decided to come
 back to explain some of typical tips and tricks when working (but not only) on
 remote. This is typical in a data scientist life as layman laptops, at some point,
 and especially if you work with big data, present limitations in memory and/or
-speed. </p>
+speed.
 
-<p class="justify">In most companies or in academia, when you need
+In most companies or in academia, when you need
 to run huge process you are given a remote machine, either in AWS or in a company/uni
 cluster. This means that you won't have physical access, and you can only connect
-there via ssh.</p>
+there via ssh.
 
-<p class="justify">*Disclaimer*: all info written in this post assumes a Mac as your local, and Ubuntu as remote. Most of it should work also with other combinations of these two.</p>
+ **Disclaimer**: all info written in this post assumes a Mac as your local, and Ubuntu as remote. Most of it should work also with other combinations of these two.
 
 **Access to a remote machine**
 
-Accessing to the cluster usually is as easy as:
+Accessing to the cluster usually is as easy as writing:
 
-  <p class="ccode">ssh username@ip</p>
+  ```ssh username@ip```
 
-<p class="justify;">This will require you to write your password, but there is a solution to avoid writing your password all the time (all from your local, <a href="http://www.linuxproblem.org/art_9.html">source</a>):</p>
+This will require you to write your password, but there is a solution to avoid writing your password all the time (all from your local, <a href="http://www.linuxproblem.org/art_9.html">source</a>):
 
-1. <p class="icode">ssh-keygen -t rsa</p>
-2. <p class="icode">ssh username@ip mkdir -p .ssh</p>
-3. <p class="icode">cat .ssh/id_rsa.pub | ssh username@ip 'cat >> .ssh/authorized_keys'</p>
+1. `ssh-keygen -t rsa`
+1. `ssh username@ip mkdir -p .ssh`
+1. `cat .ssh/id_rsa.pub | ssh username@ip 'cat >> .ssh/authorized_keys'`
 
-<p class="justify;">In addition to this, I like to define my alias to access to it, so adding to the .bashrc file something like:</p>
+In addition to this, I like to define my alias to access to it, so adding to the `.bashrc` file something like:
 
-<p class="ccode">
+`
 alias sshmarc=ssh username@ip
-</p>
+`
 
 so that just typing something short I can access to it.
 
@@ -56,38 +55,43 @@ Always do this from your local machine. Examples:
 
 From cluster to local (the dot means that it will be copied to the current directory):
 
-<p class="ccode">scp marc@172.16.6.35:~/titanic.log .</p>
+`scp marc@172.16.6.35:~/titanic.log .`
 
 From local to cluster:
 
-<p class="ccode">scp -r ~/experiments/results marc@172.16.6.35:~/results/</p>
+`scp -r ~/experiments/results marc@172.16.6.35:~/results/`
 
 A way to just synchronise is using rsync:
 
-<p class="ccode">rsync -arv --ignore-existing --progress marc@172.16.6.32:/home/marc/results experiments/results/</p>
+`
+rsync -arv --ignore-existing --progress marc@172.16.6.32:/home/marc/results experiments/results/`
 
 **Run shells on background**
 
-The main application of having a server is not only to run experiments when you're connected, but to leave it the whole night, so that you don't have to wait. However, if you close the ssh connection, you'll lose everything you had. A workaround for that is running the processes on background, or using a terminal multiplexer. While I started with `screen`, I've finally adopted `tmux`, as my favorite one. A short cheatsheet next:
+The main application of having a server is not only to run experiments when you're connected, but to leave it the whole night, so that you don't have to wait. However, if you close the ssh connection, you'll lose everything you had. A workaround for that is running the processes on background, or using a terminal multiplexer. While I started with `screen`, I've finally adopted `tmux` as my favorite one. A short cheatsheet next:
 
-* <span class="icode">tmux ls</span> <br>
-* <span class="icode">tmux new -s name</span><br>
-* <span class="icode">tmux attach -t name</span><br>
+* `tmux ls`
+* `tmux new -s name`
+* `tmux attach -t name`
 * control + b, and then d => detach
-* <span class="icode">killall tmux</span><br>
+* `killall tmux`
 
 **Notebooks**
 
-<p class"justify;">As explained in
-<a href="https://marctorrellas.github.io/posts/python-tips-tricks/">this post</a>, Jupyter notebooks are very powerful tools for Python easy prototyping, but also for intensive development. However, one typically runs the notebook in local, and connect via browser. How do we do this when we want the Python to run in our remote box?</p>
+As explained in
+<a href="https://marctorrellas.github.io/posts/python-tips-tricks/">this post</a>, Jupyter notebooks are very powerful tools for Python easy prototyping, but also for intensive development. However, one typically runs the notebook in local, and connect via browser. How do we do this when we want the Python to run in our remote box?
 
-1. Install Jupyter in the remote box to be able to run the notebook server: <span class="icode">pip install jupyter</span> or <span class="icode">conda install jupyter</span><br>
+1. Install Jupyter in the remote box to be able to run the notebook server: `pip install jupyter` or `conda install jupyter`
 
-2. <p class="icode">jupiter notebook password</p>
+2. `jupiter notebook password`
 
-3. <p class="icode">jupyter notebook --no-browser --port=8089.</p>
+3. `jupyter notebook --no-browser --port=8089.`
 
-3. Go to your local box and run:  <span class="icode">ssh -N -L 8000:localhost:8089 marc@172.16.6.32</span>. There will be no answer, just leave this open.
+3. Go to your local box and run:
+
+`ssh -N -L 8000:localhost:8089 marc@172.16.6.32`.
+
+There will be no answer, just leave this open.
 This creates a tunnel from your port 8000 to the port 8089 in the server (these ports are examples and can be changes by any number), where the notebook server is listening. Note that if you
 have multiple servers, they can all listen in the same port, but you have to tunnel them to different ports, so changing the 8000!
 
@@ -95,20 +99,19 @@ Open a browser and go to localhost:8000. The password in step2 will be asked, an
 
 Optional: add the tunnel as in
 
-<p class="ccode">
+`
     ssh -fN -L 8000:localhost:8089 marc@172.16.6.32
-</p>
+`
 
-to your ~/.bashrc, and it will be active but in the background. So no need to have a terminal blocked (but do not close it!).
-To make it effective either restart terminal or <span class="icode">source ~/.bashrc</span>.
+to your `~/.bashrc`, and it will be active but in the background. So no need to have a terminal blocked (but do not close it!).
+To make it effective either restart terminal or `source ~/.bashrc`.
 
 
 **Notebook as a service**
 
-<p class="justify;">After previous section, you're able to run notebooks on the server, and accessing to them via browser. So, even though it says localhost:8000, you're in the server! (tunnels dark magic). However, it's really annoying going to the server and run the notebook every time. This can be automated by running the notebook as a service (source: https://aichamp.wordpress.com/2017/06/13/setting-up-jupyter-notebook-server-as-service-in-ubuntu-16-04/):</p>
+After previous section, you're able to run notebooks on the server, and accessing to them via browser. So, even though it says localhost:8000, you're in the server! (tunnels dark magic). However, it's really annoying going to the server and run the notebook every time. This can be automated by running the notebook as a service <a href="https://aichamp.wordpress.com/2017/06/13/setting-up-jupyter-notebook-server-as-service-in-ubuntu-16-04/">source</a>:
 
-
-* Set the service file <span class="icode">/usr/lib/systemd/system/jupyter.service</span> (yes, you probably need to create some dirs) as in
+* Set the service file `/usr/lib/systemd/system/jupyter.service` (yes, you probably need to create some dirs) as in
 
   [Unit]<br>
   Description=Jupyter Notebook<br>
@@ -127,45 +130,47 @@ To make it effective either restart terminal or <span class="icode">source ~/.ba
   [Install]<br>
   WantedBy=multi-user.target<br>
 
-* <p class="icode">sudo systemctl enable jupyter.service</p>
-* <p class="icode">sudo systemctl daemon-reload</p>
-* <p class="icode">jupyter notebook --generate-config</p>
-* <p class="icode">jupyter notebook password</p>
-* <p class="icode">sudo systemctl restart jupyter.service</p>
+* `sudo systemctl enable jupyter.service`
+* `sudo systemctl daemon-reload`
+* `jupyter notebook --generate-config`
+* `jupyter notebook password`
+* `sudo systemctl restart jupyter.service`
 
 
 **Notebook tips and tricks**
 
 *Autoreload*
-(source: <a href=https://ipython.org/ipython-doc/3/config/extensions/autoreload.html>)
+(<a href="https://ipython.org/ipython-doc/3/config/extensions/autoreload.html">source</a>)
 
 When you change something in sources, usually you have to restart the kernel. This allows to automatically import functions again. Just add
 
-<p class="icode">%load_ext autoreload</p>
-<p class="icode">%autoreload 2</p>
+`%load_ext autoreload` <br>
+`%autoreload 2`
 
 
 *Use full width*
 
 Add this to your import cell
 
-<p class="icode">%load_ext autoreload</p>
-<p class="icode">from IPython.core.display import display, HTML
-display(HTML("<style>.container { width:100% !important; }</style>"))</p>
+`from IPython.core.display import display, HTML
+display(HTML("<style>.container { width:100% !important; }</style>"))`
 
+(Note that with Jupyter lab this is not required)
 
 
 *Folding cells*
 
-Create the dir <span class="icode">mkdir ~/.jupyter/custom</span> if not present
+Create the dir `mkdir ~/.jupyter/custom` if not present
 
-Edit <span class="icode">~/.jupyter/custom/custom.js</span> as:
+Edit `~/.jupyter/custom/custom.js` as:
 
 <div style="text-align: center">
   <img src="/content/folding_code.png" alt="" width="80%"/>
 </div> <p> </p>
 
 You'll need to restart the notebook service. Cells are fold when double-click.
+
+(Note that with Jupyter lab this is not required)
 
 
 *Display various dataframes side by side*
@@ -186,6 +191,6 @@ and even nicer, if you have a list of dataframes, the following will show them i
 
  **Conclusion**
 
-<p style="text-align: justify;">In this post, I have shown some of the tricks I have learned in the recent years for working on remote and with Jupyter notebooks. </p>
+In this post, I have shown some of the tricks I have learned in the recent years for working on remote and with Jupyter notebooks.
 
-<p style="text-align: justify;">As always, any recommendation, suggestion or improvement, please welcome. Thanks for reading!</p>
+As always, any recommendation, suggestion or improvement, please welcome. Thanks for reading!

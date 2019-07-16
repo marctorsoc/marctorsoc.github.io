@@ -5,6 +5,7 @@
 div.highlighter-rouge,
 figure.highlight {
   position: relative;
+  text-align: left;
   margin-bottom: 1em;
   background: $base00;
   color: $base05;
@@ -17,6 +18,7 @@ figure.highlight {
   pre.highlight {
     margin: 0;
     padding: 1em;
+    text-align: left;
   }
 }
 
@@ -54,12 +56,14 @@ figure.highlight {
 
 .highlight pre {
   width: 100%;
+  text-align: left;
 }
 
 .highlight .hll {
   background-color: $base06;
 }
 .highlight {
+  text-align: left;
   .c {
     /* Comment */
     color: $base04;

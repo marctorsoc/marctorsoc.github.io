@@ -1,30 +1,3 @@
----
-title: Christmas routes
-layout: single
-author_profile: true
-date: 2017-12-20T22:43:43+00:00
-comments: true
-permalink: /posts/christmas-routes/
-categories:
-  - Divulgation
----
-
-<div style="text-align: center">
-  <img src="/content/santa.jpg" alt="" width="90%" />
-</div> <p> </p>
-
-<p style="text-align: justify;">Last Christmas I was told about this quite interesting problem. It prays like this: Santa needs to deliver presents to all kids in a bunch of cities. To do so, he needs to design routes for his 8 reindeers to visit each city almost once.</p>
-
-<p style="text-align: justify;">To make it easy, it is assumed that the reindeers just need to get to the city and presents are distributed instantly (yes, not realistic, but we are only interested in maths and coding). The objective is to find the minimum speed at which they have to travel to visit all the cities, assuming a constant speed, and a maximum time of 10 hours. Hence, assuming that 30.000 km are travelled by one reindeer, its speed would be 3000 kmph.</p>
-
-<p style="text-align: justify;">We are provided with a matrix of distances, i.e. each position $(i,j)$ in the matrix is the distance from city $i$ to city $j$, and of course there is some redundancy in the matrix since almost half of the numbers are repeated.</p>
-
-<p style="text-align: justify;">I have solved this in a Python notebook to explain while coding. I have no clue whether this is the best solution, but at least is quite fast to compute and as you'll see I have improved after trying different ideas 🙂</p>
-
-<p style="text-align: justify;">I hope you enjoy this problem (please like in such a case!) and I wish you a merry Christmas!</p>
-
-PS: if anyone finds a better solution, please let me know!
-
 
 
 ```python
@@ -35,13 +8,15 @@ import networkx as nx
 plt.rcParams['figure.figsize'] = (20, 20)
 ```
 
-### Load data and visualize some rows
+### Load data and visualize some rows
 
 
 ```python
 graph = pd.read_csv('q1_data.csv', index_col=0)
 graph.head(3)
 ```
+
+
 
 
 <div>
@@ -178,7 +153,7 @@ plt.draw()
 ```
 
 
-![png](../../content/christmas_routes/output_5_0.png)
+![png](output_5_0.png)
 
 
 In this case, the graph is not really useful since points are in a 3D coodinate system but we are
@@ -377,7 +352,7 @@ for i in paths:
 
 It is worth pointing out that the clustering algorithm is not deterministic. It depends on its initialization, and in turn, it has an impact on the performance of next steps:
 - This can be observed if we execute the last block several times: different results are obtained.
-- Also, we can see that in some cases the algorithm crashes. This occurs when the North Pole is assigned a cluster itself. Since we are sending a reindeer to this cluster, but the only single node in it has been visited, the algorithm as it is does not work.
+- Also, we can see that in some cases the algorithm crashes. This occurs when the North Pole is assigned a cluster itself. Since we are sending a reindeer to this cluster, but the only single node in it has been visited, the algorithm as it is does not work. 
 
 So hereafter there is the last version of the algorithm taking into account this, such that:
 - North Pole is not used for clustering.
@@ -430,7 +405,7 @@ for it in range(1,200):
         minval = tmp
         minpaths = paths
         print(tmp)
-
+        
 print('Speed: {} kmph'.format(minval))
 for i in minpaths:
     print(' -> '.join(minpaths[i]))
@@ -479,3 +454,4 @@ for i in minpaths:
     1205.2264646
     1582.87191227
     1476.92909603
+

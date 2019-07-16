@@ -155,10 +155,12 @@ kbd,
 samp,
 pre {
   font-family: $monospace;
+  text-align: left;
 }
 
 pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
+  text-align: left;
 }
 
 p > code,
@@ -355,4 +357,5 @@ input[type="submit"],
 .archive__item-teaser {
   -webkit-transition: $global-transition;
   transition: $global-transition;
+  text-align: left;
 }
