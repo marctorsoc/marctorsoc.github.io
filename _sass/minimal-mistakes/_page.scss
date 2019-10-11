@@ -7,8 +7,8 @@
   margin-left: auto;
   margin-top: 2em;
   margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
+  // padding-left: 1em;
+  // padding-right: 1em;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   max-width: 100%;
@@ -22,14 +22,15 @@
 
 .page {
   @include breakpoint($large) {
-    float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-right: $right-sidebar-width-narrow;
+    // float: right;
+    width: auto; //calc(100% - #{$right-sidebar-width-narrow});
+    //padding-right: $right-sidebar-width-narrow;
   }
 
   @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
+    width: auto;
+    // calc(100% - #{$right-sidebar-width});
+    // padding-right: $right-sidebar-width;
   }
 
   .page__inner-wrap {
@@ -474,11 +475,11 @@
 
   @include breakpoint($large) {
     float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
+    width: 100%; //calc(100% - #{$right-sidebar-width-narrow});
   }
 
   @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
+    width: 100%; //auto; //calc(100% - #{$right-sidebar-width});
   }
 
   a {
@@ -500,21 +501,25 @@
 .wide {
   .page {
     @include breakpoint($large) {
-      padding-right: 0;
+      padding-left: 10%;
+      padding-right: 10%;
     }
 
     @include breakpoint($x-large) {
-      padding-right: 0;
+      padding-left: 10%;
+      padding-right: 10%;
     }
   }
 
   .page__related {
     @include breakpoint($large) {
-      padding-right: 0;
+      padding-left: 10%;
+      padding-right: 10%;
     }
 
     @include breakpoint($x-large) {
-      padding-right: 0;
+      padding-left: 10%;
+      padding-right: 10%;
     }
   }
 }

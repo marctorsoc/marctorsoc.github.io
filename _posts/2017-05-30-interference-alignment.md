@@ -1,9 +1,6 @@
 ---
 title: Interference Alignment
-layout: single
-author_profile: true
 date: 2017-05-30T16:04:03+00:00
-comments: true
 permalink: /posts/interference-alignment/
 categories:
   - Academia
@@ -22,7 +19,7 @@ categories:
 
 <p style="text-align: justify;">Let's then review this scenario, since it is the first one where IA was shown to provide a boost in the DoF.</p>
 <p style="text-align: center;"><img src="/content/IC.png" alt="" width="350" height="186" /></p>
-<p style="text-align: justify;">Now there are $K$ transmitter-receivers, who only communicate with each other, so they receive interference containing messages intended to other users. They can be equipped with multiple antennas and then apply linear transformations via precoding and receiving filter as shown for null-steering and zero-forcing techniques.</p>
+<p style="text-align: justify;">Now there are $K$ transmitter-receiver pairs, who only communicate with each other, so they receive interference containing messages intended to other users. They can be equipped with multiple antennas and then apply linear transformations via precoding and receiving filters as shown for null-steering and zero-forcing techniques.</p>
 
 <strong>Results</strong>
 
@@ -63,10 +60,10 @@ categories:
 
 <p style="text-align: justify;">The mathematical formulation for IA in this case is as simple as</p>
 
-\begin{equation}    \begin{matrix}          
-  \mathbf{H}\_{12} \mathbf{V}_2 = \mathbf{H}\_{13} \mathbf{V}_3 \\\          
-  \mathbf{H}\_{21} \mathbf{V}_1 = \mathbf{H}\_{23} \mathbf{V}_3 \\\          
-  \mathbf{H}\_{31} \mathbf{V}_1 = \mathbf{H}\_{32} \mathbf{V}_2       
+\begin{equation}    \begin{matrix}
+  \mathbf{H}\_{12} \mathbf{V}_2 = \mathbf{H}\_{13} \mathbf{V}_3 \\\
+  \mathbf{H}\_{21} \mathbf{V}_1 = \mathbf{H}\_{23} \mathbf{V}_3 \\\
+  \mathbf{H}\_{31} \mathbf{V}_1 = \mathbf{H}\_{32} \mathbf{V}_2   
   \end{matrix} \end{equation}
 
 but in general would be

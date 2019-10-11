@@ -1,9 +1,6 @@
 ---
 title: PDF of the sum of independent random variables
-layout: single
-author_profile: true
 date: 2017-12-17T01:02:19+00:00
-comments: true
 permalink: /posts/pdf-of-the-sum-of-independent-random-variables/
 categories:
   - Divulgation

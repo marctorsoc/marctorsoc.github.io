@@ -1,9 +1,6 @@
 ---
 title: "DC: Dungeon & Code"
-layout: single
-author_profile: true
 date: '2018-04-08 22:43:44 +0100'
-comments: true
 permalink: /posts/dc-dungeon-code/
 categories:
 - Divulgation

@@ -1,6 +1,5 @@
 ---
 date: 2017-02-05T12:57:13+00:00
-layout: archive
 permalink: /divulgation
 header:
   image: "/content/academia-940x198.png"

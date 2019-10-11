@@ -1,9 +1,6 @@
 ---
 title: Data Science in remote
-layout: single
-author_profile: true
 date: '2019-02-08 00:00:00 +0000'
-comments: true
 permalink: /posts/data-science-in-remote/
 categories:
 - Divulgation

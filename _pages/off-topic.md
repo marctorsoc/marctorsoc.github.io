@@ -1,6 +1,5 @@
 ---
 date: 2016-10-24T19:06:28+00:00
-layout: archive
 permalink: /off-topic
 header:
   image: "/content/offtopic.png"
@@ -48,5 +47,5 @@ The following is just a tentative list of items to be documented:
 {% for post in site.posts %}
   {% if post.categories contains 'Off-topic' %}
     {% include archive-single.html %}
-  {% endif %}  
+  {% endif %}
 {% endfor %}

@@ -1,9 +1,6 @@
 ---
 title:  Ukelele learning material
-layout: single
-author_profile: true
 date: 2018-07-01T16:04:03+00:00
-comments: true
 permalink: /posts/uke-chords/
 categories:
   - Off-topic

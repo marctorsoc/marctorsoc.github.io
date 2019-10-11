@@ -1,9 +1,6 @@
 ---
 title:  Football Radio Sync
-layout: single
-author_profile: true
 date: 2017-05-30T16:04:03+00:00
-comments: true
 permalink: /posts/football-radio-sync/
 categories:
   - Off-topic

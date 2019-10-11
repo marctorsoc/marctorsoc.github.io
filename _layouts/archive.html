@@ -14,6 +14,22 @@ layout: default
   {% endunless %}
 {% endif %}
 
+
+{% if page.author_profile %}
+<div id="main" role="main">
+  <div class="column" style="width: 25%">
+      {% include sidebar.html %}
+  </div>
+  <div class="column">
+    <div class="archive" style="width: 75%; padding-left: 0%">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <h1 id="page-title" class="page__title">{{ page.title }}</h1>
+      {% endunless %}
+      {{ content }}
+    </div>
+  </div>
+</div>
+{% else%}
 <div id="main" role="main">
   {% include sidebar.html %}
 
@@ -24,3 +40,4 @@ layout: default
     {{ content }}
   </div>
 </div>
+{% endif %}

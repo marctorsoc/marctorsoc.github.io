@@ -24,18 +24,20 @@
     opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
+    padding-left: 10%;
 
     &:hover {
       opacity: 1;
     }
 
-    &.sticky {
-      overflow-y: auto;
-      /* calculate height of nav list */
-      height: calc(
-        100vh - 90px - 2em
-      ); // viewport height - approx. masthead height - main content top margin
-    }
+    // &.sticky {
+    //   //overflow-y: auto;
+    //   /* calculate height of nav list */
+    //   // height: calc(
+    //   //   100vh - 90px - 2em
+    //   // ); // viewport height - approx. masthead height - main content top margin
+    //   margin-left: 2%;
+    // }
   }
 
   @include breakpoint($x-large) {
@@ -307,4 +309,3 @@
     margin-right: initial;
   }
 }
-

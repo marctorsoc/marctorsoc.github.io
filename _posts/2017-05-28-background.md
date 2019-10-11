@@ -2,7 +2,6 @@
 title:  Background
 date: 2017-05-30T16:04:03+00:00
 permalink: /posts/background/
-comments: true
 categories:
   - Academia
 ---

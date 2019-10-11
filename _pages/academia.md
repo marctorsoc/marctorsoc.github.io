@@ -1,6 +1,5 @@
 ---
 date: 2016-10-23T21:36:20+00:00
-layout: archive
 permalink: /academia
 header:
   image: "/content/TUCAN3G_UPCPlanningTeam.jpg"
@@ -18,5 +17,5 @@ All papers produced during my PhD, as well as my thesis, can be easily found, s
 {% for post in site.posts %}
   {% if post.categories contains 'Academia' %}
     {% include archive-single.html %}
-  {% endif %}  
+  {% endif %}
 {% endfor %}

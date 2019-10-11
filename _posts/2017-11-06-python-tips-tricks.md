@@ -1,9 +1,6 @@
 ---
 title: Python tips & tricks
-layout: single
-author_profile: true
 date: '2017-11-06 01:51:21 +0000'
-comments: true
 permalink: /posts/python-tips-tricks/
 categories:
 - Divulgation

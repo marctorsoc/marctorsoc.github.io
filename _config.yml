@@ -249,8 +249,17 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: true
       share: true
       related: true
+      classes: wide
+
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: archive
+      # classes: wide
+      # breadcrumbs: true --> not working

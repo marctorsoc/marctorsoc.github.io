@@ -1,9 +1,6 @@
 ---
 title: The survivor frog
-layout: single
-author_profile: true
 date: 2017-12-17T02:10:45+00:00
-comments: true
 permalink: /posts/the-survivor-frog/
 categories:
   - Divulgation
@@ -17,25 +14,26 @@ categories:
 </div> <p> </p>
 
 <p style="text-align: justify;">Ok, cheese is for mouses, not frogs, but was a really intuitive way of illustrating the scenario :-)</p>
-<p style="text-align: justify;">We assume that our green friend jumps a distance $d \in (0,1)$ with uniform probability, and it jumps an infinite number of times unless it's caught. Our mission here is to compute the <strong>probability of catching the frog</strong>.</p>
+<p style="text-align: justify;">We assume that our green friend jumps a distance $d \in (0,1)$ with uniform probability, and it jumps an infinite number of times unless it's trapped. Our mission here is to compute the <strong>probability of catching the frog</strong>.</p>
 
-<h3><strong>Caught probability for one jump</strong></h3>
+<h3><strong>Trapped probability for one jump</strong></h3>
 <p style="text-align: justify;">Using the fact that the jump size follows a distance uniform between 0 and 1, it is easy to see that:</p>
-\begin{align} \text{Prob}(\text{caught} | x = t) = 1 - p, \quad \forall t \le p. \end{align}
+\begin{align} \text{Prob}(\text{trapped} | x = t) = 1 - p, \quad \forall t \le p. \end{align}
 <p style="text-align: justify;">Consequently, if the frog is at position $x \leq p$,  it does not matter where the frog is, the probability is always $1-p$. Otherwise, the prob. is simply 0. This result will be quite useful next.</p>
 
 <h3><strong>Divide jumps and conquer</strong></h3>
-<p style="text-align: justify;">We can split the problem in many subproblems by considering the different jumps. Thus,  the probability of get caught starting from position $x=0$ can be written as follows:</p>
+<p style="text-align: justify;">We can split the problem in many subproblems by considering the different jumps. Thus,  the probability of get trapped starting from position $x=0$ can be written as follows:</p>
 \begin{align}
-\text{Prob}(\text{caught} | x = 0) &= \text{Prob}(\text{caught 1st jump} | x = 0)+  \\\ &  \text{Prob}(\text{caught 2nd jump} | x = 0) + \ldots \\\
-&= \sum_{i=0}^{\infty} \text{Prob} \left(\text{caught $n$th jump} | x = 0 \right)  \\\
-&= \sum_{i=0}^{\infty} \text{Prob} \left(\sum_{i=1}^{n-1} s_i \le p  \cap \sum_{i=1}^{n} s_i \in (p,1) \right) \\\
-&= (1-p) \sum_{i=0}^{\infty} \text{Prob}\left(\sum_{i=1}^{n-1} s_i \le p \right).
+\text{Prob}(\text{trapped} | x = 0) & = \text{Prob}(\text{trapped 1st jump} | x = 0) \, +  \\\
+&  \quad \, \text{Prob}(\text{trapped 2nd jump} | x = 0) + \ldots \\\
+& = \sum_{i=0}^{\infty} \text{Prob} \left(\text{trapped $n$th jump} | x = 0 \right)  \\\
+& = \sum_{i=0}^{\infty} \text{Prob} \left(\sum_{i=1}^{n-1} s_i \le p  \cap \sum_{i=1}^{n} s_i \in (p,1) \right) \\\
+& = (1-p) \sum_{i=0}^{\infty} \text{Prob}\left(\sum_{i=1}^{n-1} s_i \le p \right),
 \end{align}
-<p style="text-align: justify;">where $s_i$ is the $i$th jump size. In words, the probability of get caught is the sum of probs for the 1st, 2nd, 3rd jump, and so on, and there is no intersection because the frog cannot get caught in two different jumps. The next step states that getting caught in the $n$th jump means that the frog is still before the threshold point $x=p$, and it is caught in the trap exactly at the $n$th jump. Using the result in (1) we can finally simplify the expression.</p>
+<p style="text-align: justify;">where $s_i$ is the $i$th jump size. In words, the probability of get trapped is the sum of probs for the 1st, 2nd, 3rd jump, and so on, and there is no intersection because the frog cannot get trapped in two different jumps. The next step states that getting trapped in the $n$th jump means that the frog is still before the threshold point $x=p$, and it is trapped in the trap exactly at the $n$th jump. Using the result in (1) we can finally simplify the expression.</p>
 
 <h3><strong>Distribution of the sum of jumps</strong></h3>
-<p style="text-align: justify;">In (2) we have concluded that everything just depends on the prob. of being at position $x \le p$ after $n$ jumps. Hence, since all jumps have the same distribution, we face a problem involving the sum of <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">i.i.d.</a> random variables. Indeed, those variables are independent, i.e. one jump does not depend on the last one (unless the frog gets caught). If needed, you can check my <a href="/posts/pdf-of-the-sum-of-independent-random-variables/">post</a> about how to compute the pdf for the sum of random variables. The main result is that the pdf of $Z= X+Y$ can be expressed as a convolution:</p>
+<p style="text-align: justify;">In (2) we have concluded that everything just depends on the prob. of being at position $x \le p$ after $n$ jumps. Hence, since all jumps have the same distribution, we face a problem involving the sum of <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">i.i.d.</a> random variables. Indeed, those variables are independent, i.e. one jump does not depend on the last one (unless the frog gets trapped). If needed, you can check my <a href="/posts/pdf-of-the-sum-of-independent-random-variables/">post</a> about how to compute the pdf for the sum of random variables. The main result is that the pdf of $Z= X+Y$ can be expressed as a convolution:</p>
 \begin{align}
 f_{Z}(z) =f_{X}(z) * f_{Y}(z) = \int_{-\infty}^{\infty} \\!\\!\\!\\!\\! f_{X}(x) f_{Y}(z-x) \partial x.
 \end{align}
@@ -50,10 +48,10 @@ f_{Z}(z) =f_{X}(z) * f_{Y}(z) = \int_{-\infty}^{\infty} \\!\\!\\!\\!\\! f_{X}(x)
 \end{align}
 <p style="text-align: justify;">Similarly, for 3 jumps we get $\text{Prob}(s_1 + s_2 \le p) = \frac{p^3}{6}$, and so on. Consequently:</p>
 \begin{align}
-\text{Prob}(\text{caught}) &= (1-p) \left( 1 + p + \frac{p^2}{2} + \ldots \right) \\\
-&= (1-p) \sum_{i=0}^{\infty} \frac{p^n}{n} = (1-p) e^p.
+\text{Prob}(\text{trapped}) &= (1-p) \left( 1 + p + \frac{p^2}{2} + \ldots \right) \\\
+&= (1-p) \sum_{i=0}^{\infty} \frac{p^n}{n} = (1-p) e^p,
 \end{align}
-<p style="text-align: justify;">where I have applied the <a href="https://en.wikipedia.org/wiki/Taylor_series#Exponential_function">Taylor series</a> of the exponential. This result, apart from being so elegant, makes sense at extreme values. On the one hand, for $p=1$, i.e. there is no trap, there is 0 probability of get caught. On the other hand, if $p=0$, the frog will get caught with probability 1 in the first jump, since the trap occupies the whole range  of the frog potential jump.</p>
+<p style="text-align: justify;">where I have applied the <a href="https://en.wikipedia.org/wiki/Taylor_series#Exponential_function">Taylor series</a> of the exponential. This result, apart from being so elegant, makes sense at extreme values. On the one hand, for $p=1$, i.e. there is no trap, there is 0 probability of get trapped. On the other hand, if $p=0$, the frog will get trapped with probability 1 in the first jump, since the trap occupies the whole range  of the frog potential jump.</p>
 
 <h3><strong>Conclusion</strong></h3>
 <p style="text-align: justify;">Today I have presented a puzzle involving a frog trying to avoid a fixed trap. This problem has been the perfect excuse to review concepts in probability theory, such as the probability of the union and the distribution of the sum of random variables.</p>

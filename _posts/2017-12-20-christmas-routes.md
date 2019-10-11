@@ -1,9 +1,6 @@
 ---
 title: Christmas routes
-layout: single
-author_profile: true
 date: 2017-12-20T22:43:43+00:00
-comments: true
 permalink: /posts/christmas-routes/
 categories:
   - Divulgation
@@ -44,7 +41,7 @@ graph.head(3)
 ```
 
 
-<div>
+<div style="overflow: scroll;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;

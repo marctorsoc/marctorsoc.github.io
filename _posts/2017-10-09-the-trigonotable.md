@@ -1,9 +1,6 @@
 ---
 title: The trigonotable
-layout: single
-author_profile: true
 date: 2017-10-09T00:15:01+00:00
-comments: true
 permalink: /posts/the-trigonotable/
 categories:
   - Divulgation

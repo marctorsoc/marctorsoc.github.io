@@ -1,9 +1,10 @@
 ---
 date: 2016-11-04T17:55:16+00:00
-layout: archive
 permalink: /about-me
 header:
   image: "/content/llac.jpg"
+author_profile: true
+classes: nowide
 ---
 
 Some information to know more about me:

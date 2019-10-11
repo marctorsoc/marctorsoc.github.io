@@ -8,13 +8,18 @@
 
   @include breakpoint($large) {
     float: right;
-    width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-right: $right-sidebar-width-narrow;
+    width: 100%; //calc(100% - #{$right-sidebar-width-narrow});
+    // padding-right: $right-sidebar-width-narrow;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 
   @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
-    padding-right: $right-sidebar-width;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    // width: calc(100% - #{$right-sidebar-width});
+    // padding-right: $right-sidebar-width;
   }
 }
 
@@ -360,4 +365,21 @@
       padding-right: 0;
     }
   }
+}
+
+
+.nowide {
+.archive {
+  @include breakpoint($large) {
+    width: calc(100% - #{$right-sidebar-width-narrow});
+    padding-left: 5%;
+    padding-right: $right-sidebar-width-narrow;
+  }
+
+  @include breakpoint($x-large) {
+    width: calc(100% - #{$right-sidebar-width-narrow});
+    padding-left: 5%;
+    padding-right: $right-sidebar-width-narrow;
+  }
+}
 }
