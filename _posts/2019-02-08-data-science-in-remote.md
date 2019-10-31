@@ -9,11 +9,11 @@ categories:
 Long time since my last post! But decided to come
 back to explain some of typical tips and tricks when working (but not only) on
 remote. This is typical in a data scientist life as layman laptops, at some point,
-and especially if you work with big data, present limitations in memory and/or
+and especially if you work with big data, entail limitations in memory and/or
 speed.
 
 In most companies or in academia, when you need
-to run a huge process you are given a remote machine, either in AWS or in a company/uni
+to run a huge task you are given a remote machine, either in AWS or in a company/uni
 cluster. This means that you won't have physical access, and you can only connect
 there remotely.
 
@@ -69,40 +69,38 @@ The main application of having a server is not only to run experiments when you'
 **Notebooks**
 
 As explained in
-<a href="https://marctorrellas.github.io/posts/python-tips-tricks/">this post</a>, Jupyter notebooks are very powerful tools for Python easy prototyping, but also for intensive development. However, one typically runs the notebook in local, and connect via browser. How do we do this when we want the Python to run in our remote box?
+<a href="https://marctorrellas.github.io/posts/python-tips-tricks/">this post</a>, Jupyter notebooks are very powerful tools for Python easy prototyping, but also for intensive development. However, one typically runs the jupyter server in local, and connect via browser. How do we do this when we want the Python to run in our remote box?
 
-1. Install Jupyter in the remote box to be able to run the notebook server: `pip install jupyter` or `conda install jupyter`
+1. Install Jupyter lab in the remote box to be able to run the notebook server: `conda install jupyterlab`
 
-2. `jupiter notebook password`
+1. `jupyter lab --no-browser --port=8089.`
 
-3. `jupyter notebook --no-browser --port=8089.`
-
-3. Go to your local box and run: `ssh -N -L 8000:localhost:8089 marc@172.16.6.32`.
+1. Now in your local terminal run: `ssh -N -L 8000:localhost:8089 marc@172.16.6.32`.
 
 There will be no answer, just leave this open.
-This creates a tunnel from your port 8000 to the port 8089 in the server (these ports are examples and can be changes by any number), where the notebook server is listening. Note that if you
+This creates a tunnel from your port 8000 to the port 8089 in the server (these ports are examples and can be changed to any number), where the jupyter server is listening. Note that if you
 have multiple servers, they can all listen in the same port, but you have to tunnel them to different ports, so changing the 8000!
 
 Open a browser and go to localhost:8000. The password in step2 will be asked, and you should be able to work as in local.
 
 Optional: add the tunnel as in `ssh -fN -L 8000:localhost:8089 marc@172.16.6.32`
-to your `~/.bashrc`, and it will be active but in the background. So no need to have a terminal blocked (but do not close it!).
+to your `~/.bashrc`, and it will be active but in the background, and started every time you open a new terminal. So no need to have a terminal blocked (but do not close it!).
 To make it effective either restart terminal or `source ~/.bashrc`.
 
 
-**Notebook as a service**
+**Jupyter lab as a service**
 
-After previous section, you're able to run notebooks on the server, and accessing to them via browser. So, even though it says localhost:8000, you're in the server! (tunnels dark magic). However, it's really annoying going to the server and run the notebook every time. This can be automated by running the notebook as a service <a href="https://aichamp.wordpress.com/2017/06/13/setting-up-jupyter-notebook-server-as-service-in-ubuntu-16-04/">source</a>:
+After previous section, you're able to run notebooks on the server, and accessing to them via browser. So, even though it says localhost:8000, you're in the server! (tunnels dark magic). However, it's really annoying going to the server and start the sever every time. This can be automated by running it as a service <a href="https://aichamp.wordpress.com/2017/06/13/setting-up-jupyter-notebook-server-as-service-in-ubuntu-16-04/">source</a>:
 
 * Set the service file `/usr/lib/systemd/system/jupyter.service` (yes, you probably need to create some dirs) as in
 
   [Unit]<br>
-  Description=Jupyter Notebook<br>
+  Description=Jupyter Lab<br>
 
   [Service]<br>
   Type=simple<br>
   PIDFile=/run/jupyter.pid<br>
-  ExecStart=/home/marc/miniconda3/bin/jupyter-notebook --no-browser --port=8089<br>
+  ExecStart=/home/marc/miniconda3/bin/jupyter lab --no-browser --port=8089<br>
   User=marc<br>
   Group=marc<br>
   WorkingDirectory=/home/marc<br>
@@ -115,8 +113,8 @@ After previous section, you're able to run notebooks on the server, and accessin
 
 * `sudo systemctl enable jupyter.service`
 * `sudo systemctl daemon-reload`
-* `jupyter notebook --generate-config`
-* `jupyter notebook password`
+* `jupyter lab --generate-config`
+* `jupyter lab password`
 * `sudo systemctl restart jupyter.service`
 
 
@@ -130,30 +128,26 @@ When you change something in sources, usually you have to restart the kernel. Th
 `%load_ext autoreload` <br>
 `%autoreload 2`
 
+*Table of contents*
 
-*Use full width*
+Check out this useful [extension](https://github.com/jupyterlab/jupyterlab-toc).
+Especially interesting when you're writing a tutorial out of a notebook.
 
-Add this to your import cell
+*Kernels auto-discovery*
 
-`from IPython.core.display import display, HTML
-display(HTML("<style>.container { width:100% !important; }</style>"))`
+Check out [this](https://github.com/Anaconda-Platform/nb_conda_kernels), allowing
+you to have available every conda environment irrespective of which environment
+you launched the server from. With this enabled, the `python -m spacy ipykernel ...`
+in my previous post is no more required.
 
-(Note that with Jupyter lab this is not required)
+*Jupytext*
 
-
-*Folding cells*
-
-Create the dir `mkdir ~/.jupyter/custom` if not present
-
-Edit `~/.jupyter/custom/custom.js` as:
-
-<div style="text-align: center">
-  <img src="/content/folding_code.png" alt="" width="80%"/>
-</div> <p> </p>
-
-You'll need to restart the notebook service. Cells are fold when double-click.
-
-(Note that with Jupyter lab this is not required)
+Turn your notebooks into .py files automatically synchronised, see [this](https://github.com/mwouts/jupytext). Many advantages:
+* Good to keep track in version control
+* In this regard, when submitting a Pull Request this makes easier to comment on
+notebooks if necessary
+* One can potentially apply [black](https://github.com/psf/black) to auto-format the code in your notebok by
+applying *black* to your .py file and then synchronising with the notebook
 
 
 *Display various dataframes side by side*
