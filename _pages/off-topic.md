@@ -6,7 +6,7 @@ header:
 ---
 
 <p style="text-align: justify;">
-In my free time, I like to work on mini-projects, usually to automate tasks or to learn something. Plus, I have some hobbies like music or supporting the Barcelona football team. In this section, I will post stuff not that related to my job, enjoy!
+Apart from maths and data science, I have some other hobbies like music or supporting the Barcelona football team. In this section, I will post stuff not that related to my job, enjoy!
 </p>
 <!--&nbsp;
 
