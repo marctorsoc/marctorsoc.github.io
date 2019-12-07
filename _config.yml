@@ -23,11 +23,11 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title                    : The idea is to die young as late as possible
+title                    : It's not about moving fast. It's about moving right.
 title_separator          : "-"
 name                     : "Marc Torrellas"
 email                    : marc.torsoc@gmail.com
-description		           : The idea is to die young as late as possible
+description		           : It's not about moving fast. It's about moving right.
 baseurl			             : "" # the subpath of your site, e.g. /blog
 url			                 : "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username		       : marctorrellas
