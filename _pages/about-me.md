@@ -14,4 +14,9 @@ Some information to know more about me:
   * [Poster PhD Thesis](/content/2016/11/poster_tesi.pdf)
   * [Google Scholar](https://scholar.google.es/citations?user=__4XCdYAAAAJ)
   * [Github](https://github.com/marctorrellas)
-  * [Couchsurfing](https://www.couchsurfing.com/people/marc-torsoc)
+
+Open source projects I have collaborated in:
+
+  * [Hyperopt](https://github.com/hyperopt/hyperopt/) (maintainer)
+  * [globality-black](https://github.com/globality-corp/globality-black) (maintainer)
+  * [scikit-learn](https://github.com/scikit-learn/scikit-learn)
