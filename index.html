@@ -27,7 +27,7 @@ the different sections, and know a bit more about me. Have a beautiful day 😃
   <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "Recent posts" }}</h4>
   <div class="grid__wrapper">
     {% for post in site.posts limit:8 %}
-      {% include archive-single.html type="grid" %}
+      {% include archive-single.html type="list" %}
     {% endfor %}
   </div>
 </div>
