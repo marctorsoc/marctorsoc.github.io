@@ -9,7 +9,7 @@ author_profile: true
 <p style="text-align: justify;">
 Welcome to my website. Here I will share my experience, resources,
 and hobbies with whoever interested. The menu above allows you to navigate through
-the different sections, and know a bit more about me. Have a beautiful day 😃
+the different sections, and know a bit more about me. Have a beautiful day! 😃
 </p>
 
 
@@ -23,7 +23,7 @@ the different sections, and know a bit more about me. Have a beautiful day 😃
   </div>
 </div>
 
-<div class="page__related" style="width: 100%">
+<div class="page__related">
   <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "Recent posts" }}</h4>
   <div class="grid__wrapper">
     {% for post in site.posts limit:3 %}
@@ -33,10 +33,10 @@ the different sections, and know a bit more about me. Have a beautiful day 😃
 </div>
 
 
-<div class="page__related" style="width: 100%">
+<div class="page__related">
   <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "Pinned posts" }}</h4>
   <div class="grid__wrapper">
-    {% for post in site.posts limit:3 %}
+    {% for post in site.posts %}
       {% if post.pinned %}
         {% include archive-single.html type="grid" %}
       {% endif %}
