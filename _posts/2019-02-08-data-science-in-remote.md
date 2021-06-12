@@ -4,6 +4,7 @@ date: '2019-02-08 00:00:00 +0000'
 permalink: /posts/data-science-in-remote/
 categories:
 - Divulgation
+pinned: true
 ---
 
 Long time since my last post! But decided to come
