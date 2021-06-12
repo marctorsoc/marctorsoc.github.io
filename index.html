@@ -22,3 +22,12 @@ the different sections, and know a bit more about me. Have a beautiful day 😃
     <a data-ulike-id="80" data-ulike-nonce="4586b9f400" data-ulike-type="likeThis" data-ulike-status="3" class="wp_ulike_btn wp_ulike_put_image"> </a> <span class="count-box"></span>
   </div>
 </div>
+
+<div class="page__related">
+  <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "Recent posts" }}</h4>
+  <div class="grid__wrapper">
+    {% for post in site.posts limit:8 %}
+      {% include archive-single.html type="grid" %}
+    {% endfor %}
+  </div>
+</div>
