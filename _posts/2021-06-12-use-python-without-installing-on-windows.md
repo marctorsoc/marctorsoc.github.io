@@ -6,6 +6,8 @@ categories:
   - Divulgation
 ---
 
+<style>body {text-align: justify}</style>
+
 <p style="text-align: justify;">
 The last weeks I was in Barcelona renewing documents and meeting friends. And,
 of course, enjoying the sun but that's implicit :)
@@ -17,14 +19,12 @@ of course, enjoying the sun but that's implicit :)
 
 (this is not the friend I talk about in the story!)
 
-<p style="text-align: justify;">
 It's funny how over Skype you usually don't get past the live updates, but in a face to
 face conversation everything flows better. While I'm a fan of working remotely, I
 do appreciate that f2f has its advantages. In one of those, a friend told me how
 in his work as an Industrial Engineer he needs to do what I usually call a
 "monkey job", many times a month. His work is on, among many other things, configuring
 chemical reactors to produce drugs.
-</p>
 
  Disclaimer:
  * The code in this post is not optimal, and does not pretend to be.
@@ -49,8 +49,8 @@ His current approach is to open a file with Notepad++ and use find/replace some
  suggested to use this. The way I framed it was the following. Someone (him)
  would add a configuration file where each row would be a tuple with the keyword to
  find and the keyword to replace. Then, a Python script would take the input file
- and using the configuration file generate an output file. For someone seasoned in
- Python, the above cannot be more than 10min coding. Easy-peasy.
+  and generate an output file given the configuration. For someone seasoned in
+ Python, the above is no more than 10min coding. Easy-peasy.
 </p>
 
  Let's see an example of what I had in mind after my first answer:
@@ -86,7 +86,7 @@ main.py:
  ```
 
 <p style="text-align: justify;">
-Cool, so with 10 lines of code we can solve it. My friend, though, does not know
+Cool, so with a few lines of code it's solved. My friend, though, does not know
 Python at all, and his natural follow-up question was:
 </p>
 
@@ -98,7 +98,7 @@ I'm sure you can code in Windows without having to install Python.
 <p style="text-align: justify;">
 While for some folks the above questions might be excessive, there is an underlying
 motivation in all these, which I then discovered. He wants to use this in the
-client's machine, having **Windows**, where he **cannot install anything**.
+client's machine, having <b>Windows</b>, where he <b>cannot install anything</b>.
 </p>
 
 ## The solution
@@ -127,10 +127,10 @@ and placed it next to the `python3.dll` file. After this, it worked like a charm
 ## Lighweighting the package
 
 <p style="text-align: justify;">
-The above is enough for a minimum PoC, but produces a **134 MB package**.
+The above is enough for a minimum PoC, but produces a <b>134 MB package</b>.
 How come? This is just a few lines of code!
 Well, the reason is we are using `pandas`, a Python library that can do
-**many** other things, but absolutely not required for this trivial task. 
+many other things, but absolutely not required for this trivial task. 
 Let's do everything with standard library Python and remove the dependency:
 </p>
 
@@ -179,7 +179,7 @@ conda create -n find_replace_script python=3.7
 ```
 
 <p style="text-align: justify;">
-and produced the final package, obtaining a tiny **8MB file** after zip compression.
+and produced the final package, obtaining a tiny <b>8MB file</b> after zip compression.
 </p>
 
 ---
