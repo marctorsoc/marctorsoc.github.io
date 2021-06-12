@@ -13,10 +13,10 @@ Some information to know more about me:
   * [PhD Thesis](/content/2016/11/marcPhd.pdf)
   * [Poster PhD Thesis](/content/2016/11/poster_tesi.pdf)
   * [Google Scholar](https://scholar.google.es/citations?user=__4XCdYAAAAJ)
-  * [Github](https://github.com/marctorrellas)
+  * [Github](https://github.com/marctorsoc)
 
 Open source projects I have collaborated in:
 
-  * [Hyperopt](https://github.com/hyperopt/hyperopt/) (maintainer)
   * [globality-black](https://github.com/globality-corp/globality-black) (maintainer)
+  * [hyperopt](https://github.com/hyperopt/hyperopt/)
   * [scikit-learn](https://github.com/scikit-learn/scikit-learn)
