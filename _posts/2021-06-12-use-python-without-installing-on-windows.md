@@ -106,31 +106,29 @@ client's machine, having <b>Windows</b>, where he <b>cannot install anything</b>
 > creates standalone executables from Python scripts, with the same performance.
 It is cross-platform and should work on any platform that Python itself works on.
 
-<p style="text-align: justify;">
 The solution is then straightforward. Install `cx_freeze` and just run:
-</p>
 
 ```
 cxfreeze -c main.py
 ```
 
-<p style="text-align: justify;">
+
 and it should work. Does it? Well, the reality is that there is an annoying
 dependency Windows needs called `vcruntime140.dll`. I'm not sure what this does,
 but I just downloaded it (there are thousands of places where you can find it),
 and placed it next to the `python3.dll` file. After this, it worked like a charm!
-</p>
+
 
 
 ## Lighweighting the package
 
-<p style="text-align: justify;">
+
 The above is enough for a minimum PoC, but produces a <b>134 MB package</b>.
 How come? This is just a few lines of code!
 Well, the reason is we are using `pandas`, a Python library that can do
 many other things, but absolutely not required for this trivial task. 
 Let's do everything with standard library Python and remove the dependency:
-</p>
+
 
 
  ```python
