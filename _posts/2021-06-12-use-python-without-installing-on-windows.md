@@ -17,12 +17,13 @@ of course, to enjoy the sun but that's implicit :)
 
 (this is not the friend I talk about in the story!)
 
-It's funny how over Skype you usually don't get past the live updates, but in a face to
+It's funny how on videocalls you usually don't get past the life updates, but in 
+a face to
 face conversation everything flows better. While I'm a fan of working remotely, I
-do appreciate that f2f has its advantages. In one of those, a friend told me how
+do appreciate that f2f has its advantages. It was in one of those where a friend 
+was telling me how
 in his work as an Industrial Engineer he needs to do what I usually call a
-"monkey job", many times a month. His work is on, among many other things, configuring
-chemical reactors to produce drugs.
+"monkey job", many times a month. 
 
  Disclaimer:
  * The code in this post is not optimal, and does not pretend to be.
@@ -34,14 +35,14 @@ chemical reactors to produce drugs.
 
 ## The problem
 
-<p style="text-align: justify;">
-Apart from automation, he also would like to delegate it to more junior employees.
-His current approach is to open a file with Notepad++ and use find/replace some
- dozens of times, which is somewhat risky to delegate as missing some replacement
- means the pipeline could stop.
-</p>
+My friend works, among many other things, configuring the sensors and widgets that 
+interact with chemical reactors to produce drugs. Oftentimes, he needs to modify 
+the configuration by updating some values. His current approach is to open the file
+ with Notepad++ and use find/replace some
+ dozens of times. In addition to automation, he would like to delegate the task to 
+ to more junior employees but it is somewhat risky as any mistake might make
+ the whole production to stop.
 
-<p style="text-align: justify;">
  In this regard, he was asking me whether this could be automated, and how I would
  do it. As a Data Scientist working 99% of the last 6 years with Python, I obviously
  suggested to use this. The way I framed it was the following. Someone (him)
@@ -49,7 +50,6 @@ His current approach is to open a file with Notepad++ and use find/replace some
  find and the keyword to replace. Then, a Python script would take the input file
   and generate an output file given the configuration. For someone seasoned in
  Python, the above is no more than 10min coding. Easy-peasy.
-</p>
 
  Let's see an example of what I had in mind after my first answer:
 
@@ -88,16 +88,14 @@ Cool, so with a few lines of code it's solved. My friend, though, does not know
 Python at all, and his natural follow-up question was:
 </p>
 
-- Ok, but how Python works? Do I have to install something?
+- Ok, but how Python works? Do I have to install anything?
 - Well... yes. But it's minimal. Nothing to worry about.
 - I don't want to install anything. Can't we do this with a ".exe" or ".bat"?
 I'm sure you can code in Windows without having to install Python.
 
-<p style="text-align: justify;">
 While for some folks the above questions might be excessive, there is an underlying
 motivation in all these, which I then discovered. He wants to use this in the
-client's machine, having <b>Windows</b>, where he <b>cannot install anything</b>.
-</p>
+client's machine, having <b>Windows</b>, where he **cannot install anything**.
 
 ## The solution
 
@@ -127,8 +125,7 @@ The above is enough for a minimum PoC, but produces a <b>134 MB package</b>.
 How come? This is just a few lines of code!
 Well, the reason is we are using `pandas`, a Python library that can do
 many other things, but absolutely not required for this trivial task. 
-Let's do everything with standard library Python and remove the dependency:
-
+Let's do everything with the Python standard library and remove the dependency:
 
 
  ```python
@@ -185,4 +182,4 @@ And that's all for today, hope you enjoyed the story, or find this useful if you
 arrive here via Google Search :)
 </p>
 
-Don't hesitate to ask me if you have questions above the above. Have fun!
+Don't hesitate to ask me if you have questions about the above. Have fun!
