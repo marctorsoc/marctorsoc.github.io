@@ -9,8 +9,8 @@ categories:
 <style>body {text-align: justify}</style>
 
 <p style="text-align: justify;">
-The last weeks I was in Barcelona renewing documents and meeting friends. And,
-of course, enjoying the sun but that's implicit :)
+For some weeks, I went back to Barcelona to renew documents and meet friends. And,
+of course, to enjoy the sun but that's implicit :)
 </p>
 
 <div style="text-align: center">
