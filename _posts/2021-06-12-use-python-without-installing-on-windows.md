@@ -6,8 +6,6 @@ categories:
   - Divulgation
 ---
 
-<style>body {text-align: justify}</style>
-
 <p style="text-align: justify;">
 For some weeks, I went back to Barcelona to renew documents and meet friends. And,
 of course, to enjoy the sun but that's implicit :)
