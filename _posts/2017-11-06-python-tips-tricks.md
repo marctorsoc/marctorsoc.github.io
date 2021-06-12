@@ -4,6 +4,7 @@ date: '2017-11-06 01:51:21 +0000'
 permalink: /posts/python-tips-tricks/
 categories:
 - Divulgation
+pinned: true
 ---
 
 <p style="text-align: justify;">Today I'm going to explain some of the lessons and tools I've found that could be useful for someone developing data science (and also general purpose projects) in Python:</p>

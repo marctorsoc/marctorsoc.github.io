@@ -4,8 +4,8 @@ date: '2019-02-08 00:00:00 +0000'
 permalink: /posts/intro-to-text-classification/
 categories:
 - Divulgation
+pinned: true
 ---
-
 
 In this tutorial, we will explore a basic workflow to train and evaluate a model to classify text. Note that there are many important aspects not covered in what follows, such as exploratory data analysis (EDA) or hyper-parameter optimisation.
 
