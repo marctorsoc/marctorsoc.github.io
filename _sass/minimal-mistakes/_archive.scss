@@ -134,8 +134,7 @@
 
 .grid__item {
   margin-bottom: 2em;
-  width: 31%;
-/*
+
   @include breakpoint($small) {
     float: left;
     width: span(5 of 10);
@@ -178,7 +177,6 @@
       clear: none;
       margin-left: gutter(1 of 12);
     }
-    */
   }
 
   .page__meta {
