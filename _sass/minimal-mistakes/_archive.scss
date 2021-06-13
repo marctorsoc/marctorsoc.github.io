@@ -133,12 +133,12 @@
 }
 
 .grid__item {
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
 
   @include breakpoint($small) {
     float: left;
     width: span(5 of 10);
-
+    /*
     &:nth-child(2n + 1) {
       clear: both;
       margin-left: 0;
@@ -148,6 +148,7 @@
       clear: none;
       margin-left: gutter(of 10);
     }
+    */
   }
 
   @include breakpoint($medium) {
