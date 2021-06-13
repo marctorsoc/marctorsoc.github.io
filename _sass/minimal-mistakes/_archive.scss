@@ -134,6 +134,7 @@
 
 .grid__item {
   margin-bottom: 2em;
+  width: 31%;
 
   @include breakpoint($small) {
     float: left;

@@ -27,7 +27,7 @@ the different sections, and know a bit more about me. Have a beautiful day 😃
 
 <div class="page__related">
   <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "Pinned posts" }}</h4>
-  <div class="grid__wrapper">
+  <div class="grid__wrapper" style="width: inherit">
     {% for post in site.posts %}
       {% if post.pinned %}
         {% include archive-single.html type="grid" %}
@@ -39,7 +39,7 @@ the different sections, and know a bit more about me. Have a beautiful day 😃
 
 <div class="page__related">
   <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "Recent posts" }}</h4>
-  <div class="grid__wrapper">
+  <div class="grid__wrapper" style="width: inherit">
     {% for post in site.posts limit:6 %}
       {% include archive-single.html type="grid" %}
     {% endfor %}
