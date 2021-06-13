@@ -262,7 +262,7 @@
     font-size: 1.25rem;
 
     .archive__item-teaser {
-      margin-bottom: 2em;
+      margin-bottom: 0.8em;
     }
 
     @include breakpoint($small) {
@@ -289,7 +289,7 @@
     font-size: 1.25rem;
 
     .archive__item-teaser {
-      margin-bottom: 2em;
+      margin-bottom: 0.7em;
     }
 
     @include breakpoint($small) {
@@ -318,7 +318,7 @@
     font-size: 1.25rem;
 
     .archive__item-teaser {
-      margin-bottom: 2em;
+      margin-bottom: 0.6em;
     }
 
     @include breakpoint($small) {
