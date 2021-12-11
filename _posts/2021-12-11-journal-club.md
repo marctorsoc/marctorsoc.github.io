@@ -7,7 +7,7 @@ categories:
 ---
 
 <div style="text-align: center">
-  <img src="/content/cel_maco.jpg" alt="" width="60%" />
+  <img src="/content/cel_maco.jpg" alt="" width="100%" />
 </div> <p> </p>
 
 yes, the picture is just a random one I like :)
