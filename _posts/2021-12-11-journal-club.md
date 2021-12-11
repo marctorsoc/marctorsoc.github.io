@@ -7,7 +7,7 @@ categories:
 ---
 
 <div style="text-align: center">
-  <img src="/content/cel_maco.jpg" alt="" width="100%" />
+  <img src="/content/cel_maco.jpg" alt="" width="80%" />
 </div> <p> </p>
 
 yes, the picture is just a random one I like :)
@@ -31,19 +31,19 @@ In this page, I will be collecting the
 
 <ul>
 <li>
-[Precision Recall Gain curves](https://docs.google.com/presentation/d/1PXTLTWk-y8ABopHWOAXAm44TQ5rRJfdpk77NKFfgx9A/edit?usp=sharing)
+<a href="https://docs.google.com/presentation/d/1PXTLTWk-y8ABopHWOAXAm44TQ5rRJfdpk77NKFfgx9A/edit?usp=sharing">Precision Recall Gain curves</a>
 </li>
 <li>
-[Unified MRC for NER](https://docs.google.com/presentation/d/1F_QmQbiMWhYX_smrWedwCzc3f7GkEu3LxeR_u0cPSXc/edit?usp=sharing)
+<a href="https://docs.google.com/presentation/d/1F_QmQbiMWhYX_smrWedwCzc3f7GkEu3LxeR_u0cPSXc/edit?usp=sharing">Unified MRC for NER</a>
 </li>
 <li>
-[Dice loss for Imbalanced NLP](https://docs.google.com/presentation/d/1jUoCx8ayIoJ_s_AkIszQM5y8MgJOomHnXEeW2m15XJA/edit?usp=sharing)
+<a href="https://docs.google.com/presentation/d/1jUoCx8ayIoJ_s_AkIszQM5y8MgJOomHnXEeW2m15XJA/edit?usp=sharing">Dice loss for Imbalanced NLP</a>
 </li>
 <li>
-[wav2vec](https://docs.google.com/presentation/d/1O8a9JBofV4gY1jVQvIUzXuW0ECBlXs0XcDHWk03KKOo/edit?usp=sharing)
+<a href="https://docs.google.com/presentation/d/1O8a9JBofV4gY1jVQvIUzXuW0ECBlXs0XcDHWk03KKOo/edit?usp=sharing">wav2vec</a>
 </li>
 <li>
-[Long Range Arena & Fnet & RoBERT](https://docs.google.com/presentation/d/18vI8wSmncxSsf4PMmQFE-V84M9fApAPX4DGwl-_31w0/edit?usp=sharing)
+<a href="https://docs.google.com/presentation/d/18vI8wSmncxSsf4PMmQFE-V84M9fApAPX4DGwl-_31w0/edit?usp=sharing">Long Range Arena & Fnet & RoBERT</a>
 </li>
 </ul> 
 
