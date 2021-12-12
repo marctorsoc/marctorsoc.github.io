@@ -17,6 +17,10 @@ Some information to know more about me:
 
 Open source projects I have collaborated in:
 
-  * [globality-black](https://github.com/globality-corp/globality-black) (maintainer)
-  * [hyperopt](https://github.com/hyperopt/hyperopt/)
-  * [scikit-learn](https://github.com/scikit-learn/scikit-learn)
+  * [globality-black](https://github.com/globality-corp/globality-black): 
+  author and maintainer.
+  [Presentation](https://docs.google.com/presentation/d/1Lp0jLSI5YJYOXEntxSvaHeOALAlndlgu/edit?usp=sharing&ouid=102083878154902570127&rtpof=true&sd=true)
+  * [hyperopt](https://github.com/hyperopt/hyperopt/): former co-maintainer
+  * [scikit-learn](https://github.com/scikit-learn/scikit-learn): 
+  [12613](https://github.com/scikit-learn/scikit-learn/pull/12613),
+  [14900](https://github.com/scikit-learn/scikit-learn/pull/14900)

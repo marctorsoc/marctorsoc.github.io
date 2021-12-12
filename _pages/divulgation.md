@@ -5,7 +5,7 @@ header:
   image: "/content/divulgation.png"
 ---
 
-  In this section, I will post different resources that may be useful in your undergrad days, at work, or preparing a job interview. You will review something from the past, or maybe learn something new. I will include my findings in data science, coding, and maths.
+  In this section, I will post different resources that may be useful in your undergrad days, at work, or preparing a job interview. You will review something from the past, or maybe learn something new. I will include my findings in data science, coding, and maths.
 
   I also keep notes about different topics in the form of Google Slides presentations:
 

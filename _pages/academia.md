@@ -6,12 +6,19 @@ header:
 ---
 
 <p style="text-align: justify;">
-I developed a PhD in Wireless Communications during four years (2011-2015). Prior to that, while finishing my M.Sc (2006-2011), I became an intern (2009-2011) at the Signal Theory and Communications (TSC)
-<a href="https://spcom.upc.edu/">group</a> of the Universitat Politècnica de Catalunya (UPC), in Barcelona.
+I developed a PhD in Wireless Communications during four years 
+(2011-2015). Prior to that, while finishing my M.Sc 
+(2006-2011), I became an intern (2009-2011) at the 
+Signal Theory and Communications (TSC)
+<a href="https://spcom.upc.edu/">group</a> 
+of the Universitat Politècnica de Catalunya (UPC), 
+in Barcelona.
 </p>
-
+  
 <div style="text-align: justify;">
-All papers produced during and after my PhD, as well as my thesis, can be found in  <a href="https://scholar.google.es/citations?user=__4XCdYAAAAJ&hl=en">Google Scholar</a>, with most of them also available on <a href="https://arxiv.org/">arXiv</a>.
+All papers produced during and after my PhD, as well as my
+ thesis, can be found my Google Scholar page (see below), 
+ with most of them also available at <a href="https://arxiv.org/">arXiv</a>.
 </div>
 
 Journal papers:
@@ -19,6 +26,11 @@ Journal papers:
 - M. Torrellas, A. Agustin de Dios, J. Vidal and O. Muñoz Medina, *"The DoF of the 3user MIMO Interference Channel"*, IEEE Transactions on Communications, September 2014. <a href="https://arxiv.org/pdf/1407.8359">PDF</a>.
 - M. Torrellas, A. Agustin de Dios and J. Vidal, *"Achievable DoF-delay Trade-offs for the K-user MIMO Interference channel with delayed CSIT"*, IEEE Transactions on Information Theory, October 2016. <a href="https://arxiv.org/pdf/1504.05498">PDF</a>.
 - M. Torrellas, A. Agustin de Dios, J. Vidal, *"On the Degrees of Freedom of the MISO Interference Broadcast Channel with Delayed CSIT"*, submitted to Transactions on Information Theory, November 2019. <a href="https://arxiv.org/pdf/1403.7012">PDF</a>
+
+Other resources:
+* [PhD Thesis](/content/2016/11/marcPhd.pdf)
+* [Poster PhD Thesis](/content/2016/11/poster_tesi.pdf)
+* [Google Scholar](https://scholar.google.es/citations?user=__4XCdYAAAAJ)
 
 {% for post in site.posts %}
   {% if post.categories contains 'Academia' %}
