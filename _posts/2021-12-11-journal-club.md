@@ -15,7 +15,7 @@ yes, the picture is just a random one I like :)
 <p style="text-align: justify;">
 For a group 
 of data scientists remotely working together, not only but also within a private 
-company, it is very useful to have some space a) to meet and do something periodically, 
+company, it is very useful to have some space a) to meet periodically, 
  and b) just for fresh air. A Journal club is 
  one of those initiatives that helps in this regard. We started this in 
  Globality since I joined (thanks to my previous manager Pokey), and it's a good 
