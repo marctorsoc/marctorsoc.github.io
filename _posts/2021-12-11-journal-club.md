@@ -6,17 +6,21 @@ categories:
   - Divulgation
 ---
 
-<div style="text-align: center">
-  <img src="/content/cel_maco.jpg" alt="" width="80%" />
-</div> <p> </p>
 
-yes, the picture is just a random one I like :)
-
-<p style="text-align: justify;">
-For a group 
+<p style="text-align: justify;"> For a group 
 of data scientists remotely working together, not only but also within a private 
 company, it is very useful to have some space a) to meet periodically, 
- and b) just for fresh air. A Journal club is 
+ and b) just for fresh air. 
+ </p>
+
+<div style="text-align: center">
+  <img src="/content/cel_maco.jpg" alt="yes, the picture is just a random one I like :)" width="80%" />
+</div> <p></p>
+
+
+
+<p style="text-align: justify;">
+A Journal club is 
  one of those initiatives that helps in this regard. We started this in 
  Globality since I joined (thanks to my previous manager Pokey), and it's a good 
  opportunity for someone in the team to explore some parallel topic, and a bit of a 
@@ -24,6 +28,8 @@ company, it is very useful to have some space a) to meet periodically,
  new ideas in the research community, and discuss how to apply them to our 
  team objectives. 
 </p>
+
+<p> </p>
 
 In this page, I will be collecting the 
 [talks](https://drive.google.com/drive/folders/1FKblUDZb4K0yjM749X8z3YUGT6wWh5mv?usp=sharing)
