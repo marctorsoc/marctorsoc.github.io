@@ -17,9 +17,6 @@ company, it is very useful to have some space a) to meet periodically,
   <img src="/content/cel_maco.jpg" alt="yes, the picture is just a random one I like :)" width="80%" />
 </div> <p></p>
 
-
-
-<p style="text-align: justify;">
 A Journal club is 
  one of those initiatives that helps in this regard. We started this in 
  Globality since I joined (thanks to my previous manager Pokey), and it's a good 
@@ -27,7 +24,7 @@ A Journal club is
  playground. At the same time, it allows the group to learn together, explore 
  new ideas in the research community, and discuss how to apply them to our 
  team objectives. 
-</p>
+ {: style="text-align: justify;"}
 
 <p> </p>
 
