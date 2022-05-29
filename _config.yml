@@ -14,7 +14,7 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 
 # Site settings
@@ -24,7 +24,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 # in the templates via {{ site.myvariable }}.
 title                    : It's not about moving fast. It's about moving right.
 title_separator          : "-"
-name                     : "Marc Torrellas"
+name                     : "Marc Torrellas Socastro"
 email                    : marc.torsoc@gmail.com
 description		           : It's not about moving fast. It's about moving right.
 baseurl			             : "" # the subpath of your site, e.g. /blog
