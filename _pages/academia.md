@@ -28,8 +28,8 @@ Journal papers:
 - M. Torrellas, A. Agustin de Dios, J. Vidal, *"On the Degrees of Freedom of the MISO Interference Broadcast Channel with Delayed CSIT"*, submitted to Transactions on Information Theory, November 2019. <a href="https://arxiv.org/pdf/1403.7012">PDF</a>
 
 Other resources:
-* [PhD Thesis](/content/2016/11/marcPhd.pdf)
-* [Poster PhD Thesis](/content/2016/11/poster_tesi.pdf)
+* [PhD Thesis](/content/marcPhd.pdf)
+* [Poster PhD Thesis](/content/poster_tesi.pdf)
 * [Google Scholar](https://scholar.google.es/citations?user=__4XCdYAAAAJ)
 
 {% for post in site.posts %}

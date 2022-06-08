@@ -13,8 +13,9 @@ header:
   * <a href="https://docs.google.com/presentation/d/14B0zzok1l1Zl-lUTigtAKubvBdVwBQfxhh1XWADHCRo/edit?usp=sharing">NLP</a>
   * <a href="https://docs.google.com/presentation/d/1EhUGzJlXeU0T1RZiDByrt9szTwanSFvTtFziHTyVFCk/edit?usp=sharing">Algorithms and coding</a>
   * <a href="https://docs.google.com/presentation/d/1ugNBNu3AcacuTo5aGWleNnYK5JqrubO_AUpDDRh-yWM/edit?usp=sharing">Maths</a>
+  * <a href="https://docs.google.com/document/d/1_2iLYl4Jt9O4WU-AqZ4jYWluYUWTDx74kZfajKt6-_M/edit">SQL</a>
 
-These do not pretend to be exhaustive and are (and will always be) in construction.  I update them many times a month, as I find out new concepts, properties, or even better ways to explain things.
+These do not pretend to be exhaustive and are (and will always be) in construction. I update them many times a month, as I find out new concepts, properties, or even better ways to explain concepts.
 
 <div id="wp-ulike-post-181" class="wpulike wpulike-default " >
   <div class="wp_ulike_general_class wp_ulike_is_unliked">

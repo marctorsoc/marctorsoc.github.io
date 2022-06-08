@@ -5,44 +5,14 @@ header:
   image: "/content/offtopic.png"
 ---
 
-<p style="text-align: justify;">
-Apart from maths and data science, I have some other hobbies like music or supporting the Barcelona football team. In this section, I will post stuff not that related to my job, enjoy!
-</p>
-<!--&nbsp;
+Apart from maths and data science, *a man has many faces*. 
+In this section, I will post stuff not that related to my job, enjoy!
 
-The following is just a tentative list of items to be documented:
+Some resources about Lithuanian language:
+* [My notes about Lithuanian language](https://docs.google.com/document/d/10_oMegG_znrgvay_M33PTWF6XIIypNG_Tji44IWA2eo/edit#heading=h.1nihs4t9nrtp)
+* [My flash cards about Lithuanian language](https://www.brainscape.com/p/3P84P-LH-AAWC6)
+* [Cooljugator](https://cooljugator.com/lt). This really applies to any language.
 
-
-<ul>
-
-
-<li>Football Radio sync</li>
-
-
-
-
-<li>Coding guides</li>
-
-
-
-
-<li>CV ONG/NGO</li>
-
-
-
-
-<li>Subtitles Format fix</li>
-
-
-
-
-<li>Android game</li>
-
-
-</ul>
-
-
--->
 
 {% for post in site.posts %}
   {% if post.categories contains 'Off-topic' %}
