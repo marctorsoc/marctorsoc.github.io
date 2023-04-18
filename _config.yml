@@ -30,9 +30,9 @@ email                    : marc.torsoc@gmail.com
 description		           : It's not about moving fast. It's about moving right.
 baseurl			             : "" # the subpath of your site, e.g. /blog
 url			                 : "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username		       : marctorrellas
+github_username		       : marctorsoc
 github                   : [metadata]
-repository               : marctorrellas/marctorrellas.github.io
+repository               : marctorsoc/marctorsoc.github.io
 words_per_minute         : 200
 search                   : true
 
