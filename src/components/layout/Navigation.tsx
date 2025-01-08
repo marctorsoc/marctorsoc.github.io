@@ -6,7 +6,7 @@ export default function Navigation() {
   const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext);
 
   return (
-    <nav className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 py-4">
+    <nav className="bg-white dark:bg-black text-gray-900 dark:text-gray-100 py-4">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row md:items-center">
           <Link 

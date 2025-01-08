@@ -42,30 +42,30 @@ interface PostCardProps {
 
 export function PostCard({ post, isPinned, showFullContent = false }: PostCardProps) {
   return (
-    <article className="prose dark:prose-invert max-w-none bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+    <article className="prose dark:prose-invert max-w-none bg-white dark:bg-black p-4 rounded-xl shadow-lg ring-1 ring-gray-900/5">
       <h2 className="text-xl font-bold mb-2 mt-0">
         <Link 
           to={post.permalink} 
-          className="post-title-link no-underline text-gray-900 dark:text-gray-100"
+          className="post-title-link no-underline text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
         >
           {post.title}
         </Link>
       </h2>
       <div className="flex flex-wrap items-center gap-2 text-base mb-3">
-        <time className="text-gray-600 dark:text-gray-400 flex items-center">
+        <time className="text-gray-700 dark:text-gray-300 flex items-center">
           {new Date(post.date).toLocaleDateString('en-CA').replace(/-/g, '/')}
         </time>
         {post.categories.map(category => (
           <Link 
             key={category}
             to={`/${category.toLowerCase()}`}
-            className={`category-tag no-underline px-2 py-0.5 rounded-full ${categoryColors[category] || 'bg-gray-200 dark:bg-gray-700'}`}
+            className={`category-tag no-underline px-2 py-0.5 rounded-full hover:opacity-90 transition-opacity ${categoryColors[category] || 'bg-gray-200 dark:bg-gray-700'}`}
           >
             {category}
           </Link>
         ))}
       </div>
-      <div className={showFullContent ? '' : 'line-clamp-3'}>
+      <div className={`${showFullContent ? '' : 'line-clamp-3'} text-gray-800 dark:text-gray-200`}>
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeRaw]}
@@ -77,7 +77,7 @@ export function PostCard({ post, isPinned, showFullContent = false }: PostCardPr
       {!showFullContent && (
         <Link 
           to={post.permalink}
-          className="mt-2 inline-block read-more-link"
+          className="mt-2 inline-block text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
         >
           Read more →
         </Link>
