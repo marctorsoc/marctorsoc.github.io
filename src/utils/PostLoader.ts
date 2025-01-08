@@ -3,8 +3,11 @@ import { Post } from '../types/Post';
 
 async function importAll(): Promise<Post[]> {
   try {
-    // Use Vite's import.meta.glob to get all markdown files
-    const markdownFiles = import.meta.glob('/public/content/posts/*.md', { as: 'raw' });
+    // Update the path to src directory and use the new query syntax
+    const markdownFiles = import.meta.glob('/src/content/posts/*.md', { 
+      query: '?raw',
+      import: 'default'
+    });
     
     const posts = await Promise.all(
       Object.entries(markdownFiles).map(async ([filepath, loader]) => {
@@ -23,7 +26,7 @@ async function importAll(): Promise<Post[]> {
             content: body,
             date: new Date(attributes.date).toISOString(),
             permalink: attributes.permalink || filepath
-              .replace('/public/content/posts/', '')
+              .replace('/src/content/posts/', '')
               .replace('.md', '')
           };
         } catch (error) {

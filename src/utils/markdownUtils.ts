@@ -8,7 +8,7 @@ export async function getAllPosts(): Promise<Post[]> {
 
 export async function getPost(slug: string): Promise<Post> {
   try {
-    const response = await fetch(`/content/posts/${slug}.md`);
+    const response = await fetch(`/src/content/posts/${slug}.md?raw`);
     if (!response.ok) {
       throw new Error(`Failed to fetch post: ${response.statusText}`);
     }
