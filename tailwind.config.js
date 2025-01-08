@@ -7,7 +7,7 @@ export default {
             colors: {
                 gray: {
                     100: "#f3f4f6", // Light mode background
-                    800: "#1f2937", // Dark mode background
+                    800: "#212325", // Dark mode background
                     900: "#111827", // Dark mode card/nav background
                 },
             },
