@@ -1,47 +1,12 @@
----
-date: 2016-11-04T12:06:38+00:00
-layout: archive
-header:
-  image: "/content/nepal3.png"
-author_profile: true
----
-
-<p style="text-align: justify;">
-Welcome to my website. Here I will share my experience, resources,
-and hobbies with whoever interested. The menu above allows you to navigate through
-the different sections, and know a bit more about me.<br>Have a beautiful day 😃
-</p>
-
-
-<p style="text-align: center;">
-  Marc Torrellas Socastro<br /> marc.torsoc@gmail.com
-</p>
-
-<div id="wp-ulike-post-80" class="wpulike wpulike-default " >
-  <div class="wp_ulike_general_class wp_ulike_is_unliked">
-    <a data-ulike-id="80" data-ulike-nonce="4586b9f400" data-ulike-type="likeThis" data-ulike-status="3" class="wp_ulike_btn wp_ulike_put_image"> </a> <span class="count-box"></span>
-  </div>
-</div>
-
-
-
-<div class="page__related">
-  <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "Pinned posts" }}</h4>
-  <div class="grid__wrapper" style="width: inherit">
-    {% for post in site.posts %}
-      {% if post.pinned %}
-        {% include archive-single.html type="grid" %}
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
-
-
-<div class="page__related">
-  <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "Recent posts" }}</h4>
-  <div class="grid__wrapper" style="width: inherit">
-    {% for post in site.posts limit:6 %}
-      {% include archive-single.html type="grid" %}
-    {% endfor %}
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marc's Homepage</title>
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
