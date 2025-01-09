@@ -9,24 +9,26 @@ isPinned: true
 
 <!-- <i> If latex formulas are not shown in your browser, please make sure you allow loading insecure scripts from this page. Right hand side of the address bar in chrome you will see a placeholder where this can be enabled.</i> -->
 
-<p style="text-align: justify;">In the <a href="/posts/background/">last blog post</a>, I explained the concept of Zero Forcing, either at the transmitter (also known as null steering) or the receiver. Mathematically, it is based on computing the null space of some matrix, whose existence (for completely random entries as in this case) depends on the dimensions of that matrix. In turn, the matrix dimensions depend on the number of antennas at the transmitter and the receiver. Therefore, Zero Forcing will only be feasible for antenna settings where the corresponding null space exists. Otherwise, other approaches may be used:</p>
+<p style="text-align: justify;">Interference Alignment, a novel idea that emerged around 2008, kept me busy for more than five years 😄. Here, I’ll review its main concepts.
+
+In the <a href="/posts/background/">last blog post</a>, I explained the concept of *Zero Forcing*, either at the transmitter (also known as null steering) or the receiver. Mathematically, it is based on computing the null space of some matrix, whose existence (for completely random entries as in this case) depends on the dimensions of that matrix. In turn, the matrix dimensions depend on the number of antennas at the transmitter and the receiver. Therefore, Zero Forcing will only be feasible for antenna settings where the corresponding null space exists. Otherwise, other approaches may be used:</p>
 <ul>
  	<li>Use less antennas at the transmitter or the receiver. Obviously, this is usually non-optimal.</li>
  	<li>Time-sharing: use a <a href="https://en.wikipedia.org/wiki/Round-robin">round-robin</a> scheme to alleviate the number of users to be removed per round</li>
 </ul>
 <p style="text-align: justify;">For the Broadcast and Multiple Access channels introduced in the last post, the tools we have reviewed so far are enough to obtain the optimal degrees of freedom. However, there exist other scenarios where this is not always true, and it is when <strong>Interference Alignment (IA) </strong>gives us the opportunity to attain (or at least approach to) the channel DoF.</p>
 
-<strong>Interference Channel</strong>
+## Interference Channel
 
 <p style="text-align: justify;">Let's then review this scenario, since it is the first one where IA was shown to provide a boost in the DoF.</p>
 <p style="text-align: center;"><img src="/content/IC.png" alt="" width="350" height="186" /></p>
 <p style="text-align: justify;">Now there are $K$ transmitter-receiver pairs, who only communicate with each other, so they receive interference containing messages intended to other users. They can be equipped with multiple antennas and then apply linear transformations via precoding and receiving filters as shown for null-steering and zero-forcing techniques.</p>
 
-<strong>Results</strong>
+## Results
 
 <p style="text-align: justify;">Surprisingly, the IA approach shows that considering an arbitrary number of pairs of users $K$ with the same number of antennas $M$ at transmitters and receivers, the DoF sum is $KM/2$. This means that independently of the number of users, we can achieve the same performance per user!</p>
 
-<strong>Ok, nice...but how?</strong>
+## Ok, nice...but how?
 
 <p style="text-align: justify;">I'm going to explain the simplest scenario where IA can be applied, in which there are 3 users, each node is equipped with 2 antennas, and every user will be able to transmit one message.</p>
 
@@ -80,7 +82,7 @@ but in general would be
 
 <p style="text-align: justify;">where $\mathsf{span}$ refers to the subspace generated, so we actually only need that the subspace generated is the same, but it's easier  to equate the operands to find a closed-form solution. Since the objective of these posts is to see the main ideas and concepts behind my research in academia, I'm not going to enter into mathematical details, and I refer you to my <a href="/content/marcPhd.pdf">thesis</a> and the original <a href="https://arxiv.org/abs/0707.0323">paper</a> by Cadambe and Jafar.</p>
 
-<strong>Conclusion</strong>
+## Conclusion
 
 <p style="text-align: justify;">In this post I have introduced the idea of Interference Alignment, as a way of looking at the wireless transmissions from a different perspective. The main idea is that we need to reduce the number of variables to resolve the equations we have, and consequently obtain the desired variables. In our case the equations are observations at each receiving antenna, and the variables are the messages transmitted to the different users. To reduce variables, we transmit the signals in such a way the interference is mixed (aligned) at the receivers, thus releasing enough spatial dimensions for desired signals to be resolved without interference.</p>
 

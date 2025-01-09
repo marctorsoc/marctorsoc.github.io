@@ -21,13 +21,17 @@ async function importAll(): Promise<Post[]> {
             isPinned?: boolean;
           }>(content);
 
+          // Extract filename from filepath
+          const filename = filepath.split('/').pop() || '';
+
           return {
             ...attributes,
             content: body,
             date: new Date(attributes.date).toISOString(),
             permalink: attributes.permalink || filepath
               .replace('/src/content/posts/', '')
-              .replace('.md', '')
+              .replace('.md', ''),
+            filename
           };
         } catch (error) {
           console.error(`Error processing post ${filepath}:`, error);

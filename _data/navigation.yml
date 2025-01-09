@@ -1,9 +1,0 @@
-main:
-  - title: "Academia"
-    url: /academia
-  - title: "Divulgation"
-    url: /divulgation
-  - title: "Off-topic"
-    url: /off-topic
-  - title: "About me"
-    url: /about-me

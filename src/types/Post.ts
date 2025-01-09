@@ -5,4 +5,5 @@ export interface Post {
   categories: string[];
   content: string;
   isPinned?: boolean;
+  filename?: string;
 } 

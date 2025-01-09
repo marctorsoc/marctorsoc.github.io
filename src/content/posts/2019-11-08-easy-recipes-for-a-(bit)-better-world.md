@@ -13,8 +13,8 @@ categories:
 </p>
 
 * Burning coal, oil, and gas
-* Deforestation --> see Ecosia recommendation next
-* Increasing livestock farming --> this is one of the reasons why I follow a vegan lifestyle
+* **Deforestation**: see Ecosia recommendation next
+* **Increasing livestock farming** is one of the reasons I follow a **vegan lifestyle**. This is not just about avoiding meat but also about refraining from using **any animal-derived products**, such as leather or wool-based clothing.
 
 <p style="text-align: justify;">
 Changing the way we treat the planet is not on individuals' hands. It's something that governments should work together. Unfortunately, political programs barely talk about this.
