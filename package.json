@@ -2,7 +2,7 @@
   "type": "module",
   "name": "my-website",
   "version": "0.1.0",
-  "homepage": "https://marctorsoc.github.io/",
+  "homepage": "https://marctorsoc.github.io",
   "private": true,
   "dependencies": {
     "front-matter": "^4.0.2",
