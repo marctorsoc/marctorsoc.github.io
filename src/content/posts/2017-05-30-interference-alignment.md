@@ -7,7 +7,7 @@ categories:
 isPinned: true
 ---
 
-Interference Alignment, a novel idea that emerged around 2008, kept me busy for more than five years 😄. Here, I’ll review its main concepts.
+Interference Alignment, a novel idea that emerged around 2008, kept me busy for more than five years 😄. Here, I’ll review the main concept, and it's a good starting point to understand a bit more about my PhD thesis.
 
 In the <a href="/posts/background/">last blog post</a>, I explained the concept of *Zero Forcing*, either at the transmitter (also known as null steering) or the receiver. Mathematically, it is based on computing the null space of some matrix, whose existence (for completely random entries as in this case) depends on the dimensions of that matrix. In turn, the matrix dimensions depend on the number of antennas at the transmitter and the receiver. Therefore, Zero Forcing will only be feasible for antenna settings where the corresponding null space exists. Otherwise, other approaches may be used:
 <ul>
