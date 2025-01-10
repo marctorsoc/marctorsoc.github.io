@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
 import { Post } from '../types/Post';
 import { PostCard } from '../components/PostCard';
 import { getAllPosts } from '../utils/markdownUtils';
 import HeroImage from '../components/HeroImage';
+import 'katex/dist/katex.min.css';
 
 const markdown = `
 Beyond data science, *a man has many faces*. 
@@ -48,8 +51,8 @@ export default function OffTopic() {
       <div className="max-w-4xl mx-auto pt-8">
         <div className="prose dark:prose-invert max-w-none mb-12">
           <ReactMarkdown 
-            remarkPlugins={[remarkGfm]} 
-            rehypePlugins={[rehypeRaw]}
+            remarkPlugins={[remarkGfm, remarkMath]} 
+            rehypePlugins={[rehypeRaw, rehypeKatex]}
           >
             {markdown}
           </ReactMarkdown>

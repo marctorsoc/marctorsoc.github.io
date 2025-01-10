@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { DarkModeContext } from '../../utils/darkMode';
@@ -17,7 +18,7 @@ export default function Navigation() {
           </Link>
           
           <div className="md:mx-auto">
-            <ul className="flex flex-wrap gap-8 items-center text-lg">
+            <ul className="flex flex-wrap gap-12 items-center text-xl">
               <li>
                 <Link 
                   to="/academia" 

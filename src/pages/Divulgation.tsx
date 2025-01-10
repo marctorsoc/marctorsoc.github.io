@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 import rehypeRaw from 'rehype-raw';
 import { Post } from '../types/Post';
 import { PostCard } from '../components/PostCard';
 import { getAllPosts } from '../utils/markdownUtils';
 import HeroImage from '../components/HeroImage';
+import 'katex/dist/katex.min.css';
 
 const markdown = `
 In this section, I will post different resources that may be useful in your undergrad days, at work, or preparing a job interview. You will review something from the past, or maybe learn something new. I will include my findings in data science, coding, and maths.
@@ -52,8 +55,8 @@ export default function Divulgation() {
       <div className="max-w-4xl mx-auto pt-8">
         <div className="prose dark:prose-invert max-w-none mb-12">
           <ReactMarkdown 
-            remarkPlugins={[remarkGfm]} 
-            rehypePlugins={[rehypeRaw]}
+            remarkPlugins={[remarkGfm, remarkMath]} 
+            rehypePlugins={[rehypeRaw, rehypeKatex]}
           >
             {markdown}
           </ReactMarkdown>
