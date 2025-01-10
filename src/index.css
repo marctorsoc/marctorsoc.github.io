@@ -72,3 +72,11 @@
   max-width: 90%;
   border-radius: 8px;
 }
+
+.katex-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto;
+}

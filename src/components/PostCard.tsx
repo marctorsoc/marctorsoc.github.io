@@ -18,63 +18,69 @@ const categoryColors: { [key: string]: string } = {
 };
 
 function Math({ children, inline = false }: { children: string, inline?: boolean }) {
-  const html = katex.renderToString(children, {
-    displayMode: !inline,
-    throwOnError: false,
-    trust: true,
-    strict: false,
-    fleqn: false,
-    output: 'html',
-    maxSize: 10,
-    maxExpand: 1000,
-    globalGroup: true,
-    macros: {
-      "\\RR": "\\mathbb{R}",
-      "\\NN": "\\mathbb{N}",
-      "\\ZZ": "\\mathbb{Z}"
-    }
-  });
-  
-  if (inline) {
-    return <span dangerouslySetInnerHTML={{ __html: html }} />;
+  let html = '';
+  try {
+    html = katex.renderToString(children, {
+      displayMode: !inline,
+      throwOnError: false,
+      trust: true,
+      strict: false,
+      fleqn: false,
+      output: 'html',
+      maxSize: 10,
+      maxExpand: 1000,
+      globalGroup: true,
+      macros: {
+        "\\RR": "\\mathbb{R}",
+        "\\NN": "\\mathbb{N}",
+        "\\ZZ": "\\mathbb{Z}"
+      }
+    });
+  } catch (error) {
+    console.error('KaTeX render error:', error, 'Input LaTeX:', children);
+    html = `<span class="katex-error" style="color: #cc0000;">${children}</span>`;
   }
-  
-  return (
-    <div className="my-6">
-      <div 
-        dangerouslySetInnerHTML={{ __html: html }}
-        className="katex-display"
-        style={{
-          margin: '0 auto',
-          textAlign: 'center',
-          overflowX: 'auto',
-          maxWidth: '100%'
-        }}
-      />
-    </div>
+
+  return inline ? (
+    <span
+      dangerouslySetInnerHTML={{ __html: html }}
+      style={{
+        display: 'inline-block',
+        verticalAlign: 'middle',
+      }}
+    />
+  ) : (
+    <span
+      dangerouslySetInnerHTML={{ __html: html }}
+      className="katex-display"
+      style={{
+        margin: '0 auto',
+        textAlign: 'center',
+        overflowX: 'auto',
+        maxWidth: '100%',
+      }}
+    />
   );
 }
+
+
 
 function preprocessContent(content: string): string {
   // First, normalize line breaks in align environments
   let processed = content.replace(/\\\\(\s*\n\s*&)/g, '\\\\ &');
-  
+
   // Replace multiple backslashes with a single one (except in URLs, \!, and \,)
   processed = processed.replace(/\\{2,}(?![!,])(?![^\s]*\.md)/g, '\\');
-  
-  // Handle align environments
+
+  // Handle align environments correctly
   processed = processed.replace(
     /(\\begin{align})([\s\S]*?)(\\end{align})/g,
     (_, start, body, end) => {
-      // Clean up the body
       const cleanBody = body
         .trim()
-        // Remove extra backslashes before newlines
         .replace(/\\\s*\n/g, '\n')
-        // Replace multiple \! or \, with a single one
         .replace(/(?:\\!){2,}/g, '\\!')
         .replace(/(?:\\,){2,}/g, '\\,')
-        // Add proper line breaks
         .split('\n')
         .filter(line => line.trim())
         .join(' \\\\ ');
@@ -83,20 +89,16 @@ function preprocessContent(content: string): string {
     }
   );
 
-  // Handle equation environments
+  // Handle equation environments correctly
   processed = processed.replace(
     /(\\begin{equation})([\s\S]*?)(\\end{equation})/g,
     (_, start, body, end) => {
-      // Clean up the body
       const cleanBody = body
         .trim()
-        // Remove extra backslashes before newlines
         .replace(/\\\s*\n/g, '\n')
-        // Replace multiple \! or \, with a single one
         .replace(/(?:\\!){2,}/g, '\\!')
         .replace(/(?:\\,){2,}/g, '\\,');
-      
-      return `$$${cleanBody}$$`;
+      return `${start}${cleanBody}${end}`; // Keep \begin{equation}...\end{equation}
     }
   );
 
@@ -104,15 +106,27 @@ function preprocessContent(content: string): string {
 }
 
 function processMathInText(text: string) {
-  const parts = text.split(/(\$[^\$]+\$)/g);
+  const parts = text.split(/(\$\$[^\$]+\$\$|\\begin{[\s\S]*?\\end{[\s\S]*?}|\$[^\$]+\$)/g);
+
   return parts.map((part, i) => {
+    if (part.startsWith('$$') || (part.startsWith('\\begin') && part.endsWith('\\end'))) {
+      // Block math
+      const mathContent = part.startsWith('$$')
+        ? part.slice(2, -2)
+        : part;
+      return <Math key={i} inline={false}>{mathContent}</Math>;
+    }
     if (part.startsWith('$') && part.endsWith('$')) {
+      // Inline math
       const mathContent = part.slice(1, -1);
       return <Math key={i} inline={true}>{mathContent}</Math>;
     }
+    // Plain text
     return part;
   });
 }
+
+
 
 const MarkdownComponents: Components = {
   code({ node, inline, className, children, ...props }: any) {
@@ -148,17 +162,22 @@ const MarkdownComponents: Components = {
   },
   p(props) {
     const { children, ...rest } = props;
+  
     return (
       <p {...rest}>
         {React.Children.map(children, child => {
           if (typeof child === 'string') {
-            return processMathInText(child);
+            // Process text for inline and block math
+            const parts = processMathInText(child);
+  
+            // Return all parts together (text and inline math)
+            return parts;
           }
           return child;
         })}
       </p>
     );
-  },
+  },  
   a(props) {
     const { href, children, ...rest } = props;
     if (href && href.startsWith('/')) {
@@ -195,6 +214,12 @@ const MarkdownComponents: Components = {
           return child;
         })}
       </em>
+    );
+  },
+  img(props) {
+    return (
+        <img {...props} style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', maxWidth: '100%'}}/>
+
     );
   }
 };

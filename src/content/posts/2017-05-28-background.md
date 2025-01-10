@@ -21,22 +21,22 @@ To understand the idea, probably it is necessary some background. I will try t
 <h3><strong>Null Steering</strong></h3>
 To explain the concept of Interference Alignment, let's start by explaining first the well-known idea of <em><a href="https://en.wikipedia.org/wiki/Zero-forcing_precoding">Zero Forcing</a> at the transmitter</em> or <em>Null Steering</em>. In this regard, consider a network as in Figure 1, where there is one transmitter (Tx), who wants to send information to two receivers (Rx1 and Rx2). This model is known as the Broadcast Channel (BC). In this case, we consider the case where transmitter has two antennas, whereas receivers have only one. We can model the signal received at Rx<em>i </em>as follows:
 
-\begin{equation} {y}_i = \mathbf{h}^T_i (\mathbf{v}_1 x_1 + \mathbf{v}_2 x_2) + n_i  \end{equation}
+\begin{align} {y}_i = \mathbf{h}^T_i (\mathbf{v}_1 x_1 + \mathbf{v}_2 x_2) + n_i  \end{align}
 
 where $ \mathbf{h}^T_i $ is a vector whose two components denote the channel gains from each antenna of the transmitter to the single antenna of $\text{Rx}i$. As you may notice from the figure, $\mathbf{x}_i$ denotes messages intended to each receiver, while $\hat{\mathbf{x}}_i$ denotes its estimation, hopefully the true one.
 Regarding the term $n_i$, it represents the noise originated at the receiver when "listening". This noise may be the result of a number of unknown contributions such as external interference, fluctuations in the receiving antennas, and others. For these reasons, it is usually assumed to be Gaussian and <a href="https://en.wikipedia.org/wiki/White_noise">white</a>. My intention is that the reader does not need to understand all these concepts to catch the main message, but do not hesitate to contact me or post a comment if any extra info is wished. I would be more than happy to provide answers up to the limits of my knowledge.
 As you may have noticed, I have left the beamforming vectors $\mathbf{v}_i$ for the last part. The name basically tells us what they do: steer the transmitted signal to some desired direction.  This can be used twofold: to increase the power a desired signal is received with, or to alleviate or remove the interference a signal causes. Most of the scenarios considered in my thesis and papers always focus on the case where the transmission power is not problem, so we assume that we can spend as much power as required, and the only problem is the interference. Therefore, we are more oriented to remove the interference rather than increasing the desired signal power. To this end, consider the following constraints:
 
-\begin{equation} \begin{matrix}\mathbf{h}^T_1 \mathbf{v}_2 = 0 \\ \mathbf{h}^T_2 \mathbf{v}_1 = 0 \end{matrix}    \end{equation}
+\begin{align} \begin{matrix}\mathbf{h}^T_1 \mathbf{v}_2 = 0 \\ \mathbf{h}^T_2 \mathbf{v}_1 = 0 \end{matrix}    \end{align}
 
 which can be read as follows: there exists one direction for vector $\mathbf{v}_i$, such that when the signal travels through the channel it is null out. This direction, clearly, is pointed by a vector orthogonal to the channel, thus it is straightforward to derive a system completely removing the interference!
 This idea can be generalized to the case with $M$ antennas and $K=M$ single-antenna users by forcing the following general set of constraints:
 
-\begin{equation} \displaystyle \mathbf{h}^T_i \mathbf{v}_j = 0, \, \forall j \neq i \end{equation}
+\begin{align} \displaystyle \mathbf{h}^T_i \mathbf{v}_j = 0, \, \forall j \neq i \end{align}
 
 Then, each $\mathbf{v}_j$ appears in $K-1$ equations, written in matrix form as:
 
-\begin{equation} \displaystyle \begin{bmatrix}\mathbf{h}^T_i \\ \vdots \\ \mathbf{h}^T_{i-1}\\  \mathbf{h}^T_{i-1} \\ \vdots \\ \mathbf{h}^T_{K} \end{bmatrix} \mathbf{v}_j = \tilde{\mathbf{H}}_j\mathbf{v}_j = \mathbf{0} \end{equation}
+\begin{align} \displaystyle \begin{bmatrix}\mathbf{h}^T_i \\ \vdots \\ \mathbf{h}^T_{i-1}\\  \mathbf{h}^T_{i-1} \\ \vdots \\ \mathbf{h}^T_{K} \end{bmatrix} \mathbf{v}_j = \tilde{\mathbf{H}}_j\mathbf{v}_j = \mathbf{0} \end{align}
 
 The design above is usually referred to as <em>Null Steering</em>, since each transmitter steers its signal along the direction where the receivers have nulls in their antenna pattern diagram. Moreover, notice that the vector $\mathbf{v}_j$ lies on the <em>null space</em> of $\tilde{\mathbf{H}}_j$, denoted as <span style="font-family: 'courier new', courier, monospace;">null</span>$\left(\tilde{\mathbf{H}}\right)$. This null space may not always exists, and actually depends on the parameters of the system $M$ and $K$.
 
@@ -49,11 +49,11 @@ The design above is usually referred to as <em>Null Steering</em>, since each t
 The dual case of the broadcast channel is the multiple-access channel (MAC), where there are $K$ transmitters, and a single receiver, see Fig. 2. Consider the case where the receiver is equipped with $M=K$ antennas, i.e. as antennas as users, and transmitters are single-antenna. Then, similarly to the null steering idea, the receiver may filter out the directions the interference comes from, by processing the received signal with a linear filter $\mathbf{w}_i$. Such approach is usually denoted as Zero-Forcing (ZF), and this is the reason why Null Steering may also be denoted as Zero Forcing at the transmitter.
 Given the idea, let's see how this translates to maths. Assuming that $\mathbf{w}_i$ is used to decode $x_i$, for the $K=M=2$ case the processed signal is given by:
 
-\begin{equation} {z}_i = \mathbf{w}^T_i \left( \mathbf{h}_1 x_1 + \mathbf{h}_2 x_2 +\mathbf{n}_i \right)   \end{equation}
+\begin{align} {z}_i = \mathbf{w}^T_i \left( \mathbf{h}_1 x_1 + \mathbf{h}_2 x_2 +\mathbf{n}_i \right)   \end{align}
 
 where channels are now 2x1 (2 antennas at the receiver, 1 antenna at each transmitter), and precoding vectors have been omitted since with only one antenna we cannot give direction to the transmitted signals. According to the above equation, we force the following set of constraints:
 
-\begin{equation} \begin{matrix} \mathbf{w}^T_1 \mathbf{h}_2 = \mathbf{0} \\ \mathbf{w}^T_2 \mathbf{h}_1 = \mathbf{0} \end{matrix}\end{equation}
+\begin{align} \begin{matrix} \mathbf{w}^T_1 \mathbf{h}_2 = \mathbf{0} \\ \mathbf{w}^T_2 \mathbf{h}_1 = \mathbf{0} \end{matrix}\end{align}
 
 such that all the interference is removed when decoding each signal. To do so, the rows of the receiving filter (in this case only one since we are decoding a single message) should be contained on the left null space of the channels, similarly to the case of null steering explained above. A generalization to the case of general $K=M$ users is straightforward following the same approach as for null steering.
 

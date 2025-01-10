@@ -35,7 +35,7 @@ Journal papers:
 
 Other resources:
 * [PhD Thesis](/content/marcPhd.pdf)
-* [Poster PhD Thesis](/content/poster_tesi.pdf)
+* [PhD Thesis poster](/content/poster_tesi.pdf)
 * [Google Scholar](https://scholar.google.es/citations?user=__4XCdYAAAAJ)
 `;
 

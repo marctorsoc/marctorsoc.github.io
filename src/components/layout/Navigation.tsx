@@ -13,7 +13,7 @@ export default function Navigation() {
             to="/" 
             className="text-xl font-bold mb-4 md:mb-0 animated-link"
           >
-            Stay curious, work hard, achieve anything.
+            Stay curious, work hard, achieve anything
           </NavLink>
           
           <div className="md:mx-auto">
