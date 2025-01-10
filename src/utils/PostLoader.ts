@@ -12,7 +12,7 @@ async function importAll(): Promise<Post[]> {
     const posts = await Promise.all(
       Object.entries(markdownFiles).map(async ([filepath, loader]) => {
         try {
-          const content = await loader();
+          const content = await loader() as string;  // Add type assertion here
           const { attributes, body } = frontMatter<{
             title: string;
             date: string;
@@ -50,4 +50,4 @@ async function importAll(): Promise<Post[]> {
 }
 
 // Export the posts loader
-export const getPosts = importAll; 
+export const getPosts = importAll;
