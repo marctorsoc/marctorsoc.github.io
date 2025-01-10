@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface HeroImageProps {
   src: string;
   alt?: string;
@@ -15,4 +13,4 @@ export default function HeroImage({ src, alt = '' }: HeroImageProps) {
       />
     </div>
   );
-} 
+}

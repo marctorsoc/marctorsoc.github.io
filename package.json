@@ -1,5 +1,9 @@
 {
   "type": "module",
+  "name": "my-website",
+  "version": "0.1.0",
+  "homepage": "https://marctorsoc.github.io/",
+  "private": true,
   "dependencies": {
     "front-matter": "^4.0.2",
     "gray-matter": "^4.0.3",
@@ -19,8 +23,10 @@
     "@types/react": "^19.0.3",
     "@types/react-dom": "^19.0.2",
     "@types/react-router-dom": "^5.3.3",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2",

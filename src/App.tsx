@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { DarkModeContext, useDarkMode } from './utils/darkMode';
 import Layout from './components/layout/Layout';
@@ -28,4 +27,4 @@ export default function App() {
       </BrowserRouter>
     </DarkModeContext.Provider>
   );
-} 
+}

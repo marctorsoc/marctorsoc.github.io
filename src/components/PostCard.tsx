@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm';
 import katex from 'katex';
 import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus, github } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import 'katex/dist/katex.min.css';
 import type { Components } from 'react-markdown';
 
@@ -75,14 +75,14 @@ function preprocessContent(content: string): string {
   // Handle align environments correctly
   processed = processed.replace(
     /(\\begin{align})([\s\S]*?)(\\end{align})/g,
-    (_, start, body, end) => {
+    (_, _start, body) => {
       const cleanBody = body
         .trim()
         .replace(/\\\s*\n/g, '\n')
         .replace(/(?:\\!){2,}/g, '\\!')
         .replace(/(?:\\,){2,}/g, '\\,')
         .split('\n')
-        .filter(line => line.trim())
+        .filter((line: string) => line.trim())
         .join(' \\\\ ');
       
       return `$$\\begin{aligned}${cleanBody}\\end{aligned}$$`;
@@ -245,7 +245,7 @@ interface PostCardProps {
   compact?: boolean;
 }
 
-export function PostCard({ post, isPinned, showFullContent = false, maxPreviewChars = 300, compact = false }: PostCardProps) {
+export function PostCard({ post, showFullContent = false, compact = false }: PostCardProps) {
   // Preprocess content to handle LaTeX environments
   const processedContent = preprocessContent(post.content || '');
 

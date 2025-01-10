@@ -15,7 +15,8 @@ async function buildPermalinkMap(): Promise<Map<string, string>> {
     const cleanPermalink = post.permalink.replace(/^\/|\/$/g, ''); // Remove leading/trailing slashes
     const parts = cleanPermalink.split('/');
     const slug = parts[parts.length - 1]; // Get the last part of the permalink
-    permalinkMap.set(slug, post.filename);
+    if (post.filename && slug) 
+        permalinkMap.set(slug, post.filename);
   }
   
   return permalinkMap;
@@ -58,4 +59,4 @@ export async function getPost(slug: string): Promise<Post> {
     console.error(`Error loading post ${slug}:`, error);
     throw error;
   }
-} 
+}

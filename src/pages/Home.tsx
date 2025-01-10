@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Post } from '../types/Post';
 import { PostCard } from '../components/PostCard';
 import { getAllPosts } from '../utils/markdownUtils';

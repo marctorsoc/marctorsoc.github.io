@@ -1,6 +1,10 @@
 To test locally, run:
 
 ```
-bundle install
-bundle exec jekyll serve --incremental
+npm run dev
+```
+
+To deploy:
+```
+npm run deploy
 ```
