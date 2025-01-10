@@ -4,6 +4,8 @@ date: 2021-12-11T19:04:03+00:00
 permalink: /posts/journal_club/
 categories:
   - Divulgation
+heroImage: /content/cel_maco.jpg
+heroImageWidth: 80%
 ---
 
 
@@ -13,10 +15,6 @@ company, it is very useful to have some space a) to meet periodically,
  and b) just for fresh air. 
  </p>
 
-<div style="text-align: center">
-  <img src="/content/cel_maco.jpg" alt="yes, the picture is just a random one I like :)" width="80%" />
-</div> <p></p>
-
 A Journal club is 
  one of those initiatives that helps in this regard. We started this in 
  Globality since I joined (thanks to my previous manager Pokey), and it's a good 
@@ -24,13 +22,12 @@ A Journal club is
  playground. At the same time, it allows the group to learn together, explore 
  new ideas in the research community, and discuss how to apply them to our 
  team objectives. 
- {: style="text-align: justify;"}
 
 <p> </p>
 
-In this page, I will be collecting the 
+In this page, I collected some the 
 [talks](https://drive.google.com/drive/folders/1FKblUDZb4K0yjM749X8z3YUGT6wWh5mv?usp=sharing)
- I've given since then (April 2020):
+ I gave since then (April 2020):
 
 <ul>
 <li>

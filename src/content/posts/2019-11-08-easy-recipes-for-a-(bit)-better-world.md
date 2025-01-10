@@ -51,12 +51,10 @@ TLDR:
 
 ### How to enable dark mode in Google Chrome?
 
-<p style="text-align: justify;">
 At the time of writing this (Nov 2019), there is no native config for Dark mode on Chrome. The
 closest thing is a flag in `chrome://flags`, but trust me, I've tried it and doesn't work very
 well. For example, when using Jupyter notebooks it will make your cursor invisible! After trying
 different extensions my recommendation is to use <a href="https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh">Dark Reader</a>. There are two features I like here:
-</p>
 
 * You can switch from dark to light mode easily just with two clicks
 * You can select which sites you don't want the dark mode to be applied on. For example, I

@@ -5,13 +5,12 @@ permalink: /posts/cx_freeze/
 categories:
   - Divulgation
 heroImage: /content/tremp.jpeg
+heroImageWidth: 60%
 ---
 
-<p style="text-align: justify;">
-For some weeks, I went back to Barcelona to renew documents and meet friends. And,
-of course, to enjoy the sun 😎
-</p>
+Today, I will tell you a story about how I helped a friend to use Python in a Windows machine where he cannot install anything. 
 
+This happened during some weeks where I went back to Barcelona to renew documents and meet friends. And, of course, to enjoy the sun 😎 (see picture).
 
 It's funny how on videocalls you usually don't get past the life updates, but in 
 a face to

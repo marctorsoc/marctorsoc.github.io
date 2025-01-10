@@ -72,4 +72,4 @@ In this first post, we have seen the ideas of zero forcing and null steering. In
 
 Finally, I have explained the concept of Degrees of Freedom, used to explain the efficiency of a technique in terms of transmission rate. For the two scenarios explained in this post, BC and MAC, the two techniques explained are sufficient to attain the DoF of the channel for any number of users and antennas. The problems arise when we consider other topologies, such as the Interference Channel, and here is where Interference Alignment comes to the rescue.
 
-I hope to you enjoyed these concepts as much as I do, and still want to continue in this journey through my research days in academia. If so, go to my next post dedicated on the <a href="/posts/interference-alignment/">Interference Alignment</a> concept. Comments and likes more than welcome!
+I hope to you enjoyed these concepts as much as I do, and still want to continue in this journey through my research days in academia. If so, go to my next post dedicated on the <a href="/posts/interference-alignment/">Interference Alignment</a> concept.

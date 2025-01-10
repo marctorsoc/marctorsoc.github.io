@@ -178,7 +178,7 @@ plt.draw()
 
 
 In this case, the graph is not really useful since points are in a 3D coodinate system but we are
-projecting them onto a 2D space. But it's a nice a picture, isn't it? You can use this code to represent a graph in the future. Notice that the nodes (cities) are identified by numbers, but I'm not going to conjecture anything about the graph, because of the projection issue.
+projecting them onto a 2D space. But it's a nice a picture, isn't it? 🤓 You can use this code to represent a graph in the future. Notice that the nodes (cities) are identified by numbers, but I'm not going to conjecture anything about the graph, because of the projection issue.
 
 ### Function to find shortest node from current
 
@@ -231,16 +231,17 @@ for i in paths:
     print(' -> '.join(paths[i]))
 ```
 
-    Speed: 2350.3072558947 kmph
-    Oslo -> Amsterdam -> Brussels -> Luxembourg -> Bern -> Madrid -> Ottawa -> Mexico City -> Santiago
-    Tallinn -> Kiev -> Yerevan -> Baku -> Tehran -> Ashgabat -> Tashkent -> Kabul -> Hanoi -> Taipei
-    Stockholm -> Warsaw -> Budapest -> Sarajevo -> Valletta -> Pretoria -> Montevideo
-    Riga -> Belgrade -> Skopje -> Athens -> Colombo -> Jakarta -> Canberra -> Wellington
-    Moscow -> Ankara -> Nicosia -> Damascus -> New Delhi -> Bangkok -> Manila
-    Copenhagen -> Berlin -> Prague -> Ljubljana -> Zagreb -> Rome -> Santo Domingo -> Caracas -> Bogota -> Quito -> Lima -> Sucre -> Asuncion -> Buenos Aires
-    Vilnius -> Bucharest -> Sofia -> Cairo -> Beijing -> Seoul -> Tokyo
-    Dublin -> London -> Paris -> Andorra la Vella -> Lisbon -> Washington -> Tegucigalpa -> San Jose -> Panama -> Brasilia
-
+```bash
+Speed: 2350.3072558947 kmph
+Oslo -> Amsterdam -> Brussels -> Luxembourg -> Bern -> Madrid -> Ottawa -> Mexico City -> Santiago
+Tallinn -> Kiev -> Yerevan -> Baku -> Tehran -> Ashgabat -> Tashkent -> Kabul -> Hanoi -> Taipei
+Stockholm -> Warsaw -> Budapest -> Sarajevo -> Valletta -> Pretoria -> Montevideo
+Riga -> Belgrade -> Skopje -> Athens -> Colombo -> Jakarta -> Canberra -> Wellington
+Moscow -> Ankara -> Nicosia -> Damascus -> New Delhi -> Bangkok -> Manila
+Copenhagen -> Berlin -> Prague -> Ljubljana -> Zagreb -> Rome -> Santo Domingo -> Caracas -> Bogota -> Quito -> Lima -> Sucre -> Asuncion -> Buenos Aires
+Vilnius -> Bucharest -> Sofia -> Cairo -> Beijing -> Seoul -> Tokyo
+Dublin -> London -> Paris -> Andorra la Vella -> Lisbon -> Washington -> Tegucigalpa -> San Jose -> Panama -> Brasilia
+```
 
 Notice that we iterate along all reindeers, select the one that travels the less, and start again until all cities are visited.
 
@@ -248,7 +249,7 @@ Notice that we iterate along all reindeers, select the one that travels the less
 
 Analyzing the previous results, we see that there is a reindeer starting in Stockholm and finishing in Montevideo. This does not make sense: it is better that reindeers specialize somehow in a zone rather than travelling along the whole globe. An interesting idea could be the following: divide the map in 8 zones and make each reindeer responsible of one zone.
 
-#### Divide map in zones
+**Divide map in zones**
 
 This is an easy exercise of clustering. When I started experimenting my idea was to send each reindeer to the centroid of each cluster. Therefore, we cannot use the well-known K-means because the centroid needs to be a city. A good alternative for this is [K-medoids](https://en.wikipedia.org/wiki/K-medoids). Moreover, the [implementation](https://github.com/letiantian/kmedoids) in Python of K-medoids allows feeding the algorithm with a distance matrix, so our data is ready to use. Using SKlearn K-means could be an interesting line of future work.
 
@@ -260,17 +261,19 @@ for i in C:
     print("{}: {}".format(i,list(map(lambda x: node2city[x],C[i]))))
 ```
 
-    0: ['Oslo', 'Tallinn', 'North Pole', 'Stockholm', 'Copenhagen']
-    1: ['Hanoi', 'Bangkok', 'Manila', 'Seoul', 'Beijing', 'Tokyo', 'Jakarta', 'Wellington', 'Canberra', 'Taipei']
-    2: ['Ljubljana', 'Zagreb', 'Valletta', 'Rome', 'Andorra la Vella']
-    3: ['Paris', 'Luxembourg', 'Lisbon', 'Berlin', 'Brussels', 'Dublin', 'Bern', 'Prague', 'London', 'Madrid', 'Amsterdam']
-    4: ['Kabul', 'Tashkent', 'Tehran', 'Colombo', 'New Delhi', 'Ashgabat', 'Baku', 'Yerevan']
-    5: ['Mexico City', 'Caracas', 'Panama', 'Montevideo', 'Tegucigalpa', 'Santiago', 'Buenos Aires', 'Brasilia', 'Asuncion', 'Sucre', 'San Jose', 'Ottawa', 'Quito', 'Bogota', 'Washington', 'Santo Domingo', 'Lima']
-    6: ['Sofia', 'Athens', 'Damascus', 'Nicosia', 'Ankara', 'Skopje', 'Budapest', 'Sarajevo', 'Pretoria', 'Bucharest', 'Belgrade', 'Cairo']
-    7: ['Riga', 'Kiev', 'Moscow', 'Vilnius', 'Warsaw']
+```bash
+0: ['Oslo', 'Tallinn', 'North Pole', 'Stockholm', 'Copenhagen']
+1: ['Hanoi', 'Bangkok', 'Manila', 'Seoul', 'Beijing', 'Tokyo', 'Jakarta', 'Wellington', 'Canberra', 'Taipei']
+2: ['Ljubljana', 'Zagreb', 'Valletta', 'Rome', 'Andorra la Vella']
+3: ['Paris', 'Luxembourg', 'Lisbon', 'Berlin', 'Brussels', 'Dublin', 'Bern', 'Prague', 'London', 'Madrid', 'Amsterdam']
+4: ['Kabul', 'Tashkent', 'Tehran', 'Colombo', 'New Delhi', 'Ashgabat', 'Baku', 'Yerevan']
+5: ['Mexico City', 'Caracas', 'Panama', 'Montevideo', 'Tegucigalpa', 'Santiago', 'Buenos Aires', 'Brasilia', 'Asuncion', 'Sucre', 'San Jose', 'Ottawa', 'Quito', 'Bogota', 'Washington', 'Santo Domingo', 'Lima']
+6: ['Sofia', 'Athens', 'Damascus', 'Nicosia', 'Ankara', 'Skopje', 'Budapest', 'Sarajevo', 'Pretoria', 'Bucharest', 'Belgrade', 'Cairo']
+7: ['Riga', 'Kiev', 'Moscow', 'Vilnius', 'Warsaw']
+```
 
 
-#### Distribute reindeers per zones
+**Distribute reindeers per zones**
 
 In the first iteration we send each reindeer to one different zone. Note that we need to reload variables
 
@@ -308,15 +311,17 @@ for i in paths:
     print(' -> '.join(paths[i]))
 ```
 
-    Speed: 2254.7100953912 kmph
-    Oslo -> Stockholm -> Tallinn -> Riga -> Vilnius -> Warsaw -> Berlin -> Prague -> Budapest -> Zagreb -> Ljubljana -> Sarajevo -> Belgrade -> Skopje -> Sofia -> Bucharest -> Athens -> Ankara -> Kiev -> Moscow -> Copenhagen -> Amsterdam -> London -> Dublin
-    Baku -> Yerevan -> Tehran -> Ashgabat -> Damascus -> Nicosia -> Cairo -> Valletta -> Rome -> Bern -> Luxembourg -> Brussels -> Paris -> Andorra la Vella -> Madrid -> Lisbon
-    Sucre -> Asuncion -> Buenos Aires -> Santiago
-    Beijing -> Seoul -> Tokyo -> Taipei -> Manila -> Hanoi -> Pretoria
-    Brasilia -> Montevideo -> Lima
-    Canberra -> Wellington
-    Ottawa -> Washington -> Santo Domingo -> Caracas -> Bogota -> Quito -> Panama -> San Jose -> Tegucigalpa -> Mexico City
-    Tashkent -> Kabul -> New Delhi -> Colombo -> Bangkok -> Jakarta
+```bash
+Speed: 2254.7100953912 kmph
+Oslo -> Stockholm -> Tallinn -> Riga -> Vilnius -> Warsaw -> Berlin -> Prague -> Budapest -> Zagreb -> Ljubljana -> Sarajevo -> Belgrade -> Skopje -> Sofia -> Bucharest -> Athens -> Ankara -> Kiev -> Moscow -> Copenhagen -> Amsterdam -> London -> Dublin
+Baku -> Yerevan -> Tehran -> Ashgabat -> Damascus -> Nicosia -> Cairo -> Valletta -> Rome -> Bern -> Luxembourg -> Brussels -> Paris -> Andorra la Vella -> Madrid -> Lisbon
+Sucre -> Asuncion -> Buenos Aires -> Santiago
+Beijing -> Seoul -> Tokyo -> Taipei -> Manila -> Hanoi -> Pretoria
+Brasilia -> Montevideo -> Lima
+Canberra -> Wellington
+Ottawa -> Washington -> Santo Domingo -> Caracas -> Bogota -> Quito -> Panama -> San Jose -> Tegucigalpa -> Mexico City
+Tashkent -> Kabul -> New Delhi -> Colombo -> Bangkok -> Jakarta
+```
 
 
 We have sent the reindeers one to each zone, but after that is possible that they move back to the closest zone to the North Pole, so eventually having the same problem again. One interesting idea is to force the reindeers to move along its assigned zone until completing all nodes in it.
@@ -358,15 +363,17 @@ for i in paths:
     print(' -> '.join(paths[i]))
 ```
 
-    Speed: 1934.0230497204 kmph
-    Ottawa -> Washington -> Santo Domingo -> Caracas -> Bogota -> Quito -> Brasilia
-    Beijing -> Seoul -> Tokyo -> Taipei -> Manila -> Hanoi -> Bangkok -> Jakarta -> Colombo
-    Lima -> Sucre -> Asuncion -> Buenos Aires -> Montevideo
-    Kiev -> Bucharest -> Sofia -> Skopje -> Belgrade -> Sarajevo -> Zagreb -> Ljubljana -> Budapest -> Prague -> Bern -> Andorra la Vella -> Madrid -> Lisbon -> Rome -> Valletta
-    Canberra -> Wellington
-    Mexico City -> Tegucigalpa -> San Jose -> Panama -> Santiago
-    Tashkent -> Kabul -> Ashgabat -> Tehran -> Baku -> Yerevan -> Ankara -> Nicosia -> Damascus -> Cairo -> Pretoria
-    Oslo -> Stockholm -> Tallinn -> Riga -> Vilnius -> Warsaw -> Berlin -> Copenhagen -> Amsterdam -> Brussels -> Luxembourg -> Paris -> London -> Dublin -> Moscow -> Athens -> New Delhi
+```bash
+Speed: 1934.0230497204 kmph
+Ottawa -> Washington -> Santo Domingo -> Caracas -> Bogota -> Quito -> Brasilia
+Beijing -> Seoul -> Tokyo -> Taipei -> Manila -> Hanoi -> Bangkok -> Jakarta -> Colombo
+Lima -> Sucre -> Asuncion -> Buenos Aires -> Montevideo
+Kiev -> Bucharest -> Sofia -> Skopje -> Belgrade -> Sarajevo -> Zagreb -> Ljubljana -> Budapest -> Prague -> Bern -> Andorra la Vella -> Madrid -> Lisbon -> Rome -> Valletta
+Canberra -> Wellington
+Mexico City -> Tegucigalpa -> San Jose -> Panama -> Santiago
+Tashkent -> Kabul -> Ashgabat -> Tehran -> Baku -> Yerevan -> Ankara -> Nicosia -> Damascus -> Cairo -> Pretoria
+Oslo -> Stockholm -> Tallinn -> Riga -> Vilnius -> Warsaw -> Berlin -> Copenhagen -> Amsterdam -> Brussels -> Luxembourg -> Paris -> London -> Dublin -> Moscow -> Athens -> New Delhi
+```
 
 
 ### Initialization matters
@@ -432,22 +439,24 @@ for i in minpaths:
     print(' -> '.join(minpaths[i]))
 ```
 
-    2372.39329872
-    2075.33687
-    2061.09365841
-    1854.00817298
-    1776.55611721
-    1720.09690112
-    1665.42562055
-    Speed: 1665.4256205544 kmph
-    Dublin -> London -> Brussels -> Amsterdam -> Luxembourg -> Paris -> Bern -> Andorra la Vella -> Madrid -> Lisbon -> Brasilia
-    Oslo -> Stockholm -> Tallinn -> Riga -> Vilnius -> Warsaw -> Berlin -> Copenhagen -> Kiev -> Moscow -> Ankara -> New Delhi -> Colombo
-    Prague -> Budapest -> Zagreb -> Ljubljana -> Sarajevo -> Belgrade -> Skopje -> Sofia -> Bucharest -> Athens -> Valletta -> Rome -> Pretoria
-    Tashkent -> Kabul -> Ashgabat -> Tehran -> Baku -> Yerevan -> Damascus -> Nicosia -> Cairo
-    Canberra -> Wellington
-    Santo Domingo -> Caracas -> Bogota -> Quito -> Lima -> Sucre -> Asuncion -> Buenos Aires -> Montevideo
-    Beijing -> Seoul -> Tokyo -> Taipei -> Manila -> Hanoi -> Bangkok -> Jakarta
-    Ottawa -> Washington -> Mexico City -> Tegucigalpa -> San Jose -> Panama -> Santiago
+```bash
+2372.39329872
+2075.33687
+2061.09365841
+1854.00817298
+1776.55611721
+1720.09690112
+1665.42562055
+Speed: 1665.4256205544 kmph
+Dublin -> London -> Brussels -> Amsterdam -> Luxembourg -> Paris -> Bern -> Andorra la Vella -> Madrid -> Lisbon -> Brasilia
+Oslo -> Stockholm -> Tallinn -> Riga -> Vilnius -> Warsaw -> Berlin -> Copenhagen -> Kiev -> Moscow -> Ankara -> New Delhi -> Colombo
+Prague -> Budapest -> Zagreb -> Ljubljana -> Sarajevo -> Belgrade -> Skopje -> Sofia -> Bucharest -> Athens -> Valletta -> Rome -> Pretoria
+Tashkent -> Kabul -> Ashgabat -> Tehran -> Baku -> Yerevan -> Damascus -> Nicosia -> Cairo
+Canberra -> Wellington
+Santo Domingo -> Caracas -> Bogota -> Quito -> Lima -> Sucre -> Asuncion -> Buenos Aires -> Montevideo
+Beijing -> Seoul -> Tokyo -> Taipei -> Manila -> Hanoi -> Bangkok -> Jakarta
+Ottawa -> Washington -> Mexico City -> Tegucigalpa -> San Jose -> Panama -> Santiago
+```
 
 
 And we have got the best solution overall, forcing each reindeer to travel at most at 1625 kmph.
@@ -467,11 +476,13 @@ for i in minpaths:
     print(distance/10)
 ```
 
-    1153.35693483
-    1720.09690112
-    1625.70517399
-    1480.46545108
-    1600.72616671
-    1205.2264646
-    1582.87191227
-    1476.92909603
+```bash
+1153.35693483
+1720.09690112
+1625.70517399
+1480.46545108
+1600.72616671
+1205.2264646
+1582.87191227
+1476.92909603
+```

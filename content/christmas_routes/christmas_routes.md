@@ -140,7 +140,7 @@ graph.head(3)
 
 
 
-Here we see, for example, that from Sofia to Paris there are 1757 km.
+Here we see that, for example, from Sofia to Paris there are 1757 km.
 
 ### Plot graph
 

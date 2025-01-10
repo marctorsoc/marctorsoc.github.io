@@ -12,24 +12,22 @@ categories:
 
 Imagine you have two random variables:
 
-$$
+\begin{align}
 \begin{matrix}
 X \sim f_X(x) \\ Y \sim f_Y(y) 
 \end{matrix}
-$$
+\end{align}
 
 <p style="text-align: justify;">
   This notation denotes that each random variable follows a different probability distribution. We will assume that these two variables are independent, and our purpose is to compute the pdf of its sum $Z = X+Y$. To do so, I will start from the <a href="https://en.wikipedia.org/wiki/Cumulative_distribution_function">cumulative distribution function</a> (cdf):
 </p>
 
-$$
 \begin{align}
-F_Z(z) &= \text{Prob}\left( Z \le z \right)   \nonumber \\
-&=\text{Prob}\left( X+Y \le z \right) \nonumber \\ &= \text{Prob}\left( Y \le z - X \right) \nonumber\\
-&= \int_{-\infty}^{\infty} \!\!\!\!\! \partial x \int_{-\infty}^{z - x} \!\!\!\!\! f_{XY}(x,y) \partial y \nonumber\\
-&= \int_{-\infty}^{\infty} \!\!\!\!\! f_{X}(x) \partial x \int_{-\infty}^{z - x} \!\!\!\!\! f_{Y}(y) \partial y \nonumber
+F_Z(z) &= \text{Prob}\left( Z \le z \right)   \nonumber \newline
+&=\text{Prob}\left( X+Y \le z \right) \nonumber \newline &= \text{Prob}\left( Y \le z - X \right) \nonumber \newline
+&= \int_{-\infty}^{\infty}  \partial x \int_{-\infty}^{z - x}  f_{XY}(x,y) \partial y \nonumber \newline
+&= \int_{-\infty}^{\infty} f_{X}(x) \partial x \int_{-\infty}^{z - x}  f_{Y}(y) \partial y \nonumber
 \end{align}
-$$
 
 
 <p style="text-align: justify;">
@@ -37,7 +35,7 @@ $$
 </p>
 
 $$
-f_{Z}(z) = \frac{\partial}{\partial z} F_Z(z) = \int_{-\infty}^{\infty} \!\!\!\!\! f_{X}(x) f_{Y}(z-x) \partial x = f_{X}(z) * f_{Y}(z)
+f_{Z}(z) = \frac{\partial}{\partial z} F_Z(z) = \int_{-\infty}^{\infty} f_{X}(x) f_{Y}(z-x) \partial x = f_{X}(z) * f_{Y}(z)
 $$
 
 <p style="text-align: justify;">
@@ -45,9 +43,9 @@ $$
 </p>
 
 <p style="text-align: center;">
-  &#8220;<em>The pdf of the sum of two independent random variables is given by the<br /> convolution of the two pdf's of those variables&#8221;</em>
+  <em>The pdf of the sum of two independent random variables is given by the<br /> convolution of the two pdf's of those variables</em>
 </p>
 
 <p style="text-align: justify;">
-  And that's it, folks! If you enjoyed this (short) post please like, and in case of any suggestion, do not hesitate to comment!
+  And that's it, folks! I hope you enjoyed this more mathsy post!
 </p>

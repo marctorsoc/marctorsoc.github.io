@@ -19,7 +19,7 @@ there remotely.
 
  **Disclaimer**: all info written in this post assumes a Mac as your local, and Ubuntu as remote. Most of it should work also with other combinations of these two.
 
-**Access to a remote machine**
+## Access to a remote machine
 
 Accessing to the cluster usually is as easy as writing:
 
@@ -39,7 +39,7 @@ alias sshmarc=ssh username@ip
 
 so that just typing something short I can access to it.
 
-**File transfer**
+## File transfer
 
 Always do this from your local machine. Examples:
 
@@ -56,7 +56,7 @@ A way to just synchronise is using rsync:
 `
 rsync -arv --ignore-existing --progress marc@172.16.6.32:/home/marc/results experiments/results/`
 
-**Run shells on background**
+## Run shells on background
 
 The main application of having a server is not only to run experiments when you're connected, but to leave it the whole night, so that you don't have to wait. However, if you close the ssh connection, you'll lose everything you had. A workaround for that is running the processes on background, or using a terminal multiplexer. While I started with `screen`, I've finally adopted `tmux` as my favorite one. A short cheatsheet next:
 
@@ -66,7 +66,7 @@ The main application of having a server is not only to run experiments when you'
 * control + b, and then d => detach
 * `killall tmux`
 
-**Notebooks**
+## Notebooks
 
 As explained in
 <a href="https://marctorrellas.github.io/posts/python-tips-tricks/">this post</a>, Jupyter notebooks are very powerful tools for Python easy prototyping, but also for intensive development. However, one typically runs the jupyter server in local, and connect via browser. How do we do this when we want the Python to run in our remote box?
@@ -81,35 +81,35 @@ There will be no answer, just leave this open.
 This creates a tunnel from your port 8000 to the port 8089 in the server (these ports are examples and can be changed to any number), where the jupyter server is listening. Note that if you
 have multiple servers, they can all listen in the same port, but you have to tunnel them to different ports, so changing the 8000!
 
-Open a browser and go to localhost:8000. The password in step2 will be asked, and you should be able to work as in local.
+Open a browser and go to `localhost:8000`. The password in step2 will be asked, and you should be able to work as in local.
 
 Optional: add the tunnel as in `ssh -fN -L 8000:localhost:8089 marc@172.16.6.32`
 to your `~/.bashrc`, and it will be active but in the background, and started every time you open a new terminal. So no need to have a terminal blocked (but do not close it!).
 To make it effective either restart terminal or `source ~/.bashrc`.
 
 
-**Jupyter lab as a service**
+## Jupyter lab as a service
 
-After previous section, you're able to run notebooks on the server, and accessing to them via browser. So, even though it says localhost:8000, you're in the server! (tunnels dark magic). However, it's really annoying going to the server and start the sever every time. This can be automated by running it as a service <a href="https://aichamp.wordpress.com/2017/06/13/setting-up-jupyter-notebook-server-as-service-in-ubuntu-16-04/">source</a>:
+After previous section, you're able to run notebooks on the server, and accessing to them via browser. So, even though it says `localhost:8000`, you're in the server! (tunnels dark magic). However, it's really annoying going to the server and start the sever every time. This can be automated by running it as a service <a href="https://aichamp.wordpress.com/2017/06/13/setting-up-jupyter-notebook-server-as-service-in-ubuntu-16-04/">source</a>:
 
 * Set the service file `/usr/lib/systemd/system/jupyter.service` (yes, you probably need to create some dirs) as in
+```bash 
+[Unit]
+Description=Jupyter Lab
 
-  [Unit]<br>
-  Description=Jupyter Lab<br>
-
-  [Service]<br>
-  Type=simple<br>
-  PIDFile=/run/jupyter.pid<br>
-  ExecStart=/home/marc/miniconda3/bin/jupyter lab --no-browser --port=8089<br>
-  User=marc<br>
-  Group=marc<br>
-  WorkingDirectory=/home/marc<br>
-  Restart=always<br>
-  RestartSec=10<br>
-  #KillMode=mixed
-
-  [Install]<br>
-  WantedBy=multi-user.target<br>
+[Service]
+Type=simple
+PIDFile=/run/jupyter.pid
+ExecStart=/home/marc/miniconda3/bin/jupyter lab --no-browser --port=8089
+User=marc
+Group=marc
+WorkingDirectory=/home/marc
+Restart=always
+RestartSec=10
+#KillMode=mixed
+[Install]
+WantedBy=multi-user.target
+```
 
 * `sudo systemctl enable jupyter.service`
 * `sudo systemctl daemon-reload`
@@ -117,10 +117,10 @@ After previous section, you're able to run notebooks on the server, and accessin
 * `jupyter lab password`
 * `sudo systemctl restart jupyter.service`
 
+## Notebook tips and tricks
 
-**Notebook tips and tricks**
+### Autoreload
 
-*Autoreload*
 (<a href="https://ipython.org/ipython-doc/3/config/extensions/autoreload.html">source</a>)
 
 When you change something in sources, usually you have to restart the kernel. This allows to automatically import functions again. Just add
@@ -128,19 +128,19 @@ When you change something in sources, usually you have to restart the kernel. Th
 `%load_ext autoreload` <br>
 `%autoreload 2`
 
-*Table of contents*
+### Table of contents
 
 Check out this useful [extension](https://github.com/jupyterlab/jupyterlab-toc).
 Especially interesting when you're writing a tutorial out of a notebook.
 
-*Kernels auto-discovery*
+### Kernels auto-discovery
 
 Check out [this](https://github.com/Anaconda-Platform/nb_conda_kernels), allowing
 you to have available every conda environment irrespective of which environment
 you launched the server from. With this enabled, the `python -m spacy ipykernel ...`
 in my previous post is no more required.
 
-*Jupytext*
+### Jupytext
 
 Turn your notebooks into .py files automatically synchronised, see [this](https://github.com/mwouts/jupytext). Many advantages:
 * Good to keep track in version control
@@ -150,7 +150,7 @@ notebooks if necessary
 applying *black* to your .py file and then synchronising with the notebook
 
 
-*Display various dataframes side by side*
+### Display various dataframes side by side
 
 
 Use the following code:
@@ -166,8 +166,8 @@ and even nicer, if you have a list of dataframes, the following will show them i
   <img src="/content/display_dfs.png" alt="" width="50%"/>
 </div> <p> </p>
 
- **Conclusion**
+ ## Conclusion
 
 In this post, I have shown some of the tricks I have learned in the recent years for working on remote and with Jupyter notebooks.
 
-As always, any recommendation, suggestion or improvement, please welcome. Thanks for reading!
+As always, any recommendation, suggestion or improvement, please let me know. Thanks for reading!

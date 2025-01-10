@@ -62,5 +62,5 @@ isPinned: false
 </p>
 
 <p style="text-align: justify;">
-  And that's all folks! I hope you enjoyed the post and if any question arises just comment or contact me 🙂
+  And that's all folks! I hope you enjoyed the post and helps you enjoy football (or any live event really) wherever you are 🙂
 </p>

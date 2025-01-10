@@ -44,65 +44,95 @@ df.head()
 ```
 
 
-
-
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
+  <style scoped>
+    .dataframe {
+      border-collapse: collapse;
+      margin: 20px auto;
+      font-size: 14px;
+      width: 80%; /* Adjust the width as needed */
+      border: 1px solid #ddd;
+      text-align: left;
+      font-family: Arial, sans-serif;
     }
 
     .dataframe thead th {
-        text-align: right;
+      background-color: #f2f2f2; /* Light gray header background */
+      color: #333; /* Dark text for headers */
+      padding: 8px;
+      text-align: center; /* Center-align header text */
     }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>text</th>
-      <th>target</th>
-      <th>target_names</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>From: lerxst@wam.umd.edu (where's my thing)\nS...</td>
-      <td>7</td>
-      <td>rec.autos</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>From: guykuo@carson.u.washington.edu (Guy Kuo)...</td>
-      <td>4</td>
-      <td>comp.sys.mac.hardware</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>From: twillis@ec.ecn.purdue.edu (Thomas E Will...</td>
-      <td>4</td>
-      <td>comp.sys.mac.hardware</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>From: jgreen@amber (Joe Green)\nSubject: Re: W...</td>
-      <td>1</td>
-      <td>comp.graphics</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>From: jcm@head-cfa.harvard.edu (Jonathan McDow...</td>
-      <td>14</td>
-      <td>sci.space</td>
-    </tr>
-  </tbody>
-</table>
+
+    .dataframe tbody td,
+    .dataframe tbody th {
+      padding: 8px;
+      border: 1px solid #ddd; /* Subtle borders */
+    }
+
+    .dataframe tbody tr:nth-child(odd) {
+      background-color: #f9f9f9; /* Light background for odd rows */
+    }
+
+    .dataframe tbody tr:hover {
+      background-color: #f1f1f1; /* Highlight row on hover */
+    }
+
+    .dataframe tbody td {
+      text-align: left; /* Align text content to the left */
+    }
+
+    .dataframe tbody th {
+      text-align: center; /* Align row headers to the center */
+    }
+
+    .dataframe {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+  </style>
+  <table class="dataframe">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Text</th>
+        <th>Target</th>
+        <th>Target Names</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>0</th>
+        <td>From: lerxst@wam.umd.edu (where's my thing)\nS...</td>
+        <td>7</td>
+        <td>rec.autos</td>
+      </tr>
+      <tr>
+        <th>1</th>
+        <td>From: guykuo@carson.u.washington.edu (Guy Kuo)...</td>
+        <td>4</td>
+        <td>comp.sys.mac.hardware</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>From: twillis@ec.ecn.purdue.edu (Thomas E Will...</td>
+        <td>4</td>
+        <td>comp.sys.mac.hardware</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>From: jgreen@amber (Joe Green)\nSubject: Re: W...</td>
+        <td>1</td>
+        <td>comp.graphics</td>
+      </tr>
+      <tr>
+        <th>4</th>
+        <td>From: jcm@head-cfa.harvard.edu (Jonathan McDow...</td>
+        <td>14</td>
+        <td>sci.space</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+
 
 
 
@@ -121,39 +151,40 @@ target_to_name_dict
 ```
 
 
-
-
-    {'alt.atheism': 0,
-     'comp.graphics': 1,
-     'comp.os.ms-windows.misc': 2,
-     'comp.sys.ibm.pc.hardware': 3,
-     'comp.sys.mac.hardware': 4,
-     'comp.windows.x': 5,
-     'misc.forsale': 6,
-     'rec.autos': 7,
-     'rec.motorcycles': 8,
-     'rec.sport.baseball': 9,
-     'rec.sport.hockey': 10,
-     'sci.crypt': 11,
-     'sci.electronics': 12,
-     'sci.med': 13,
-     'sci.space': 14,
-     'soc.religion.christian': 15,
-     'talk.politics.guns': 16,
-     'talk.politics.mideast': 17,
-     'talk.politics.misc': 18,
-     'talk.religion.misc': 19}
-
+```bash
+{
+  'alt.atheism': 0,
+  'comp.graphics': 1,
+  'comp.os.ms-windows.misc': 2,
+  'comp.sys.ibm.pc.hardware': 3,
+  'comp.sys.mac.hardware': 4,
+  'comp.windows.x': 5,
+  'misc.forsale': 6,
+  'rec.autos': 7,
+  'rec.motorcycles': 8,
+  'rec.sport.baseball': 9,
+  'rec.sport.hockey': 10,
+  'sci.crypt': 11,
+  'sci.electronics': 12,
+  'sci.med': 13,
+  'sci.space': 14,
+  'soc.religion.christian': 15,
+  'talk.politics.guns': 16,
+  'talk.politics.mideast': 17,
+  'talk.politics.misc': 18,
+  'talk.religion.misc': 19,
+}
+```
 
 
 ## List of contents
 
 The tutorial is organised as follows:
-* Data Cleaning: some easy steps to get data in a cleaner state
-* Data Representation: before being able to train a model, we need to represent data (in our case text) in some numerical shape, and both inputs and labels. In our case, labels are already encoded. For inputs, this step is usually called *feature extraction*.
-* Logistic Regression: since this is a binary classifier, we will simplify the problem to classifying `OTHER` vs `REST`, which happens to be more or less balanced problem. In addition to be an easy to start algorithm, this will be useful to review how to measure performance for a trained model
-* Multi-class Logistic Regression: we will extend the previous approach for our scenario with 20 classes using two different methodologies, and obtain performance results for the given dataset
-* Further work: a proposal of tentative tasks to continue learning 😊
+* **Data Cleaning**: some easy steps to get data in a cleaner state
+* **Data Representation**: before being able to train a model, we need to represent data (in our case text) in some numerical shape, and both inputs and labels. In our case, labels are already encoded. For inputs, this step is usually called *feature extraction*.
+* **Logistic Regression**: since this is a binary classifier, we will simplify the problem to classifying `OTHER` vs `REST`, which happens to be more or less balanced problem. In addition to be an easy to start algorithm, this will be useful to review how to measure performance for a trained model
+* **Multi-class Logistic Regression**: we will extend the previous approach for our scenario with 20 classes using two different methodologies, and obtain performance results for the given dataset
+* **Further work**: a proposal of tentative tasks to continue learning 😊
 
 ## Data Cleaning
 
@@ -188,9 +219,9 @@ tfidf_vectorizer = TfidfVectorizer(stop_words="english", min_df=3)
 
 We will start using Logistic Regression (LR), a linear model that in its simplest form allows to separate two classes, i.e. perform binary classification. The basis of LR is to apply the sigmoid function to the result of a linear regression. As the sigmoid outputs always a value between 0 and 1, one can interpret the result as the probability for one of the classes. Then, mathematically we have:
 
-\begin{equation}
+\begin{align}
 \textsf{Prob}(y=1 | \mathbf{x} ) = \sigma ( \mathbf{w}^T \mathbf{x} )
-\end{equation}
+\end{align}
 
 where $\sigma(z) = \frac{1}{1 + e^{-z}} $, $\mathbf{x}$ being the input features, $y$ the label, and $\mathbf{w}$ the learned weights representing the model. For a more extensive description of LR, please see e.g. [this](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression) reference
 
@@ -204,9 +235,9 @@ Counter(binary_labels)
 
 
 
-
+```bash
     Counter({0: 5790, 1: 5524})
-
+```
 
 
 
@@ -216,9 +247,9 @@ X, y = df.text, binary_labels
 
 We will measure the performance of our model using precision, recall, and f1-score. They are defined as follows:
 
-\begin{equation}
+\begin{align}
 P = \frac{TP}{TP + FP}, \quad   R = \frac{TP}{TP + FN}, \quad F1 = \frac{ P \cdot R}{P+R}
-\end{equation}
+\end{align}
 
 where `TP`, `FP`, `FN` refer to the true positives, false positives, and false negatives, respectively. See more info this [Wikipedia](https://en.wikipedia.org/wiki/Precision_and_recall). These metrics refer to a binary classification. Imagine we are detecting spam, and that's considered to be the "positive" class. Then, precision is the probability of being true spam when model has classified it as spam, whereas recall is the other way around: probability of classifying as spam, when the sample is true spam. The F-score can be considered as an aggregation of both metrics into a single number. I will defer the interested reader to the aforementioned article. For experienced readers, it is also interesting this more advanced and relatively recent [paper](https://papers.nips.cc/paper/5867-precision-recall-gain-curves-pr-analysis-done-right).
 
@@ -251,12 +282,15 @@ cross_validate(pipeline, X, y, scoring=scoring , cv=KFold(3, shuffle=True, rando
 
 
 
-
-    {'fit_time': array([2.87251377, 2.464993  , 2.54700494]),
-     'score_time': array([3.47419429, 3.73824   , 3.2415061 ]),
-     'test_precision': array([0.94088017, 0.94112967, 0.94112967]),
-     'test_recall': array([0.94088017, 0.94112967, 0.94112967]),
-     'test_f1': array([0.94088017, 0.94112967, 0.94112967])}
+```bash
+{
+  'fit_time': array([2.87251377, 2.464993  , 2.54700494]),
+  'score_time': array([3.47419429, 3.73824   , 3.2415061 ]),
+  'test_precision': array([0.94088017, 0.94112967, 0.94112967]),
+  'test_recall': array([0.94088017, 0.94112967, 0.94112967]),
+  'test_f1': array([0.94088017, 0.94112967, 0.94112967]),
+}
+```
 
 
 
@@ -273,12 +307,15 @@ cross_validate(pipeline, X, y, scoring=scoring , cv=KFold(3, shuffle=True, rando
 
 
 
-
-    {'fit_time': array([8.3804059 , 8.43357706, 8.73326707]),
-     'score_time': array([6.31431293, 5.60395193, 5.07479286]),
-     'test_precision': array([0.94671262, 0.9421904 , 0.94351631]),
-     'test_recall': array([0.94671262, 0.9421904 , 0.94351631]),
-     'test_f1': array([0.94671262, 0.9421904 , 0.94351631])}
+```bash
+{
+  'fit_time': array([8.3804059 , 8.43357706, 8.73326707]),
+  'score_time': array([6.31431293, 5.60395193, 5.07479286]),
+  'test_precision': array([0.94671262, 0.9421904 , 0.94351631]),
+  'test_recall': array([0.94671262, 0.9421904 , 0.94351631]),
+  'test_f1': array([0.94671262, 0.9421904 , 0.94351631])
+}
+```
 
 
 
@@ -300,13 +337,6 @@ sn.heatmap(df_cm, annot=True,annot_kws={"size": 15},cmap='Blues', fmt='g')
 ```
 
 
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x125e57cf8>
-
-
-
-
 <div style="text-align: center">
   <img src="/content/NLP_101/output_28_1.png" alt="" width="50%"/>
 </div> <p> </p>
@@ -318,13 +348,6 @@ Showing the confusion matrix as percentages (normalised by the true labels):
 ```python
 sn.heatmap((df_cm.T / df_cm.sum(axis=1)).T, annot=True,annot_kws={"size": 15},cmap='Blues', fmt='.5g')
 ```
-
-
-
-
-    <matplotlib.axes._subplots.AxesSubplot at 0x1280f83c8>
-
-
 
 
 <div style="text-align: center">
@@ -342,10 +365,6 @@ sn.heatmap((df_cm.T / df_cm.sum(axis=1)).T, annot=True,annot_kws={"size": 15},cm
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x125e741d0>
-
-
-
 
 <div style="text-align: center">
   <img src="/content/NLP_101/output_31_1.png" alt="" width="50%"/>
@@ -358,9 +377,9 @@ We can see how the results are a bit worse for test (obviously!), but still pret
 
 Let's deal now with the real 20 classes problem. For this, we are going to use an extension of Logistic Regression called Multinomial Logistic Regression. Don't be scared by the name, it is quite simple. Again, I'm going to refer to [Wikipedia](https://en.wikipedia.org/wiki/Multinomial_logistic_regression) for the meat, but just to get some intuition, the idea is to have a set of weights $\mathbf{w}_k$ for each class $k$, and then consider
 
-\begin{equation}
+\begin{align}
 \textsf{Prob}(y=k | \mathbf{x} ) = \frac{ e^{\mathbf{w_k}^T \mathbf{x}} } {\sum e^{\mathbf{w_i}^T \mathbf{x}} }
-\end{equation}
+\end{align}
 
 so we keep the class whose associated probability is higher.
 
@@ -384,15 +403,18 @@ cross_validate(pipeline, X, y, scoring=scoring, cv=KFold(3, shuffle=True, random
 
 
 
-
-    {'fit_time': array([45.18805194, 40.86410403, 37.66616702]),
-     'score_time': array([5.46300483, 6.45399904, 5.8795979 ]),
-     'test_precision': array([0.89872747, 0.90453461, 0.89976134]),
-     'train_precision': array([0.9826306 , 0.98303062, 0.9851518 ]),
-     'test_recall': array([0.89872747, 0.90453461, 0.89976134]),
-     'train_recall': array([0.9826306 , 0.98303062, 0.9851518 ]),
-     'test_f1': array([0.89872747, 0.90453461, 0.89976134]),
-     'train_f1': array([0.9826306 , 0.98303062, 0.9851518 ])}
+```bash
+{
+  'fit_time': array([45.18805194, 40.86410403, 37.66616702]),
+  'score_time': array([5.46300483, 6.45399904, 5.8795979 ]),
+  'test_precision': array([0.89872747, 0.90453461, 0.89976134]),
+  'train_precision': array([0.9826306 , 0.98303062, 0.9851518 ]),
+  'test_recall': array([0.89872747, 0.90453461, 0.89976134]),
+  'train_recall': array([0.9826306 , 0.98303062, 0.9851518 ]),
+  'test_f1': array([0.89872747, 0.90453461, 0.89976134]),
+  'train_f1': array([0.9826306 , 0.98303062, 0.9851518 ]),
+}
+```
 
 
 
@@ -413,12 +435,15 @@ cross_validate(pipeline, X, y, scoring=scoring , cv=KFold(3, shuffle=True, rando
 
 
 
-
-    {'fit_time': array([30.14457989, 35.85461402, 31.10211205]),
-     'score_time': array([6.67796206, 5.93058729, 4.71054101]),
-     'test_precision': array([0.90376458, 0.91249006, 0.90453461]),
-     'test_recall': array([0.90376458, 0.91249006, 0.90453461]),
-     'test_f1': array([0.90376458, 0.91249006, 0.90453461])}
+```bash
+{
+  'fit_time': array([30.14457989, 35.85461402, 31.10211205]),
+  'score_time': array([6.67796206, 5.93058729, 4.71054101]),
+  'test_precision': array([0.90376458, 0.91249006, 0.90453461]),
+  'test_recall': array([0.90376458, 0.91249006, 0.90453461]),
+  'test_f1': array([0.90376458, 0.91249006, 0.90453461])
+}
+```
 
 
 
@@ -452,10 +477,11 @@ for scorer in [f1_score, precision_score, recall_score]:
     print(f'{name}: {scorer(y_train, pred_train, average="micro"):.4f}')
 ```
 
-    f1_score: 0.9866
-    precision_score: 0.9866
-    recall_score: 0.9866
-
+```bash
+f1_score: 0.9866
+precision_score: 0.9866
+recall_score: 0.9866
+```
 
 
 <div style="text-align: center">
@@ -473,10 +499,11 @@ for scorer in [f1_score, precision_score, recall_score]:
     print(f'{name}: {scorer(y_test, pred_test, average="micro"):.4f}')
 ```
 
-    f1_score: 0.8886
-    precision_score: 0.8886
-    recall_score: 0.8886
-
+```bash
+f1_score: 0.8886
+precision_score: 0.8886
+recall_score: 0.8886
+```
 
 
 <div style="text-align: center">
@@ -499,6 +526,6 @@ And with this we got to the end of this tutorial. Some more ideas or directions 
   - Topic features: extract topics to learn more about the dataset / add them as features to improve the classifier. I recommend here using LDA with the gensim library.
   - Use word embeddings
 - Use other classical ML algorithms, usually good in overfitting scenarios, e.g. SVM, Random Forest
-- Deep Learning based model, and also transfer learning. I recommend here using [FastAI](fast.ai) and the ULMFit methodology
+- Deep Learning based model, and also transfer learning. I recommend here using [FastAI](fast.ai) and the ULMFit methodology.
 
-As always, any recommendation, suggestion or improvement, please welcome. Thanks for reading!
+Thanks for reading!

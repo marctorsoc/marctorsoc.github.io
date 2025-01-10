@@ -4,13 +4,11 @@ date: '2018-04-08 22:43:44 +0100'
 permalink: /posts/dc-dungeon-code/
 categories:
 - Divulgation
+heroImage: /content/yX1T7D.png
+heroImageWidth: 70%
 ---
 
-Today I come with a fairly easy but interesting problem. Consider a dungeon grid like this:
-
-<div style="text-align: center">
-  <img src="/content/yX1T7D.png" alt="" width="100%"/>
-</div> <p> </p>
+Today I come with a fairly easy but interesting problem. Consider a dungeon grid we want to escape from, like in the image.
 
 Ok, we will have something much more simplified, e.g:
 
@@ -18,9 +16,7 @@ Ok, we will have something much more simplified, e.g:
   XXXXXXXXX..e..XXXXXXXX<br /> XXXXX&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;XXXXX<br /> XXX&#8230;&#8230;&#8230;&#8230;.XXX&#8230;&#8230;.s&#8230;..XXX<br /> XXXXX&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;XXXXX<br /> XXXXXXXXXXXXXXXXXXX
 </p>
 
-<p style="text-align: justify;">
-  This array of strings can represent somehow the previous dungeon, where each character is a position, &#8220;s&#8221; is the starting position, &#8220;e&#8221; the ending one, and &#8220;X&#8221; the obstacles, so positions that cannot be landed.
-</p>
+  This array of strings can represent somehow the previous dungeon, where each character is a position, `s` and `e` are the starting and ending positions, resp., and `X` the obstacles, so positions that cannot be landed.
 
 <p style="text-align: justify;">
   The objective will be to find an algorithm to get the shortest path from start to end positions. Instantly, when we see shortest path we think on <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra algorithm</a>, basically because is the first result when googling it. The problem is that we don't have a graph. Hence, once transformed to a graph this problem is fairly easy. I refer you to <a href="https://github.com/marctorrellas/dungeon-code">my code</a> in Github for this conversion and the rest of this post will be devoted to the Dijkstra algorithm through an example. As always any doubts about the code, more than happy to help.
@@ -113,5 +109,5 @@ After that, we select E:
 </p>
 
 <p style="text-align: justify;">
-  PS: these images are part of one huge <a href="https://docs.google.com/presentation/d/1EhUGzJlXeU0T1RZiDByrt9szTwanSFvTtFziHTyVFCk/edit?usp=sharing">Google slides document</a> I manage. It's about Algorithms and tips and tricks and concepts for coding, especially to deal with coding exercises for interviews. Check it out if you have interest 🙂
+  PS: these images are all part of  this <a href="https://docs.google.com/presentation/d/1EhUGzJlXeU0T1RZiDByrt9szTwanSFvTtFziHTyVFCk/edit?usp=sharing">Google slides document</a> I manage. It's about Algorithms and tips and tricks and concepts for coding, especially to deal with coding exercises for interviews. Check it out if interested 🙂
 </p>
