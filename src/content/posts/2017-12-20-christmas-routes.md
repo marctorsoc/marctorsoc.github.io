@@ -4,11 +4,10 @@ date: 2017-12-20T22:43:43+00:00
 permalink: /posts/christmas-routes/
 categories:
   - Divulgation
+heroImage: /content/santa.jpg
+heroImageWidth: 80%
+heroImageHeight: 50%
 ---
-
-<div style="text-align: center">
-  <img src="/content/santa.jpg" alt="" width="90%" />
-</div> <p> </p>
 
 <p style="text-align: justify;">Last Christmas I was told about this quite interesting problem. It prays like this: Santa needs to deliver presents to all kids in a bunch of cities. To do so, he needs to design routes for his 8 reindeers to visit each city almost once.</p>
 

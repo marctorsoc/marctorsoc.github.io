@@ -4,18 +4,14 @@ date: 2021-06-11T19:04:03+00:00
 permalink: /posts/cx_freeze/
 categories:
   - Divulgation
+heroImage: /content/tremp.jpeg
 ---
 
 <p style="text-align: justify;">
 For some weeks, I went back to Barcelona to renew documents and meet friends. And,
-of course, to enjoy the sun but that's implicit :)
+of course, to enjoy the sun 😎
 </p>
 
-<div style="text-align: center">
-  <img src="/content/tremp.jpeg" alt="" width="60%" />
-</div> <p> </p>
-
-(this is not the friend I talk about in the story!)
 
 It's funny how on videocalls you usually don't get past the life updates, but in 
 a face to
@@ -54,7 +50,7 @@ the configuration by updating some values. His current approach is to open the f
  Let's see an example of what I had in mind after my first answer:
 
 config.csv:
- ```
+ ```bash
  input,output
  PROTOCOL_A, PROTOCOL_B
  DRUG_X, DRUG_Y
@@ -106,7 +102,7 @@ It is cross-platform and should work on any platform that Python itself works on
 
 The solution is then straightforward. Install `cx_freeze` and just run:
 
-```
+```bash
 cxfreeze -c main.py
 ```
 
@@ -159,15 +155,15 @@ package size:
 
 | python | pandas |  size  |
 |:------:|:------:|:------:|
-|   3.9  |    Y   | 134 MB |
-|   3.9  |    N   |  30 MB |
-|   3.8  |    N   |  30 MB |
-|   3.7  |    N   |  16 MB |
+|   3.9  |    T   | 134 MB |
+|   3.9  |    F   |  30 MB |
+|   3.8  |    F   |  30 MB |
+|   3.7  |    F   |  16 MB |
 
 
 So I recreated my conda environment with 3.7 as in:
 
-```
+```shell
 conda create -n find_replace_script python=3.7
 ```
 

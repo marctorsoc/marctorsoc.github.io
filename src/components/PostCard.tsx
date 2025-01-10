@@ -6,7 +6,7 @@ import remarkGfm from 'remark-gfm';
 import katex from 'katex';
 import rehypeRaw from 'rehype-raw';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { vscDarkPlus, github } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import 'katex/dist/katex.min.css';
 import type { Components } from 'react-markdown';
 
@@ -128,11 +128,13 @@ const MarkdownComponents: Components = {
       const mathContent = content.slice(2, -2);
       return <Math inline={false}>{mathContent}</Math>;
     }
+    
+    const language = match ? match[1] : undefined;
 
-    return !inline && match ? (
+    return !inline && language ? (
       <SyntaxHighlighter
         style={vscDarkPlus}
-        language={match[1]}
+        language={language}
         PreTag="div"
         {...props}
       >
@@ -157,6 +159,18 @@ const MarkdownComponents: Components = {
       </p>
     );
   },
+  a(props) {
+    const { href, children, ...rest } = props;
+    if (href && href.startsWith('/')) {
+      return (
+        <Link to={href} {...rest}>
+          {children}
+        </Link>
+      );
+    }
+    return <a href={href} {...rest}>{children}</a>;
+  },
+
   strong(props) {
     const { children, ...rest } = props;
     return (
@@ -195,6 +209,72 @@ export function PostCard({ post, isPinned, showFullContent = false }: PostCardPr
   // Preprocess content to handle LaTeX environments
   const processedContent = preprocessContent(post.content || '');
 
+  // Extract the first paragraph for the preview
+  const firstParagraphMatch = processedContent.match(/^(.*?)(?:\n\n|$)/s);
+  let firstParagraph = firstParagraphMatch ? firstParagraphMatch[1].trim() : '';
+  
+  const maxChars = 300;
+  let previewContent = '';
+  if (firstParagraph) {
+    // Get text content for word splitting
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = firstParagraph;
+    const textContent = tempDiv.textContent || tempDiv.innerText || '';
+
+    // Split into words
+    const words = textContent.trim().split(/\s+/);
+    
+    // Get the last 3 words
+    const lastThreeWords = words.slice(-3);
+
+    if (lastThreeWords.length > 0) {
+      // Join the last three words to search for
+      const lastThreeWordsJoined = lastThreeWords.join(' ');
+      const lastThreeWordsIndex = firstParagraph.lastIndexOf(lastThreeWordsJoined);
+      
+      if (lastThreeWordsIndex !== -1) {
+        previewContent = firstParagraph.substring(0, lastThreeWordsIndex + lastThreeWordsJoined.length);
+
+        // Check if the last three words are inside an HTML tag
+        const tagMatch = previewContent.match(/<[^>]*$/);
+        if (tagMatch) {
+          const tagStart = tagMatch[0];
+          const closingTagMatch = firstParagraph.substring(lastThreeWordsIndex + lastThreeWordsJoined.length).match(/<\/([^>]+)>|(\/>)/);
+          if (closingTagMatch) {
+            const closingTag = closingTagMatch[0];
+            previewContent += closingTag;
+            // Check if the closing tag is at the end of the paragraph
+            const remainingText = firstParagraph.substring(lastThreeWordsIndex + lastThreeWordsJoined.length + closingTag.length).trim();
+            if (remainingText.length > 0) {
+              // Add more words if the closing tag is not at the end
+              const nextWords = remainingText.trim().split(/\s+/);
+              const nextWord = nextWords[0] || '';
+              previewContent += ' ' + nextWord;
+            }
+          }
+        }
+      } else {
+        previewContent = firstParagraph;
+      }
+    } else {
+      previewContent = firstParagraph;
+    }
+    
+    // Truncate at word boundary
+    if (previewContent.length > maxChars) {
+      const truncated = previewContent.substring(0, maxChars);
+      const lastSpaceIndex = truncated.lastIndexOf(' ');
+      previewContent = lastSpaceIndex === -1 ? truncated : truncated.substring(0, lastSpaceIndex);
+    }
+    
+
+    // Remove trailing punctuation
+    previewContent = previewContent.replace(/[.,;:!?]*$/, '');    
+    // Add ellipsis always
+    previewContent += '...';
+    
+  }
+  
   return (
     <article className="prose dark:prose-invert max-w-none bg-white dark:bg-black p-4 rounded-xl shadow-lg ring-1 ring-gray-900/5">
       <h2 className="text-2xl font-bold mb-4 mt-0">
@@ -204,7 +284,7 @@ export function PostCard({ post, isPinned, showFullContent = false }: PostCardPr
         >
           {post.title}
         </Link>
-      </h2>
+       </h2>
       <div className="flex flex-wrap items-center gap-2 text-base mb-3">
         <time className="text-gray-700 dark:text-gray-300 flex items-center">
           {new Date(post.date).toLocaleDateString('en-CA').replace(/-/g, '/')}
@@ -219,14 +299,36 @@ export function PostCard({ post, isPinned, showFullContent = false }: PostCardPr
           </Link>
         ))}
       </div>
-      <div className={`${showFullContent ? '' : 'line-clamp-3'} text-gray-800 dark:text-gray-200 text-justify`}>
+      {post.heroImage && showFullContent && (
+        <div
+            className={`mb-6 ${showFullContent ? '' : 'hidden'}`} 
+            style={{
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center'
+            }}
+        >
+            <img
+              src={post.heroImage}
+              alt={post.title}
+              className="rounded-t-xl"
+              style={{
+                  maxWidth: post.heroImageWidth || '100%',
+                  objectFit: 'contain'
+              }}
+            />
+        </div>
+       )}
+
+      <div className={`text-gray-800 dark:text-gray-200 text-justify`}>
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeRaw]}
           components={MarkdownComponents}
         >
-          {processedContent}
-        </ReactMarkdown>
+          {showFullContent ? processedContent : previewContent}
+        </ReactMarkdown>        
       </div>
       {!showFullContent && (
         <Link 
@@ -238,4 +340,4 @@ export function PostCard({ post, isPinned, showFullContent = false }: PostCardPr
       )}
     </article>
   );
-} 
+}

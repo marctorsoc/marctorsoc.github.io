@@ -7,8 +7,7 @@ categories:
 isPinned: true
 ---
 
-Long time since my last post! But decided to come
-back to explain some of typical tips and tricks when working (but not only) on
+Today we'll see some tips and tricks when working (but not only) on
 remote. This is typical in a data scientist life as layman laptops, at some point,
 and especially if you work with big data, entail limitations in memory and/or
 speed.

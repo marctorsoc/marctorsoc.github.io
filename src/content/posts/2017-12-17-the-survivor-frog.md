@@ -4,14 +4,12 @@ date: 2017-12-17T02:10:45+00:00
 permalink: /posts/the-survivor-frog/
 categories:
   - Divulgation
+heroImage: /content/amphibian-1295172_640.png
+heroImageWidth: 60%
 ---
 
 
 In this maths puzzle, a frog is trying to escape from [introduce your preferred evil force]. In an attempt to catch the frog, a trap is positioned occupying $x \in (p,1)$, with the frog initially located at $x=0$, see figure.
-
-<div style="text-align: center">
-  <img src="/content/amphibian-1295172_640.png" alt="" width="60%" />
-</div>
 
 Ok, cheese is for mouses, not frogs, but was a really intuitive way of illustrating the scenario 😄. 
 We assume that our green friend jumps a distance $d\in (0,1)$ with uniform probability, and it jumps an infinite number of times unless it's trapped. Our mission here is to compute the **probability of catching the frog**.

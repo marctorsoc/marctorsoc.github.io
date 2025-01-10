@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
 import { DarkModeContext } from '../../utils/darkMode';
 
 export default function Navigation() {
@@ -10,46 +9,46 @@ export default function Navigation() {
     <nav className="bg-white dark:bg-black text-gray-900 dark:text-gray-100 py-4">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row md:items-center">
-          <Link 
+          <NavLink 
             to="/" 
             className="text-xl font-bold mb-4 md:mb-0 animated-link"
           >
             Stay curious, work hard, achieve anything.
-          </Link>
+          </NavLink>
           
           <div className="md:mx-auto">
             <ul className="flex flex-wrap gap-12 items-center text-xl">
               <li>
-                <Link 
+                <NavLink 
                   to="/academia" 
-                  className="nav-link"
+                  className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
                 >
                   Academia
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link 
+                <NavLink 
                   to="/divulgation" 
-                  className="nav-link"
+                  className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
                 >
                   Divulgation
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link 
+                <NavLink 
                   to="/off-topic" 
-                  className="nav-link"
+                  className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
                 >
                   Off-topic
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link 
+                <NavLink 
                   to="/about" 
-                  className="nav-link"
+                  className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
                 >
                   About me
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -93,4 +92,4 @@ export default function Navigation() {
       </div>
     </nav>
   );
-} 
+}

@@ -6,11 +6,9 @@ categories:
   - Off-topic
 ---
 
-<p style="text-align: justify;">
   The planet is in an
   <a href="https://www.bbc.co.uk/news/uk-politics-48126677/">emergency</a>,
-  and we all should be doing something for it. The main problems on planet sustainability <a href="https://ec.europa.eu/clima/change/causes_en">are</a>:
-</p>
+  and we all should be doing something. <a href="https://ec.europa.eu/clima/change/causes_en">Here</a> the main problems on planet sustainability:
 
 * Burning coal, oil, and gas
 * **Deforestation**: see Ecosia recommendation next

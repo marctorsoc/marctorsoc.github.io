@@ -6,4 +6,7 @@ export interface Post {
   content: string;
   isPinned?: boolean;
   filename?: string;
+  heroImage?: string;
+  heroImageWidth?: string;
+  heroImageHeight?: string;
 } 
