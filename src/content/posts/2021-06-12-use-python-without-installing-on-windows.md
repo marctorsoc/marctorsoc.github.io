@@ -1,5 +1,5 @@
 ---
-title:  Use Python without installing on Windows
+title:  Python without installing on Windows
 date: 2021-06-11T19:04:03+00:00
 permalink: /posts/cx_freeze/
 categories:

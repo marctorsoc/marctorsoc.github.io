@@ -216,6 +216,19 @@ const MarkdownComponents: Components = {
       </em>
     );
   },
+  i(props) {
+    const { children, ...rest } = props;
+    return (
+      <em {...rest}>
+        {React.Children.map(children, child => {
+          if (typeof child === 'string') {
+            return processMathInText(child);
+          }
+          return child;
+        })}
+      </em>
+    );
+  },
   img(props) {
     return (
         <img {...props} style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', maxWidth: '100%'}}/>
@@ -228,89 +241,31 @@ interface PostCardProps {
   post: Post;
   isPinned?: boolean;
   showFullContent?: boolean;
+  maxPreviewChars?: number;
+  compact?: boolean;
 }
 
-export function PostCard({ post, isPinned, showFullContent = false }: PostCardProps) {
+export function PostCard({ post, isPinned, showFullContent = false, maxPreviewChars = 300, compact = false }: PostCardProps) {
   // Preprocess content to handle LaTeX environments
   const processedContent = preprocessContent(post.content || '');
 
   // Extract the first paragraph for the preview
   const firstParagraphMatch = processedContent.match(/^(.*?)(?:\n\n|$)/s);
-  let firstParagraph = firstParagraphMatch ? firstParagraphMatch[1].trim() : '';
-  
-  const maxChars = 300;
-  let previewContent = '';
-  if (firstParagraph) {
-    // Get text content for word splitting
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = firstParagraph;
-    const textContent = tempDiv.textContent || tempDiv.innerText || '';
+  const firstParagraph = firstParagraphMatch ? firstParagraphMatch[1].trim() : '';
 
-    // Split into words
-    const words = textContent.trim().split(/\s+/);
-    
-    // Get the last 3 words
-    const lastThreeWords = words.slice(-3);
-
-    if (lastThreeWords.length > 0) {
-      // Join the last three words to search for
-      const lastThreeWordsJoined = lastThreeWords.join(' ');
-      const lastThreeWordsIndex = firstParagraph.lastIndexOf(lastThreeWordsJoined);
-      
-      if (lastThreeWordsIndex !== -1) {
-        previewContent = firstParagraph.substring(0, lastThreeWordsIndex + lastThreeWordsJoined.length);
-
-        // Check if the last three words are inside an HTML tag
-        const tagMatch = previewContent.match(/<[^>]*$/);
-        if (tagMatch) {
-          const tagStart = tagMatch[0];
-          const closingTagMatch = firstParagraph.substring(lastThreeWordsIndex + lastThreeWordsJoined.length).match(/<\/([^>]+)>|(\/>)/);
-          if (closingTagMatch) {
-            const closingTag = closingTagMatch[0];
-            previewContent += closingTag;
-            // Check if the closing tag is at the end of the paragraph
-            const remainingText = firstParagraph.substring(lastThreeWordsIndex + lastThreeWordsJoined.length + closingTag.length).trim();
-            if (remainingText.length > 0) {
-              // Add more words if the closing tag is not at the end
-              const nextWords = remainingText.trim().split(/\s+/);
-              const nextWord = nextWords[0] || '';
-              previewContent += ' ' + nextWord;
-            }
-          }
-        }
-      } else {
-        previewContent = firstParagraph;
-      }
-    } else {
-      previewContent = firstParagraph;
-    }
-    
-    // Truncate at word boundary
-    if (previewContent.length > maxChars) {
-      const truncated = previewContent.substring(0, maxChars);
-      const lastSpaceIndex = truncated.lastIndexOf(' ');
-      previewContent = lastSpaceIndex === -1 ? truncated : truncated.substring(0, lastSpaceIndex);
-    }
-    
-
-    // Remove trailing punctuation
-    previewContent = previewContent.replace(/[.,;:!?]*$/, '');    
-    // Add ellipsis always
-    previewContent += '...';
-    
-  }
-  
   return (
-    <article className="prose dark:prose-invert max-w-none bg-white dark:bg-black p-4 rounded-xl shadow-lg ring-1 ring-gray-900/5">
-      <h2 className="text-2xl font-bold mb-4 mt-0">
+    <article className={`prose dark:prose-invert max-w-none bg-white dark:bg-black p-4 rounded-xl shadow-lg ring-1 ring-gray-900/5 ${
+      compact ? 'h-[200px] flex flex-col' : ''
+    }`}>
+      <h2 className={`${compact ? 'text-xl mb-2' : 'text-2xl mb-4'} font-bold mt-0`}>
         <Link 
           to={post.permalink} 
           className="post-title-link no-underline text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
         >
           {post.title}
         </Link>
-       </h2>
-      <div className="flex flex-wrap items-center gap-2 text-base mb-3">
+      </h2>
+      <div className={`flex flex-wrap items-center gap-2 text-base ${compact ? 'mb-2' : 'mb-3'}`}>
         <time className="text-gray-700 dark:text-gray-300 flex items-center">
           {new Date(post.date).toLocaleDateString('en-CA').replace(/-/g, '/')}
         </time>
@@ -346,22 +301,28 @@ export function PostCard({ post, isPinned, showFullContent = false }: PostCardPr
         </div>
        )}
 
-      <div className={`text-gray-800 dark:text-gray-200 text-justify`}>
-        <ReactMarkdown
-          remarkPlugins={[remarkGfm]}
-          rehypePlugins={[rehypeRaw]}
-          components={MarkdownComponents}
-        >
-          {showFullContent ? processedContent : previewContent}
-        </ReactMarkdown>        
+      <div className={`text-gray-800 dark:text-gray-200 ${compact ? 'text-sm flex-grow overflow-hidden' : 'text-justify'}`}>
+        <div className={!showFullContent ? 'line-clamp-3' : ''}>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+            components={MarkdownComponents}
+          >
+            {showFullContent ? processedContent : firstParagraph}
+          </ReactMarkdown>
+        </div>
       </div>
       {!showFullContent && (
-        <Link 
-          to={post.permalink}
-          className="mt-2 inline-block text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
-        >
-          Read more →
-        </Link>
+        <div className={`${compact ? 'text-sm mt-2' : 'mt-2'}`}>
+          <Link 
+            to={post.permalink}
+            className="text-blue-600 dark:text-blue-400 no-underline"
+          >
+            <span className="inline-block transition-[text-decoration-color] duration-1000 [text-decoration-color:transparent] hover:[text-decoration-color:currentColor] underline">
+              Read more
+            </span>
+          </Link>
+        </div>
       )}
     </article>
   );

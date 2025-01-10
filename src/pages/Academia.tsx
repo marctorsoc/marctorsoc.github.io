@@ -98,4 +98,4 @@ export default function Academia() {
       </div>
     </div>
   );
-} 
+}

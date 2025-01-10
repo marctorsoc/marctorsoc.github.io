@@ -8,7 +8,7 @@ isPinned: false
 ---
 
 Sometimes I get my mind back to 2009, when Prof. Josep Vidal came to me with <a href="https://arxiv.org/abs/0707.0323">this</a> then recently published amazing paper. At that moment, I had never imagined that <a href="http://www.ece.uci.edu/~syed/">Jafar</a>, a name that I related more to Disney Aladdin's <a href="https://en.wikipedia.org/wiki/List_of_Disney%27s_Aladdin_characters#Jafar">antagonist</a>, would be the origin of my PhD. In short, the thing is that two (very smart) guys: Syed Ali Jafar and his PhD student Viveck Cadambe, ideated an innovative an disruptive way of communicating nodes in a wireless network.
-The main achievement is that, regardless the number of active nodes located in a network, each achieves the same performance! To be practical, consider a room with 2 pairs of people, all communicating by turns. This means that to understand each other, each pair can only talk during half the time. So we say that the <em>efficiency </em>is of 50% per pair or 0.5 per pair. What this incredible result claims is that, if we now put 100 pairs in the same room, this same per-pair efficiency can be maintained, so there is way to transmit information where they don't mind how many people there is in the room!
+The main achievement is that, regardless the number of active nodes located in a network, each achieves the same performance! To be practical, consider a room with 2 pairs of people, all communicating by turns. This means that to understand each other, each pair can only talk during half the time. So we say that the *efficiency* is of 50% per pair or 0.5 per pair. What this incredible result claims is that, if we now put 100 pairs in the same room, this same per-pair efficiency can be maintained, so there is way to transmit information where they don't mind how many people there is in the room!
 In a world where there are increasingly more and more devices communicating at the same time, one can understand how this idea may bring a revolution to the wireless communications.
 To understand the idea, probably it is necessary some background. I will try to make things simpler than they are, but obviously some maths are needed.
 
@@ -46,8 +46,8 @@ The design above is usually referred to as <em>Null Steering</em>, since each t
 </div>
 
 <h3><strong>Zero-forcing</strong></h3>
-The dual case of the broadcast channel is the multiple-access channel (MAC), where there are $K$ transmitters, and a single receiver, see Fig. 2. Consider the case where the receiver is equipped with $M=K$ antennas, i.e. as antennas as users, and transmitters are single-antenna. Then, similarly to the null steering idea, the receiver may filter out the directions the interference comes from, by processing the received signal with a linear filter $\mathbf{w}_i$. Such approach is usually denoted as Zero-Forcing (ZF), and this is the reason why Null Steering may also be denoted as Zero Forcing at the transmitter.
-Given the idea, let's see how this translates to maths. Assuming that $\mathbf{w}_i$ is used to decode $x_i$, for the $K=M=2$ case the processed signal is given by:
+
+The dual case of the broadcast channel is the multiple-access channel (MAC), where there are $K$ transmitters, and a single receiver, see Fig. 2. Consider the case where the receiver is equipped with $M=K$ antennas, i.e. as many antennas as users, and transmitters are single-antenna. Then, similarly to the null steering idea, the receiver may filter out the directions the interference comes from, by processing the received signal with a linear filter $\mathbf{w}_i$. Such approach is usually denoted as Zero-Forcing (ZF), and this is the reason why Null Steering may also be denoted as Zero Forcing at the transmitter. Given the idea, let's see how this translates to maths. Assuming that $\mathbf{w}_i$ is used to decode $x_i$, for the $K=M=2$ case the processed signal is given by:
 
 \begin{align} {z}_i = \mathbf{w}^T_i \left( \mathbf{h}_1 x_1 + \mathbf{h}_2 x_2 +\mathbf{n}_i \right)   \end{align}
 
@@ -58,13 +58,14 @@ where channels are now 2x1 (2 antennas at the receiver, 1 antenna at each transm
 such that all the interference is removed when decoding each signal. To do so, the rows of the receiving filter (in this case only one since we are decoding a single message) should be contained on the left null space of the channels, similarly to the case of null steering explained above. A generalization to the case of general $K=M$ users is straightforward following the same approach as for null steering.
 
 <h3><strong>Degrees of Freedom</strong></h3>
-During this post I have talked about efficiency, referring to what rigorously is denoted as the <it>degrees of freedom</it> (DoF) of the channel. I'm not going to explain in detail this concept, because I think it's the less interesting part for common people who don't have passion for maths.
 
-To put it simple, think about the DoF as the number of messages that can be transmitted per time unit, received without interference. For each scenario (topology, number of users, and distribution of antennas), there is a value which is the optimal. This means that it's not feasible to obtain more than this. I will refer to this as the <it>optimal</it> DoF, or just the <it>DoF of the channel</it>.
+During this post I have talked about efficiency, referring to what rigorously is denoted as the *degrees of freedom* (DoF) of the channel. I'm not going to explain in detail this concept, because I think it's the less interesting part for common people who don't have passion for maths.
 
-In addition to this, based on (usually) complicated Information Theory tools, it is possible to bound the DoF of the channel, such that we know that more than this is not possible to achieve. This is known as DoF <it>upper bound</it> or <it>outer bound</it>.
+To put it simple, think about the DoF as the number of messages that can be transmitted per time unit, received without interference. For each scenario (topology, number of users, and distribution of antennas), there is a value which is the optimal. This means that it's not feasible to obtain more than this. I will refer to this as the *optimal* DoF, or just the *DoF of the channel*.
 
-Finally, for each proposed transmission technique we can analyze how many DoF are achieved, leading to a DoF <it>inner bound</it>. Therefore, the only way to derive the DoF of the channel is to find the DoF of the channel is to find a DoF inner bound coinciding with a DoF upper bound.
+In addition to this, based on (usually) complicated Information Theory tools, it is possible to bound the DoF of the channel, such that we know that more than this is not possible to achieve. This is known as DoF *upper bound* or *outer bound*.
+
+Finally, for each proposed transmission technique we can analyze how many DoF are achieved, leading to a DoF *inner bound*. Therefore, the only way to derive the DoF of the channel is to find the DoF of the channel is to find a DoF inner bound coinciding with a DoF upper bound.
 
 <h3><strong>Conclusion</strong></h3>
 In this first post, we have seen the ideas of zero forcing and null steering. In short, the idea in the former is to make use of multiple antennas to transmit in such a way that no interference is generated to other users. Likewise, for the latter all signals received through directions corresponding to other users' channels are filtered out. Both techniques are formulated in mathematical terms by referring to the concept of <em>null space </em>of a matrix.

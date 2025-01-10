@@ -87,7 +87,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold mb-6">Pinned Posts</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {pinnedPosts.map(post => (
-                <PostCard key={post.permalink} post={post} />
+                <PostCard key={post.permalink} post={post} maxPreviewChars={100} compact={true} />
               ))}
             </div>
           </section>
@@ -98,7 +98,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold mb-6">Recent Posts</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {recentPosts.map(post => (
-                <PostCard key={post.permalink} post={post} />
+                <PostCard key={post.permalink} post={post} maxPreviewChars={100} compact={true} />
               ))}
             </div>
           </section>
@@ -106,4 +106,4 @@ export default function Home() {
       </div>
     </div>
   );
-} 
+}
