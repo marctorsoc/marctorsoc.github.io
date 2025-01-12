@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base animated underline style */
+.animated-underline {
+  @apply relative;
+}
+
+.animated-underline::after {
+  content: '';
+  @apply absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-500 transition-all duration-300 ease-out -translate-x-1/2;
+}
+
+.animated-underline:hover::after {
+  @apply w-full;
+}
+
+/* Dark mode adjustment */
+@media (prefers-color-scheme: dark) {
+  .animated-underline::after {
+    @apply bg-blue-400;
+  }
+}
+
+/* Navigation links */
+.nav-link {
+  @apply animated-underline py-2 text-lg;
+}
+
+.nav-link.active {
+  @apply font-bold text-blue-600 dark:text-blue-400;
+}
+
+/* Post title links */
+.prose h2 .post-title-link {
+  @apply animated-underline inline-block text-gray-900 dark:text-gray-100 no-underline !important;
+}
+
+.prose h2 .post-title-link:hover {
+  @apply text-gray-900 dark:text-gray-100 !important;
+}
+
+/* Post content links - exclude category tags and other special links */
+.prose a:not(.post-title-link):not(.read-more-link):not(.category-tag) {
+  @apply animated-underline no-underline text-blue-600 dark:text-blue-400;
+}
+
+/* Read more link */
+.read-more-link {
+  @apply no-underline text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors;
+}
+
+/* Category tag links */
+.category-tag {
+  @apply no-underline !important;
+  text-decoration: none !important;
+}
+
+.category-tag:hover {
+  @apply no-underline !important;
+  text-decoration: none !important;
+} 
+
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  max-width: 90%;
+  border-radius: 8px;
+}
+
+.katex-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto;
+}
