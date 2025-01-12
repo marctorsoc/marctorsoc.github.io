@@ -7,8 +7,8 @@ import HeroImage from '../components/HeroImage';
 const markdown = `
 Please find some resources to know more about my PhD:
 
-  * [PhD Thesis](/content/2016/11/marcPhd.pdf)
-  * [PhD Thesis poster](/content/2016/11/poster_tesi.pdf)
+  * [PhD Thesis](/content/marcPhd.pdf)
+  * [PhD Thesis poster](/content/poster_tesi.pdf)
 
 and you might find some other profiles by clicking on the icons on the rigth hand side.
 

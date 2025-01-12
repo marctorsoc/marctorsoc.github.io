@@ -46,7 +46,8 @@ export default function OffTopic() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 pb-8">
-      <HeroImage src="/content/offtopic.png" />
+      <HeroImage src="/content/offtopic2.jpg" />
+      {/* <HeroImage src="/content/offtopic.png" /> */}
       
       <div className="max-w-4xl mx-auto pt-8">
         <div className="prose dark:prose-invert max-w-none mb-12">

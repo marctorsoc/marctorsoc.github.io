@@ -173,8 +173,11 @@ labels = nx.get_edge_attributes(G,'weight')
 plt.draw()
 ```
 
-
-![png](../../content/christmas_routes/output_5_0.png)
+<img 
+    src="/content/output_5_0.jpg" 
+    alt="" 
+    width="50%"
+/>
 
 
 In this case, the graph is not really useful since points are in a 3D coodinate system but we are
