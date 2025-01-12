@@ -1,21 +1,35 @@
 interface ProfileSidebarProps {
-  name: string;
-  tagline: string;
-  location: string;
-  avatarUrl: string;
-  socialLinks: {
+  name?: string;
+  tagline?: string;
+  avatarUrl?: string;
+  socialLinks?: {
     type: 'linkedin' | 'github' | 'google-scholar' | 'other';
     url: string;
   }[];
 }
 
-export default function ProfileSidebar({ 
-  name, 
-  tagline, 
-  location, 
-  avatarUrl,
-  socialLinks 
-}: ProfileSidebarProps) {
+const defaultProps: Required<ProfileSidebarProps> = {
+  name: "Marc Torrellas Socastro",
+  tagline: "Tech, Teaching, Maths & Music",
+  avatarUrl: "/content/marc_CV2015_transp.png",
+  socialLinks: [
+    {
+      type: 'linkedin',
+      url: 'https://www.linkedin.com/in/marctorsoc'
+    },
+    {
+      type: 'github',
+      url: 'https://github.com/marctorsoc'
+    },
+    {
+      type: 'google-scholar',
+      url: 'https://scholar.google.es/citations?user=__4XCdYAAAAJ'
+    }
+  ]
+};
+
+export default function ProfileSidebar(props: ProfileSidebarProps = {}) {
+  const { name, tagline, avatarUrl, socialLinks } = { ...defaultProps, ...props };
   return (
     <div className="sticky top-4">
       <div className="flex flex-col items-center">
@@ -29,33 +43,27 @@ export default function ProfileSidebar({
         </div>
 
         {/* Content */}
-        <div className="text-center mb-6">
+        <div className="text-center mb-3">
           <h3 className="text-xl font-bold mb-2">{name}</h3>
           <p className="text-gray-600 dark:text-gray-400">{tagline}</p>
         </div>
 
         {/* Location */}
-        <div className="flex items-center gap-2 mb-4 text-gray-600 dark:text-gray-400">
-          <svg 
-            className="w-4 h-4" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" 
-            />
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" 
-            />
+        <div className="flex items-center gap-1 mb-4 text-gray-600 dark:text-gray-400">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
           </svg>
-          <span>{location}</span>
+          <span>
+            From Barcelona
+            <img 
+              src="/content/sagrada-familia.png" 
+              alt="Sagrada Familia" 
+              className="inline-block w-5 h-5 align-baseline relative mx-1" 
+              style={{ top: '2px' }} 
+            />
+            to the 🌎
+          </span>
         </div>
 
         {/* Social Links */}
@@ -100,4 +108,4 @@ export default function ProfileSidebar({
       </div>
     </div>
   );
-} 
+}

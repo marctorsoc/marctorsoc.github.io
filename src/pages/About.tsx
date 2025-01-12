@@ -46,26 +46,7 @@ export default function About() {
           </div>
           
           <div className="md:w-1/3 flex flex-col justify-center">
-            <ProfileSidebar
-              name="Marc Torrellas Socastro"
-              tagline="Maths, Tech, Teaching & Music"
-              location="From Barcelona to the 🌎"
-              avatarUrl="/content/marc_CV2015_transp.png"
-              socialLinks={[
-                {
-                  type: 'linkedin',
-                  url: 'https://www.linkedin.com/in/marctorsoc'
-                },
-                {
-                  type: 'github',
-                  url: 'https://github.com/marctorsoc'
-                },
-                {
-                  type: 'google-scholar',
-                  url: 'https://scholar.google.es/citations?user=__4XCdYAAAAJ'
-                }
-              ]}
-            />
+            <ProfileSidebar/>
           </div>
         </div>
       </div>

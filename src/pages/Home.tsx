@@ -39,33 +39,14 @@ export default function Home() {
           <div className="max-w-md">
             <h2 className="text-2xl font-bold mb-6">Welcome to my website!</h2>
             <p>
-              A place to share my experience, resources, and hobbies. 
-              The menu above allows you to navigate through the different sections, and know a bit more about me.
+              A place to share my experiences, resources, and hobbies. 
+              Use the menu above to explore the different sections, and learn a bit more about me.
             </p>
             <p>Have a beautiful day! 😃</p>
           </div>
         </section>
 
-        <ProfileSidebar 
-          name="Marc Torrellas Socastro"
-          tagline="Maths, Tech, Teaching & Music"
-          location="From Barcelona to the 🌎"
-          avatarUrl="/content/marc_CV2015_transp.png"
-          socialLinks={[
-            {
-              type: 'linkedin',
-              url: 'https://www.linkedin.com/in/marctorsoc'
-            },
-            {
-              type: 'github',
-              url: 'https://github.com/marctorsoc'
-            },
-            {
-              type: 'google-scholar',
-              url: 'https://scholar.google.es/citations?user=__4XCdYAAAAJ'
-            }
-          ]}
-        />
+        <ProfileSidebar />
       </div>
 
       <div>
