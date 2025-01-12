@@ -3,14 +3,16 @@ interface HeroImageProps {
   alt?: string;
 }
 
-export default function HeroImage({ src, alt = '' }: HeroImageProps) {
+export default function HeroImage({ src, alt }: HeroImageProps) {
   return (
-    <div className="w-full overflow-hidden">
-      <img 
-        src={src} 
-        alt={alt} 
-        className="w-full h-[300px] object-cover"
-      />
+    <div className="relative w-full mb-8">
+      <div className="relative w-full flex justify-center">
+        <img
+          src={src}
+          alt={alt || "Hero image"}
+          className="w-full max-h-[300px] object-contain"
+        />
+      </div>
     </div>
   );
 }
