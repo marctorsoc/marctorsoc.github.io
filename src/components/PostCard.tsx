@@ -271,13 +271,26 @@ export function PostCard({ post, showFullContent = false, compact = false }: Pos
     <article className={`prose dark:prose-invert max-w-none bg-white dark:bg-black p-4 rounded-xl shadow-lg ring-1 ring-gray-900/5 ${
       compact ? 'h-[200px] flex flex-col' : ''
     }`}>
-      <h2 className={`${compact ? 'text-xl mb-2' : 'text-2xl mb-4'} font-bold mt-0`}>
-        <Link 
-          to={post.permalink} 
-          className="post-title-link no-underline text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-        >
-          {post.title}
-        </Link>
+      <h2 className={`${
+        showFullContent 
+          ? 'text-2xl md:text-2xl' 
+          : compact 
+            ? 'text-xl' 
+            : 'text-2xl'
+        } font-bold mt-0 mb-4`}
+      >
+        {showFullContent ? (
+          <span className="text-gray-900 dark:text-gray-100">
+            {post.title}
+          </span>
+        ) : (
+          <Link 
+            to={post.permalink} 
+            className="post-title-link no-underline text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          >
+            {post.title}
+          </Link>
+        )}
       </h2>
       <div className={`flex flex-wrap items-center gap-2 text-base ${compact ? 'mb-2' : 'mb-3'}`}>
         <time className="text-gray-700 dark:text-gray-300 flex items-center">
