@@ -273,7 +273,7 @@ export function PostCard({ post, showFullContent = false, compact = false }: Pos
     }`}>
       <h2 className={`${
         showFullContent 
-          ? 'text-2xl md:text-2xl' 
+          ? 'text-3xl' 
           : compact 
             ? 'text-xl' 
             : 'text-2xl'
