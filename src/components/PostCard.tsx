@@ -246,12 +246,26 @@ interface PostCardProps {
 }
 
 export function PostCard({ post, showFullContent = false, compact = false }: PostCardProps) {
-  // Preprocess content to handle LaTeX environments
-  const processedContent = preprocessContent(post.content || '');
+  // Add null checks at the top of component
+  if (!post || !post.categories) {
+    console.error('PostCard: Missing post data or categories', { post });
+    return null;
+  }
 
-  // Extract the first paragraph for the preview
+  const safeContent = post.content || '';
+  
+  // Preprocess content to handle LaTeX environments
+  const processedContent = preprocessContent(safeContent);
+
+  // Safer extraction of first paragraph with fallback
   const firstParagraphMatch = processedContent.match(/^(.*?)(?:\n\n|$)/s);
-  const firstParagraph = firstParagraphMatch ? firstParagraphMatch[1].trim() : '';
+  const firstParagraph = firstParagraphMatch ? firstParagraphMatch[1].trim() : 'No content available';
+
+  // Move categories validation outside JSX
+  if (!Array.isArray(post.categories)) {
+    console.warn('PostCard: categories is not an array', { categories: post.categories });
+    post.categories = []; // Provide empty array as fallback
+  }
 
   return (
     <article className={`prose dark:prose-invert max-w-none bg-white dark:bg-black p-4 rounded-xl shadow-lg ring-1 ring-gray-900/5 ${

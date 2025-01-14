@@ -35,7 +35,8 @@ If you are interested, it's interesting to see that with ZF concepts we cannot a
 Let's assume that each transmitter $i$ uses a 2x1 precoding vector $\mathbf{v}_i$ to transmit the symbol ${x_i}$. Then, the signal obtained at receiver $j$ can be written as:
 
 <div style="text-align: center">
-  <img src="/content/AI_IC_formula.png" alt="" width="357" height="291" />
+  <img src="/content/AI_IC_formula.png" 
+  alt="as image bc does not render with katex otherwise" width="35%"/>
 </div>
 
 where $\mathbf{H}_{ji}$ is the 2x2 matrix whose entries are channel gains from each antenna of transmitter $i$ to receiver $j$, and $\mathbf{n}_i$ is the noise term.
@@ -59,21 +60,19 @@ In this situation, we can resolve at each receiver the desired symbol, and also 
 The mathematical formulation for IA in this case is as simple as
 
 \begin{align}    
-\begin{matrix}
-  \mathbf{H}\_{12} \mathbf{V}_2 = \mathbf{H}\_{13} \mathbf{V}_3 \newline
-  \mathbf{H}\_{21} \mathbf{V}_1 = \mathbf{H}\_{23} \mathbf{V}_3 \newline
-  \\, \\, \\, \\, \mathbf{H}\_{31} \mathbf{V}_1 = \mathbf{H}\_{32} \mathbf{V}_2   
-\end{matrix}
+  \mathbf{H}\_{12} \mathbf{V}_2 =& \mathbf{H}\_{13} \mathbf{V}_3 \newline
+  \mathbf{H}\_{21} \mathbf{V}_1 =& \mathbf{H}\_{23} \mathbf{V}_3 \newline
+  \mathbf{H}\_{31} \mathbf{V}_1 =& \mathbf{H}\_{32} \mathbf{V}_2   
  \end{align}
 
 but in general would be
 
 \begin{align}
-\mathsf{span} \left\( \mathbf{H}\_{12} \mathbf{V}_2 \right\) =
+\mathsf{span} \left\( \mathbf{H}\_{12} \mathbf{V}_2 \right\) =&
 \mathsf{span} \left\( \mathbf{H}\_{13} \mathbf{V}_3 \right\) \newline
-\mathsf{span} \left\( \mathbf{H}\_{21} \mathbf{V}_1\right\) =
+\mathsf{span} \left\( \mathbf{H}\_{21} \mathbf{V}_1\right\) =&
 \mathsf{span} \left\( \mathbf{H}\_{23} \mathbf{V}_3\right\) \newline
-\mathsf{span} \left\( \mathbf{H}\_{31} \mathbf{V}_1\right\) =
+\mathsf{span} \left\( \mathbf{H}\_{31} \mathbf{V}_1\right\) =&
 \mathsf{span} \left\( \mathbf{H}\_{32} \mathbf{V}_2 \right\)  
 \end{align}
 
