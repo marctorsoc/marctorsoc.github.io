@@ -3,7 +3,8 @@ title: "DC: Dungeon & Code"
 date: '2018-04-08 22:43:44 +0100'
 permalink: /posts/dc-dungeon-code/
 categories:
-- Divulgation
+- Coding
+- AI
 heroImage: /content/yX1T7D.png
 heroImageWidth: 70%
 ---

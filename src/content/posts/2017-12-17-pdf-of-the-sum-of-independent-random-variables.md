@@ -3,7 +3,7 @@ title: PDF of the sum of independent random variables
 date: 2017-12-17T01:02:19+00:00
 permalink: /posts/pdf-of-the-sum-of-independent-random-variables/
 categories:
-  - Divulgation
+  - Maths
 ---
 
 <p style="text-align: justify;">

@@ -10,11 +10,14 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import 'katex/dist/katex.min.css';
 import type { Components } from 'react-markdown';
 
-// Map categories to colors
+// Update category colors with a unique color for each category
 const categoryColors: { [key: string]: string } = {
-  'Academia': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
   'Off-topic': 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300',
-  'Divulgation': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300'
+  'Academia': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
+  'Work': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+  'Maths': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
+  'Coding': 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300',
+  'AI': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300'
 };
 
 function Math({ children, inline = false }: { children: string, inline?: boolean }) {
@@ -299,7 +302,7 @@ export function PostCard({ post, showFullContent = false, compact = false }: Pos
         {post.categories.map(category => (
           <Link 
             key={category}
-            to={`/${category.toLowerCase()}`}
+            to={`/blog?category=${encodeURIComponent(category)}`}
             className={`category-tag no-underline px-2 py-0.5 rounded-full hover:opacity-90 transition-opacity ${categoryColors[category] || 'bg-gray-200 dark:bg-gray-700'}`}
           >
             {category}

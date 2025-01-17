@@ -24,6 +24,8 @@ in social settings, to avoid being difficult.
 
 - For over 10 years, I was part of a Scouts organization. First as a kid, then as a monitor.
 It was a truly transformative experience that shaped my values, and I cannot recommend it enough.
+During that time, I learned to play the guitar, later picked up the ukulele, and even joined 
+a Gospel choir, which I was part of for a few years 🎤.
 
 - In 2017, after a 5 years degree and 4 years of PhD, all in Barcelona, I decided to move abroad 
 to the UK for work. It was a one-way journey, not knowing when, or if I would return. 

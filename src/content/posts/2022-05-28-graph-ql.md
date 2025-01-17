@@ -5,7 +5,8 @@ permalink: /posts/hack_days_graphql/
 header:
   image: /content/hackathon.png
 categories:
-  - Divulgation
+  - Work
+  - Coding
 ---
 
 Nowadays, it is common in many startups to have playground events for engineers to encourage 
