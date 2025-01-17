@@ -10,10 +10,11 @@ export default function Navigation() {
   const closeMenu = () => setIsMenuOpen(false);
 
   const navItems = [
+    { to: "/", text: "Home" },
     { to: "/academia", text: "Academia" },
-    { to: "/divulgation", text: "Divulgation" },
-    { to: "/off-topic", text: "Off-topic" },
-    { to: "/about", text: "About me" },
+    { to: "/blog", text: "Blog" },
+    { to: "/resources", text: "Resources" }, 
+    { to: "/about", text: "About" },
   ];
 
   return (

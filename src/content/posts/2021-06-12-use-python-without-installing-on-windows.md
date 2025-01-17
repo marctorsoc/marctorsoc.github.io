@@ -3,7 +3,7 @@ title:  Python without installing on Windows
 date: 2021-06-11T19:04:03+00:00
 permalink: /posts/cx_freeze/
 categories:
-  - Divulgation
+  - Coding
 heroImage: /content/tremp.jpeg
 heroImageWidth: 60%
 ---

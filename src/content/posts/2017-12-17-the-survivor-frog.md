@@ -3,7 +3,7 @@ title: The survivor frog
 date: 2017-12-17T02:10:45+00:00
 permalink: /posts/the-survivor-frog/
 categories:
-  - Divulgation
+  - Maths
 heroImage: /content/amphibian-1295172_640.png
 heroImageWidth: 60%
 ---

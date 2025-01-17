@@ -22,16 +22,16 @@ in Barcelona.
 </p>
   
 <div style="text-align: justify;">
-All papers produced during and after my PhD, as well as my
- thesis, can be found my Google Scholar page (see below), 
- with most of them also available at <a href="https://arxiv.org/">arXiv</a>.
+All my research papers are available on my Google Scholar page
+(link below). Most of them, including conference and journal publications, 
+are also accessible on <a href="https://arxiv.org/">arXiv</a>.
 </div>
 
 Journal papers:
 
 - M. Torrellas, A. Agustin de Dios, J. Vidal and O. Muñoz Medina, *"The DoF of the 3user MIMO Interference Channel"*, IEEE Transactions on Communications, September 2014. <a href="https://arxiv.org/pdf/1407.8359">PDF</a>.
 - M. Torrellas, A. Agustin de Dios and J. Vidal, *"Achievable DoF-delay Trade-offs for the K-user MIMO Interference channel with delayed CSIT"*, IEEE Transactions on Information Theory, October 2016. <a href="https://arxiv.org/pdf/1504.05498">PDF</a>.
-- M. Torrellas, A. Agustin de Dios, J. Vidal, *"On the Degrees of Freedom of the MISO Interference Broadcast Channel with Delayed CSIT"*, submitted to Transactions on Information Theory, November 2019. <a href="https://arxiv.org/pdf/1403.7012">PDF</a>
+- M. Torrellas, A. Agustin de Dios and J. Vidal, *"On the Degrees of Freedom of the MISO Interference Broadcast Channel with Delayed CSIT"*, submitted to Transactions on Information Theory, November 2019. <a href="https://arxiv.org/pdf/1403.7012">PDF</a>
 
 Other resources:
 * [PhD Thesis](/content/marcPhd.pdf)

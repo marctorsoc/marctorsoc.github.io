@@ -3,7 +3,8 @@ title:  Journal Club
 date: 2021-12-11T19:04:03+00:00
 permalink: /posts/journal_club/
 categories:
-  - Divulgation
+  - Work
+  - AI
 heroImage: /content/cel_maco.jpeg
 heroImageWidth: 80%
 ---

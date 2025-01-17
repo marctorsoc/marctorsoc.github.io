@@ -3,7 +3,7 @@ title: The trigonotable
 date: 2017-10-09T00:15:01+00:00
 permalink: /posts/the-trigonotable/
 categories:
-  - Divulgation
+  - Maths
 ---
 
 <p style="text-align: justify;">At some point during the high school, one is required to memorize the value of some trigonometric functions. In this post, I'm going to show an easy trick to memorize the following table:</p>

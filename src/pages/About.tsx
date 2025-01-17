@@ -5,51 +5,53 @@ import ProfileSidebar from '../components/ProfileSidebar';
 import HeroImage from '../components/HeroImage';
 
 const markdown = `
-Please find some resources to know more about my PhD:
+Beyond a PhD and work, *a man has many faces*. Here some curious facts about me:
 
-  * [PhD Thesis](/content/marcPhd.pdf)
-  * [PhD Thesis poster](/content/poster_tesi.pdf)
+- I was born in Barcelona and, like many Catalans, I'm a big fan of FC Barcelona - 
+we call it "Barça." Fun fact: the city is "Barna" for us locals. Oh, and please 
+don't refer to "Real Madrid" as "Real"; for us, it's simply "Madrid.
 
-and you might find some other profiles by clicking on the icons on the rigth hand side.
+- As you might have noticed, I identify as Catalan and I am a big proponent of 
+the Catalan language. I also believe we would be better off
+as an independent country. But I also think that the base case scenario would be 
+Europe as a federation of regions, with a strong European Union.
+And I support the Spanish National football team. Yeah, we all have contradictions.
 
-Some open source projects I have collaborated in:
+- Speaking of contradictions, I adopted a vegan diet back in 2014. Over
+the years, it has evolved into something more flexitarian, if you want to assign me a label. 
+I avoid meat entirely, but I might consume fish or dairy products every now and then, especially 
+in social settings, to avoid being difficult.
 
-  * [globality-black](https://github.com/globality-corp/globality-black): 
-  creator and former maintainer.
-  [Presentation](https://docs.google.com/presentation/d/1Lp0jLSI5YJYOXEntxSvaHeOALAlndlgu/edit?usp=sharing&ouid=102083878154902570127&rtpof=true&sd=true)
-  * [hyperopt](https://github.com/hyperopt/hyperopt/): former co-maintainer
-  * [scikit-learn](https://github.com/scikit-learn/scikit-learn): 
-  [12613](https://github.com/scikit-learn/scikit-learn/pull/12613),
-  [14900](https://github.com/scikit-learn/scikit-learn/pull/14900)
+- For over 10 years, I was part of a Scouts organization. First as a kid, then as a monitor.
+It was a truly transformative experience that shaped my values, and I cannot recommend it enough.
+During that time, I learned to play the guitar, later picked up the ukulele, and even joined 
+a Gospel choir, which I was part of for a few years 🎤.
 
-
-And last, but not least, [LinguaQuest](https://play.google.com/store/apps/details?id=com.marc.torsoc.linguaquest), 
-  a language learning app I developed and published to Google Play.
+- In 2017, after a 5 years degree and 4 years of PhD, all in Barcelona, I decided to move abroad 
+to the UK for work. It was a one-way journey, not knowing when, or if I would return. 
+I was even close to moving, though it finally did not happen. After 5 years abroad, I returned to
+Barcelona as a choice, but cannot recommend enough the experience of living abroad. 
 `;
 
 export default function About() {
   return (
     <div className="max-w-7xl mx-auto px-4 pb-8">
-      <HeroImage src="/content/llac.jpg" />
+      <HeroImage src="/content/offtopic2.jpg" />
       
-      <div className="max-w-4xl mx-auto px-4 md:px-8 pt-8">
-        <div className="flex flex-col md:flex-row gap-8">
-          <div className="md:w-2/3">
-            <div className="prose prose-lg dark:prose-invert max-w-none">
-              <ReactMarkdown 
-                remarkPlugins={[remarkGfm]} 
-                rehypePlugins={[rehypeRaw]}
-              >
-                {markdown}
-              </ReactMarkdown>
-            </div>
+      <div className="max-w-4xl mx-auto pt-8">
+          <div className="prose dark:prose-invert max-w-none">
+            <ReactMarkdown 
+            remarkPlugins={[remarkGfm]} 
+            rehypePlugins={[rehypeRaw]}
+          >
+            {markdown}
+          </ReactMarkdown>
+        </div>
           </div>
           
-          <div className="md:w-1/3 flex flex-col justify-center">
+          <div className="w-full">
             <ProfileSidebar/>
           </div>
-        </div>
       </div>
-    </div>
   );
-} 
+}
