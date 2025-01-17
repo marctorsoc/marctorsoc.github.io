@@ -11,6 +11,7 @@ import 'katex/dist/katex.min.css';
 import { useSearchParams } from 'react-router-dom';
 
 const CATEGORIES = ['Academia', 'AI', 'Coding','Maths', 'Off-topic', 'Work'];
+const POSTS_PER_PAGE = 5;
 
 // Add the same color mapping used in PostCard
 const categoryColors: { [key: string]: string } = {
@@ -32,12 +33,23 @@ export default function Blog() {
   const [selectedCategories, setSelectedCategories] = React.useState<string[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
+  const [currentPage, setCurrentPage] = React.useState(1);
 
   // Initialize selected categories from URL parameter
   React.useEffect(() => {
     const categoryParam = searchParams.get('category');
     if (categoryParam && CATEGORIES.includes(categoryParam)) {
       setSelectedCategories([categoryParam]);
+    }
+  }, [searchParams]);
+
+  // Initialize page from URL parameter
+  React.useEffect(() => {
+    const pageParam = searchParams.get('page');
+    if (pageParam) {
+      setCurrentPage(parseInt(pageParam, 10));
+    } else {
+      setCurrentPage(1);
     }
   }, [searchParams]);
 
@@ -67,6 +79,13 @@ export default function Blog() {
     );
   }, [posts, selectedCategories]);
 
+  // Pagination calculation
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const paginatedPosts = filteredPosts.slice(
+    (currentPage - 1) * POSTS_PER_PAGE,
+    currentPage * POSTS_PER_PAGE
+  );
+
   const handleCategoryChange = (category: string) => {
     setSelectedCategories(prev => {
       const newCategories = prev.includes(category)
@@ -81,6 +100,26 @@ export default function Blog() {
       }
       
       return newCategories;
+    });
+  };
+
+  const handlePageChange = (newPage: number) => {
+    // Prevent default scroll to top behavior
+    const currentPosition = window.scrollY;
+    
+    setCurrentPage(newPage);
+    setSearchParams(prev => {
+      const newParams = new URLSearchParams(prev);
+      newParams.set('page', newPage.toString());
+      return newParams;
+    });
+
+    // Restore scroll position after a short delay to ensure render is complete
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: currentPosition,
+        behavior: 'instant'
+      });
     });
   };
 
@@ -126,11 +165,58 @@ export default function Blog() {
         )}
 
         {filteredPosts.length > 0 ? (
-          <div className="grid gap-8 md:grid-cols-1">
-            {filteredPosts.map(post => (
-              <PostCard key={post.permalink} post={post} showFullContent={false} />
-            ))}
-          </div>
+          <>
+            <div className="grid gap-8 md:grid-cols-1">
+              {paginatedPosts.map(post => (
+                <PostCard key={post.permalink} post={post} showFullContent={false} />
+              ))}
+            </div>
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex justify-center items-center gap-2 mt-8">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className={`px-4 py-2 rounded-full border transition-colors ${
+                    currentPage === 1
+                      ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                      : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                  }`}
+                >
+                  Previous
+                </button>
+                
+                <div className="flex gap-2">
+                  {[...Array(totalPages)].map((_, i) => (
+                    <button
+                      key={i + 1}
+                      onClick={() => handlePageChange(i + 1)}
+                      className={`w-8 h-8 rounded-full transition-colors ${
+                        currentPage === i + 1
+                          ? 'bg-gray-800 text-white dark:bg-white dark:text-black'
+                          : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                      }`}
+                    >
+                      {i + 1}
+                    </button>
+                  ))}
+                </div>
+
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className={`px-4 py-2 rounded-full border transition-colors ${
+                    currentPage === totalPages
+                      ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                      : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                  }`}
+                >
+                  Next
+                </button>
+              </div>
+            )}
+          </>
         ) : (
           <div className="text-gray-600 dark:text-gray-400">
             No posts found for the selected categories.
