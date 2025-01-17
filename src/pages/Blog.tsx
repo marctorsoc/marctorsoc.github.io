@@ -11,21 +11,14 @@ import HeroImage from '../components/HeroImage';
 import 'katex/dist/katex.min.css';
 
 const markdown = `
-In this section, I will post different resources that may be useful in your undergrad days, at work, or preparing a job interview. You will review something from the past, or maybe learn something new. I will include my findings in data science, coding, and maths.
-
-I also keep notes about different topics in the form of Google Slides / Docs:
-
-* <a href="https://docs.google.com/presentation/d/1abzvRA6VQyMPIfuLVh43QgDdgH-7XgnfE7v73kxNYWw/edit?usp=sharing">Machine Learning</a>
-* <a href="https://docs.google.com/presentation/d/14B0zzok1l1Zl-lUTigtAKubvBdVwBQfxhh1XWADHCRo/edit?usp=sharing">NLP</a>
-* <a href="https://docs.google.com/presentation/d/1EhUGzJlXeU0T1RZiDByrt9szTwanSFvTtFziHTyVFCk/edit?usp=sharing">Algorithms and coding</a>
-* <a href="https://docs.google.com/presentation/d/1ugNBNu3AcacuTo5aGWleNnYK5JqrubO_AUpDDRh-yWM/edit?usp=sharing">Maths</a>
-* <a href="https://docs.google.com/document/d/1_2iLYl4Jt9O4WU-AqZ4jYWluYUWTDx74kZfajKt6-_M/edit">SQL</a>
-
-These do not pretend to be exhaustive and are (and will always be) in construction. I update them every now and then, 
-as I find out new concepts, properties, or even better ways to explain concepts.
+Welcome to my blog! Here you'll find posts about various topics, including:
+- Technical deep dives
+- Career insights
+- Personal experiences
+- Random thoughts and musings
 `;
 
-export default function Divulgation() {
+export default function Blog() {
   const [posts, setPosts] = React.useState<Post[]>([]);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
@@ -34,10 +27,8 @@ export default function Divulgation() {
     setLoading(true);
     getAllPosts()
       .then(fetchedPosts => {
-        const divulgationPosts = fetchedPosts.filter(post => 
-          post.categories.includes('Divulgation')
-        );
-        setPosts(divulgationPosts);
+        // Show all blog posts, not filtering by category anymore
+        setPosts(fetchedPosts);
       })
       .catch(err => {
         console.error('Error loading posts:', err);
@@ -50,7 +41,7 @@ export default function Divulgation() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 pb-8">
-      <HeroImage src="/content/divulgation.png" />
+      {/* <HeroImage src="/content/offtopic2.jpg" /> */}
       
       <div className="max-w-4xl mx-auto pt-8">
         <div className="prose dark:prose-invert max-w-none mb-12">
@@ -84,4 +75,4 @@ export default function Divulgation() {
       </div>
     </div>
   );
-} 
+}
