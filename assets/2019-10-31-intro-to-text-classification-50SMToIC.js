@@ -3,7 +3,7 @@ title: Intro to text classification
 date: '2019-02-08 00:00:00 +0000'
 permalink: /posts/intro-to-text-classification/
 categories:
-- Divulgation
+- AI
 isPinned: true
 ---
 

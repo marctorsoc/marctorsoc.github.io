@@ -3,7 +3,9 @@ title: Data Science in remote
 date: '2019-02-08 00:00:00 +0000'
 permalink: /posts/data-science-in-remote/
 categories:
-- Divulgation
+- AI
+- Coding
+- Work
 isPinned: true
 ---
 

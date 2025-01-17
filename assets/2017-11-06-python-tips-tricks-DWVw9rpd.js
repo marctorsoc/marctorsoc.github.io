@@ -3,7 +3,7 @@ title: Python Tips & Tricks
 date: 2017-11-06T00:00:00+00:00
 permalink: /posts/python-tips-tricks
 categories:
-  - Divulgation
+  - Coding
 isPinned: false
 ---
 
