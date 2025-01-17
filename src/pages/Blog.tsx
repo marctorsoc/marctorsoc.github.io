@@ -9,19 +9,7 @@ import { PostCard } from '../components/PostCard';
 import { getAllPosts } from '../utils/markdownUtils';
 import 'katex/dist/katex.min.css';
 import { useSearchParams } from 'react-router-dom';
-
-const CATEGORIES = ['Academia', 'AI', 'Coding','Maths', 'Off-topic', 'Work'];
-const POSTS_PER_PAGE = 5;
-
-// Add the same color mapping used in PostCard
-const categoryColors: { [key: string]: string } = {
-  'Off-topic': 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300',
-  'Academia': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
-  'Work': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
-  'Maths': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
-  'Coding': 'bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300',
-  'AI': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300'
-};
+import { CATEGORIES, POSTS_PER_PAGE, categoryColors } from '../utils/constants';
 
 const markdown = `
 Welcome to my blog! Use the categories filter below to find posts that interest you.
@@ -143,7 +131,7 @@ export default function Blog() {
               onClick={() => handleCategoryChange(category)}
               className={`px-4 py-2 rounded-full border transition-colors ${
                 selectedCategories.includes(category)
-                  ? categoryColors[category]
+                  ? `${categoryColors[category]} font-bold`
                   : 'bg-transparent border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800'
               }`}
             >
