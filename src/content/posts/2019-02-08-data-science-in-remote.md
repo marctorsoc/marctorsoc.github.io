@@ -3,9 +3,7 @@ title: Data Science in remote
 date: '2019-02-08 00:00:00 +0000'
 permalink: /posts/data-science-in-remote/
 categories:
-- AI
-- Coding
-- Work
+- Dev tools
 isPinned: true
 ---
 
@@ -70,8 +68,8 @@ The main application of having a server is not only to run experiments when you'
 
 ## Notebooks
 
-As explained in
-<a href="https://marctorrellas.github.io/posts/python-tips-tricks/">this post</a>, Jupyter notebooks are very powerful tools for Python easy prototyping, but also for intensive development. However, one typically runs the jupyter server in local, and connect via browser. How do we do this when we want the Python to run in our remote box?
+As explained in the Python tips and tricks
+<a href="/posts/python-tips-tricks/">post</a>, Jupyter notebooks are very powerful tools for Python easy prototyping, but also for intensive development. However, one typically runs the jupyter server in local, and connect via browser. How do we do this when we want the Python to run in our remote box?
 
 1. Install Jupyter lab in the remote box to be able to run the notebook server: `conda install jupyterlab`
 

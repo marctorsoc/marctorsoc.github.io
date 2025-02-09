@@ -3,7 +3,7 @@ title: Christmas routes
 date: 2017-12-20T22:43:43+00:00
 permalink: /posts/christmas-routes/
 categories:
-  - AI
+  - Coding puzzles
 heroImage: /content/santa.jpg
 heroImageWidth: 80%
 heroImageHeight: 50%

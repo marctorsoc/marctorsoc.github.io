@@ -1,10 +1,16 @@
-import { useContext, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { DarkModeContext } from '../../utils/darkMode';
 
 export default function Navigation() {
   const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]); 
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
