@@ -1,10 +1,10 @@
 ---
-title: Data Science in remote
+title: Data Science on remote (OLD)
 date: '2019-02-08 00:00:00 +0000'
-permalink: /posts/data-science-in-remote/
+permalink: /posts/data-science-in-remote-old/
 categories:
 - Dev tools
-isPinned: true
+isPinned: false
 ---
 
 Today we'll see some tips and tricks when working (but not only) on
