@@ -47,13 +47,25 @@ const MarkdownComponents: Components = {
       <SyntaxHighlighter
         style={vscDarkPlus}
         language={language}
-        PreTag="div"
+        PreTag="pre"
+        customStyle={{
+            margin: "0em",
+            padding: "0.5em",
+            backgroundColor: '#1f2937', // Set to same color as vscDarkPlus
+            border: 'none', // Remove border
+            outline: 'none', // Remove outline
+          }}
         {...props}
       >
         {content}
       </SyntaxHighlighter>
-    ) : (
-      <code className={`not-prose bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded font-['Courier New'] text-black dark:text-white text-sm`} {...props}>
+    ) : 
+    // inline blocks
+    (
+      <code
+        className={`not-prose bg-gray-200 dark:bg-gray-700 px-1.5 py-0.5 rounded font-['Courier New'] text-black dark:text-white text-sm border-none`}
+        {...props}
+      >
         {children}
       </code>
     );
