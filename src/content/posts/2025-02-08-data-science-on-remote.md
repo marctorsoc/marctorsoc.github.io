@@ -1,5 +1,5 @@
 ---
-title: Data Science on remote
+title: Data Science on a Remote Machine
 date: '2025-02-08 00:00:00 +0000'
 permalink: /posts/data-science-in-remote/
 categories:
@@ -7,7 +7,7 @@ categories:
 isPinned: false
 ---
 
-In this post, we'll see some tips and tricks that I use when working (but not only) on remote.
+In this post, I'll share some practical tips and tricks for using a remote machine for data science, covering first the why, then connection, tmux and more.
 
 *Disclaimer: all info written in this post assumes a Mac as your local, and Ubuntu as remote. Most of it should work also with other combinations of these two.*
 
@@ -62,6 +62,8 @@ Now you can simply use:
 ssh marc
 ```
 
+and the same for any other command where you would write `username@ip_address`. You'll see some examples below.
+
 ## File Transfer
 
 ### Using `scp`
@@ -87,9 +89,7 @@ rsync -arv --ignore-existing --progress marc:/home/marc/results experiments/resu
 
 ## Running Shells in the Background
 
-Running long processes remotely requires keeping them active even if the connection drops. Use `tmux` to manage persistent sessions.
-
-### `tmux` Commands
+Running long processes remotely requires keeping them active even if the connection drops. While `screen` is an option, I prefer using `tmux`. Here a cheatsheet of `tmux` commands:
 
 - List sessions:
   ```bash
@@ -103,18 +103,26 @@ Running long processes remotely requires keeping them active even if the connect
   ```bash
   tmux attach -t name
   ```
-- Detach from a session (Control + b, then d)
+- Detach from a session (`Control + b`, then `d`)
 - Kill all sessions:
   ```bash
   killall tmux
   ```
 - Scrolling: Enter scroll mode with `Control + b` followed by `[`. Navigate using arrow keys. To exit scroll mode, press `q`.
 
-With these tools and techniques, you'll be more efficient and productive when working remotely.
+## VS Code's Remote Development: A Game Changer
+
+If you checked my old posts, you'll see I was big proponent of Pycharm over VScode. However, I used to run notebooks on a Jupyter server, and then connected via browser after setting up a tunnel. You can check [here](/posts/jupyter-lab-on-a-remote-machine/) my old config if still useful at all. I really liked Pycharm's Git integration, especially for merges and comparing branches. And, to be honest, I still think it's a better inferface than the one in VScode. At least with all extensions I tried.
+
+But at some point I found VSCode's Remotes feature, and it really became a game changer for me. VScode supports:
+- Opening notebooks directly in the IDE, which means you get all the advantages of being an IDE (code and imports completion, error highlighting, search, debugging, etc.)
+- Running notebooks on the remote machine, with the same experience as if it was running locally
+- LLM-powered autocomplete within the notebook itself!
+- A table of contents (called Outline) to navigate the notebook.
 
 
  ## Conclusion
 
-In this post, I have shown some of the tricks I have learned in the recent years for working on remote and with Jupyter notebooks.
+In this post, I shared some good practices for working with a remote machine, especially for data science projects. With these tools and techniques, you'll be more efficient and productive when working remotely.
 
 As always, any recommendation, suggestion or improvement, please let me know. Thanks for reading!
