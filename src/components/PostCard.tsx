@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import MarkdownComponents from './MarkdownComponents';
 import { categoryColors } from '../utils/constants';
+import { HeaderIndexProvider, useHeaderIndex } from '../context/HeaderIndexContext';
 
 function preprocessContent(content: string): string {
   // First, normalize line breaks in align environments

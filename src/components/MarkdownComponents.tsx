@@ -5,6 +5,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Math from './Math';
 import type { Components } from 'react-markdown';
 import { generateId } from '../utils/textUtils';
+import { useHeaderIndex } from '../context/HeaderIndexContext';
 
 function processMathInText(text: string) {
   const parts = text.split(/(\$\$[^\$]+\$\$|\\begin{[\s\S]*?\\end{[\s\S]*?}|\$[^\$]+\$)/g);
@@ -149,21 +150,21 @@ const MarkdownComponents: Components = {
 
   h1(props) {
     const { children, ...rest } = props;
-    const text = typeof children === 'string' ? children : '';
-    const id = generateId(text);
-    return <h1 id={id} {...rest}>{children}</h1>;
+    const text = React.Children.toArray(children).join('');
+    const baseId = generateId(text);
+    return <h1 id={baseId} {...rest}>{children}</h1>;
   },
   h2(props) {
     const { children, ...rest } = props;
-    const text = typeof children === 'string' ? children : '';
-    const id = generateId(text);
-    return <h2 id={id} {...rest}>{children}</h2>;
+    const text = React.Children.toArray(children).join('');
+    const baseId = generateId(text);
+    return <h2 id={baseId} {...rest}>{children}</h2>;
   },
   h3(props) {
     const { children, ...rest } = props;
-    const text = typeof children === 'string' ? children : '';
-    const id = generateId(text);
-    return <h3 id={id} {...rest}>{children}</h3>;
+    const text = React.Children.toArray(children).join('');
+    const baseId = generateId(text);
+    return <h3 id={baseId} {...rest}>{children}</h3>;
   },
 };
 

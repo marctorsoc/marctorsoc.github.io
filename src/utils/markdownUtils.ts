@@ -1,6 +1,8 @@
 import frontMatter from 'front-matter';
 import { Post } from '../types/Post';
 import { getPosts } from './PostLoader';
+import ReactMarkdown from 'react-markdown';
+import { generateId } from './textUtils';
 
 export async function getAllPosts(): Promise<Post[]> {
   return getPosts();
@@ -65,12 +67,24 @@ export async function getPost(slug: string): Promise<Post> {
     const headerMatches = body.match(/^(### |## |# )(.*)$/gm);
     console.log('Raw header matches:', headerMatches);
 
+    // Create a map to track header occurrences
+    const headerOccurrences = new Map<string, number>();
+
     const headers = headerMatches?.map(header => {
       const level = header.startsWith('### ') ? 3 : header.startsWith('## ') ? 2 : 1;
       const text = header.replace(/^### |^## |^# /, '');
-      const id = text.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-      console.log('Processing header:', { raw: header, level, text, id });
-      return { level, text, id };
+      
+      // Generate base ID
+      const baseId = generateId(text);
+      
+      // Track occurrences of this header
+      const count = headerOccurrences.get(baseId) || 0;
+      headerOccurrences.set(baseId, count + 1);
+      
+      // Add suffix if this is a duplicate
+      const id = count > 0 ? `${baseId}-${count}` : baseId;
+      
+      return { level, text, id, index: count };
     }) || [];
 
     console.log('Final TOC headers:', headers);
