@@ -4,6 +4,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Math from './Math';
 import type { Components } from 'react-markdown';
+import { generateId } from '../utils/textUtils';
 
 function processMathInText(text: string) {
   const parts = text.split(/(\$\$[^\$]+\$\$|\\begin{[\s\S]*?\\end{[\s\S]*?}|\$[^\$]+\$)/g);
@@ -144,7 +145,26 @@ const MarkdownComponents: Components = {
         <img {...props} style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', maxWidth: '100%'}}/>
 
     );
-  }
+  },
+
+  h1(props) {
+    const { children, ...rest } = props;
+    const text = typeof children === 'string' ? children : '';
+    const id = generateId(text);
+    return <h1 id={id} {...rest}>{children}</h1>;
+  },
+  h2(props) {
+    const { children, ...rest } = props;
+    const text = typeof children === 'string' ? children : '';
+    const id = generateId(text);
+    return <h2 id={id} {...rest}>{children}</h2>;
+  },
+  h3(props) {
+    const { children, ...rest } = props;
+    const text = typeof children === 'string' ? children : '';
+    const id = generateId(text);
+    return <h3 id={id} {...rest}>{children}</h3>;
+  },
 };
 
 export default MarkdownComponents;

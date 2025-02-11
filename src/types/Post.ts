@@ -1,3 +1,9 @@
+export interface TOCHeader {
+  level: number;
+  text: string;
+  id: string;
+}
+
 export interface Post {
     content: string;
     date: string;
@@ -8,4 +14,5 @@ export interface Post {
     isPinned?: boolean;
     heroImage?: string;
     heroImageWidth?: string;
+    toc?: TOCHeader[];
 }

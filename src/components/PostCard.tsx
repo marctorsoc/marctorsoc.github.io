@@ -37,7 +37,7 @@ function preprocessContent(content: string): string {
       const cleanBody = body
         .trim()
         .replace(/\\\s*\n/g, '\n')
-        .replace(/(?:\\!){2,}/g, '\\!')
+        .replace(/(?:\\!){2,}/g, '\\!') // Add missing quote here
         .replace(/(?:\\,){2,}/g, '\\,');
       return `${start}${cleanBody}${end}`; // Keep \begin{equation}...\end{equation}
     }
@@ -115,6 +115,58 @@ export function PostCard({ post, showFullContent = false, compact = false }: Pos
           </Link>
         ))}
       </div>
+      {showFullContent && post.toc && post.toc.length > 0 && (
+        <>
+          <nav className="toc mb-4">
+            <h3 className="text-xl font-semibold mb-4">Table of Contents</h3>
+            <ul className="space-y-2 list-none p-0">
+              {post.toc.map(header => {
+                // Adjust level to make level 2 the base (no indentation)
+                const minLevel = Math.min(...post.toc.map(h => h.level));
+                const adjustedLevel = Math.max(0, header.level - minLevel);
+                
+                return (
+                  <li
+                    key={header.id}
+                    style={{ marginLeft: `${adjustedLevel * 1.5}rem` }}
+                    className="hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    <a 
+                      href={`#${header.id}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.getElementById(header.id);
+                        if (element) {
+                          element.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                          });
+                          window.history.pushState(null, '', `#${header.id}`);
+                        }
+                      }}
+                      className="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors no-underline"
+                    >
+                      <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                          p: ({children}) => <>{children}</>,
+                          strong: ({children}) => <strong>{children}</strong>,
+                          em: ({children}) => <em>{children}</em>
+                        }}
+                      >
+                        {header.text}
+                      </ReactMarkdown>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+          <hr className="my-8 border-t border-gray-200 dark:border-gray-800" />
+        </>
+      )}
+
+      
       {post.heroImage && showFullContent && (
         <div
             className={`mb-6 ${showFullContent ? '' : 'hidden'}`} 
@@ -135,7 +187,7 @@ export function PostCard({ post, showFullContent = false, compact = false }: Pos
               }}
             />
         </div>
-       )}
+      )}
 
       <div className={`text-gray-800 dark:text-gray-200 ${compact ? 'text-sm flex-grow overflow-hidden' : 'text-justify'}`}>
         <div className={!showFullContent ? 'line-clamp-3' : ''}>

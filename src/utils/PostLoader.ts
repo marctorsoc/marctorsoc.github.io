@@ -1,5 +1,6 @@
 import frontMatter from 'front-matter';
 import { Post } from '../types/Post';
+import { generateId } from './textUtils';
 
 const DEBUG = import.meta.env.DEV;
 
@@ -75,6 +76,33 @@ async function importAll(): Promise<Post[]> {
 
           const filename = filepath.split('/').pop() || '';
           
+          const lines = body.split('\n');
+          const headers = [];
+          let inCodeBlock = false;
+          let headerIndex = 0;
+          const headerIds = new Map<string, number>();
+          
+          for (let line of lines) {
+            if (line.startsWith('```')) {
+              inCodeBlock = !inCodeBlock;
+              continue;
+            }
+            
+            if (!inCodeBlock && /^(### |## |# )/.test(line)) {
+              const level = line.startsWith('### ') ? 3 : line.startsWith('## ') ? 2 : 1;
+              const text = line.replace(/^### |^## |^# /, '');
+              
+              // Generate a unique ID for duplicate headers
+              const baseId = generateId(text);
+              const count = headerIds.get(baseId) || 0;
+              headerIds.set(baseId, count + 1);
+              const id = count === 0 ? baseId : `${baseId}-${count}`;
+              
+              if (DEBUG) console.log('Found header:', { level, text, id });
+              headers.push({ level, text, id });
+            }
+          }
+
           return {
             ...attributes,
             content: body,
@@ -82,7 +110,8 @@ async function importAll(): Promise<Post[]> {
             permalink: attributes.permalink || filepath
               .replace('/src/content/posts/', '')
               .replace('.md', ''),
-            filename
+            filename,
+            toc: headers  // Add this line to include the TOC
           };
         } catch (error) {
           console.error(`❌ Error processing ${filepath}:`, error);

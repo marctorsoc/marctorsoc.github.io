@@ -58,6 +58,23 @@ export async function getPost(slug: string): Promise<Post> {
       throw new Error('Invalid post format');
     }
 
+    // Extract headers for TOC with enhanced debug logging
+    console.log('Content body length:', body.length);
+    console.log('First 500 chars of content:', body.substring(0, 500));
+    
+    const headerMatches = body.match(/^(### |## |# )(.*)$/gm);
+    console.log('Raw header matches:', headerMatches);
+
+    const headers = headerMatches?.map(header => {
+      const level = header.startsWith('### ') ? 3 : header.startsWith('## ') ? 2 : 1;
+      const text = header.replace(/^### |^## |^# /, '');
+      const id = text.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      console.log('Processing header:', { raw: header, level, text, id });
+      return { level, text, id };
+    }) || [];
+
+    console.log('Final TOC headers:', headers);
+
     // Now TypeScript knows the shape of attributes
     const post: Post = {
       title: attributes.title,
@@ -69,9 +86,11 @@ export async function getPost(slug: string): Promise<Post> {
         .replace('.md', ''),
       filename: filepath.split('/').pop() || '',
       heroImage: attributes.heroImage,
-      heroImageWidth: attributes.heroImageWidth
+      heroImageWidth: attributes.heroImageWidth,
+      toc: headers
     };
 
+    if (DEBUG) console.log('Post TOC:', post.toc);
     return post;
   } catch (error) {
     console.error('Error loading post:', error);
