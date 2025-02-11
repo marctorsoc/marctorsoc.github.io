@@ -150,7 +150,9 @@ export function PostCard({ post, showFullContent = false, compact = false }: Pos
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm]}
                         components={{
+                          // Override default components to render plain text
                           p: ({children}) => <>{children}</>,
+                          code: ({children}) => <>{children}</>,
                           strong: ({children}) => <strong>{children}</strong>,
                           em: ({children}) => <em>{children}</em>
                         }}

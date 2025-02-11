@@ -74,7 +74,7 @@ export async function getPost(slug: string): Promise<Post> {
       const level = header.startsWith('### ') ? 3 : header.startsWith('## ') ? 2 : 1;
       const text = header.replace(/^### |^## |^# /, '');
       
-      // Generate base ID
+      // Generate base ID from the cleaned text
       const baseId = generateId(text);
       
       // Track occurrences of this header
@@ -84,7 +84,7 @@ export async function getPost(slug: string): Promise<Post> {
       // Add suffix if this is a duplicate
       const id = count > 0 ? `${baseId}-${count}` : baseId;
       
-      return { level, text, id, index: count };
+      return { level, text, id };
     }) || [];
 
     console.log('Final TOC headers:', headers);

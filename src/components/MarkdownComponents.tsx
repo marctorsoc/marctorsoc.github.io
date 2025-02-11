@@ -28,6 +28,23 @@ function processMathInText(text: string) {
   });
 }
 
+function getTextFromChildren(children: React.ReactNode): string {
+  return React.Children.map(children, child => {
+    if (typeof child === 'string') {
+      return child;
+    }
+    if (React.isValidElement(child)) {
+      // If it's a code block, get its children as text
+      if (child.type === 'code') {
+        return child.props.children;
+      }
+      // Recursively get text from nested children
+      return getTextFromChildren(child.props.children);
+    }
+    return '';
+  }).join('');
+}
+
 const MarkdownComponents: Components = {
   code({ node, inline, className, children, ...props }: any) {
     const match = /language-(\w+)/.exec(className || '');
@@ -150,19 +167,19 @@ const MarkdownComponents: Components = {
 
   h1(props) {
     const { children, ...rest } = props;
-    const text = React.Children.toArray(children).join('');
+    const text = getTextFromChildren(children);
     const baseId = generateId(text);
     return <h1 id={baseId} {...rest}>{children}</h1>;
   },
   h2(props) {
     const { children, ...rest } = props;
-    const text = React.Children.toArray(children).join('');
+    const text = getTextFromChildren(children);
     const baseId = generateId(text);
     return <h2 id={baseId} {...rest}>{children}</h2>;
   },
   h3(props) {
     const { children, ...rest } = props;
-    const text = React.Children.toArray(children).join('');
+    const text = getTextFromChildren(children);
     const baseId = generateId(text);
     return <h3 id={baseId} {...rest}>{children}</h3>;
   },
