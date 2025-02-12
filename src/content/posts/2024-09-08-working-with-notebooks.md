@@ -7,7 +7,18 @@ categories:
 isPinned: true
 ---
 
-TODO
+In data science, experimentation is key. You often need to explore datasets, visualize results, tweak models, and iterate quickly. **Jupyter notebooks** provide an ideal environment for this workflow:
+
+* 📝 Interactive execution: Run code in small, manageable chunks instead of executing entire scripts.
+* 📊 Rich outputs: Easily display tables, charts, and even interactive visualizations inline.
+* 🔄 Reproducibility: Keep code, results, and documentation together in a structured way.
+
+Because of these benefits, Jupyter notebooks have become a go-to tool for data scientists. For years, I used
+to work first in the classic Jupyter Notebook, and later on with JupyterLab. But still, I felt myself 
+transitioning from prototyping in Jupyter on the browser, to writing *serious code* on my IDE (at the time, 
+Pycharm). When working remotely, I had my system where I would have a service in the EC2 instance,
+create a tunnel, and access via browser as if the Jupyter server was local. See [here](/posts/jupyter-lab-on-a-remote-machine/) for details of my config.
+
 
 When I started moving beyond simple experiments and into the world of deploying AI models to production, the importance of Docker became crystal clear.  It wasn't just about making things run smoothly on my own machine anymore; it was about ensuring reliability, scalability, and maintainability in a real-world setting.  That's when I realized Docker wasn't optional – it was *essential*.  
 
