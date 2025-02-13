@@ -28,22 +28,6 @@ function processMathInText(text: string) {
   });
 }
 
-function getTextFromChildren(children: React.ReactNode): string {
-  return React.Children.map(children, child => {
-    if (typeof child === 'string') {
-      return child;
-    }
-    if (React.isValidElement(child)) {
-      // If it's a code block, get its children as text
-      if (child.type === 'code') {
-        return child.props.children;
-      }
-      // Recursively get text from nested children
-      return getTextFromChildren(child.props.children);
-    }
-    return '';
-  }).join('');
-}
 
 const MarkdownComponents: Components = {
   code({ node, inline, className, children, ...props }: any) {
@@ -165,23 +149,29 @@ const MarkdownComponents: Components = {
     );
   },
 
-  h1(props) {
-    const { children, ...rest } = props;
-    const text = getTextFromChildren(children);
-    const baseId = generateId(text);
-    return <h1 id={baseId} {...rest}>{children}</h1>;
+  h1: ({children}) => {
+    const id = generateId(children as string);
+    return <h1 id={id}>{children}</h1>;
   },
-  h2(props) {
-    const { children, ...rest } = props;
-    const text = getTextFromChildren(children);
-    const baseId = generateId(text);
-    return <h2 id={baseId} {...rest}>{children}</h2>;
+  h2: ({children}) => {
+    const id = generateId(children as string);
+    return <h2 id={id}>{children}</h2>;
   },
-  h3(props) {
-    const { children, ...rest } = props;
-    const text = getTextFromChildren(children);
-    const baseId = generateId(text);
-    return <h3 id={baseId} {...rest}>{children}</h3>;
+  h3: ({children}) => {
+    const id = generateId(children as string);
+    return <h3 id={id}>{children}</h3>;
+  },
+  h4: ({children}) => {
+    const id = generateId(children as string);
+    return <h4 id={id}>{children}</h4>;
+  },
+  h5: ({children}) => {
+    const id = generateId(children as string);
+    return <h5 id={id}>{children}</h5>;
+  },
+  h6: ({children}) => {
+    const id = generateId(children as string);
+    return <h6 id={id}>{children}</h6>;
   },
 };
 

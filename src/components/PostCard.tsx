@@ -123,9 +123,8 @@ export function PostCard({ post, showFullContent = false, compact = false }: Pos
             <h3 className="text-xl font-semibold mb-4">Table of Contents</h3>
             <ul className="space-y-2 list-none p-0">
               {post.toc.map(header => {
-                // Adjust level to make level 2 the base (no indentation)
                 const minLevel = Math.min(...post.toc.map(h => h.level));
-                const adjustedLevel = Math.max(0, header.level - minLevel);
+                const adjustedLevel = header.level - minLevel;
                 
                 return (
                   <li
