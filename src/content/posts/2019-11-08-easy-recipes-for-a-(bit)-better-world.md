@@ -59,7 +59,7 @@ different extensions my recommendation is to use <a href="https://chrome.google.
 * You can switch from dark to light mode easily just with two clicks
 * You can select which sites you don't want the dark mode to be applied on. For example, I
 disabled local Jupyter notebooks by going to Site list and typing `localhost:8888` in the filter.
-As Jupyter lab has its own Dark Mode, I can rely on it better than using this extension.
+Since JupyterLab has its own Dark Mode, I can rely on it better than using this extension.
 
 
 ## Every search counts

@@ -1,3 +1,9 @@
+export interface TOCHeader {
+  level: number;
+  text: string;
+  id: string;
+}
+
 export interface Post {
     content: string;
     date: string;
@@ -6,6 +12,8 @@ export interface Post {
     title: string;
     categories: string[];
     isPinned?: boolean;
+    isArchived?: boolean;
     heroImage?: string;
     heroImageWidth?: string;
+    toc?: TOCHeader[];
 }

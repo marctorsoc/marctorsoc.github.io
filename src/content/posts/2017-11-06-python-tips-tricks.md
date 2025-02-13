@@ -3,19 +3,16 @@ title: Python Tips & Tricks
 date: 2017-11-06T00:00:00+00:00
 permalink: /posts/python-tips-tricks
 categories:
-  - Coding
+  - Dev tools
 isPinned: false
+isArchived: true
 ---
 
-<p style="text-align: justify;">Today I'm going to explain some of the lessons and tools I've found that could be useful for someone developing data science (and also general purpose projects) in Python:</p>
+Today I'm going to explain some of the lessons and tools I've found that could be useful for someone developing data science (and also general purpose projects) in Python.
 
-  * Ipython
-  * Notebooks
-  * Tricks for python in a terminal
+For the readers already working in Python, probably some of these items are already known. But I love shortcuts and ways to save time, so maybe you can still find something useful in what follows.
 
-<p style="text-align: justify;">For the readers already working in Python, probably some of these items are already known. But I love shortcuts and ways to save time, so maybe you can still find something useful in what follows.</p>
-
-**IPython**
+## IPython
 
 <p style="text-align: justify;">An improved version of the typical python shell. Actually the "i" comes from "interactive", but I would rather say that it's more an improved version.</p>
 
@@ -31,7 +28,7 @@ In case you are in Ubuntu, you can also run
   <span style="font-family: 'courier new', courier, monospace;">sudo apt install python-ipython</span>
 </p>
 
-<p style="text-align: justify;">Hey, it's not a mistake. , since last versions, apt-get has been simplified to just <a href="https://itsfoss.com/apt-vs-apt-get-difference/">apt</a>. The advantages of ipython w.r.t. classical python shell are many, let's enumerate some:</p>
+Hey, it's not a mistake. As of last versions, `apt-get` has been simplified to just <a href="https://itsfoss.com/apt-vs-apt-get-difference/">apt</a>. The advantages of ipython w.r.t. classical python shell are many, let's enumerate some:
 
   * <p style="text-align: justify;">As in a unix terminal, you can autocomplete and see suggestions using the tab command. Something really appreciated when introducing filenames, names of variables, etc.</p>
   * <p style="text-align: justify;">Using the alt key, ipython allows to move the cursor word by word. This feature is not available (at least in my Mac) when using the classical python shell</p>
@@ -43,7 +40,7 @@ In case you are in Ubuntu, you can also run
     <img src="/content/ipython_help.png" alt="" width="80%" />
   </div> <p> </p>
 
-<span style="font-size: 12pt;"><strong>Profiles</strong></span>
+### Profiles
 
 <p style="text-align: justify;">Have you ever been programming in your favorite IDE and thought: "Is numpy/pandas accepting this? I'm gonna try in a terminal a toy example, just to be sure". Then you go to a terminal, write <span style="font-family: 'courier new', courier, monospace;">[i]python </span>and you have to write, for 334th time in a week, the famous:</p>
 
@@ -74,7 +71,7 @@ In case you are in Ubuntu, you can also run
   1. Modify the default profile, found in the same directory as the profiles we create
   2. Create an alias, see last section in this post
 
-**Notebooks**
+## Notebooks
 
 <p style="text-align: justify;">Jupyter notebooks are really powerful environments where you can develop applications not only in Python, but also other programming languages such as R. They are a complete world, and I'm not gonna explain the entire list of features they have. See an example <a href="https://nbviewer.jupyter.org/github/marctorrellas/christmas_routes/blob/master/christmas_routes.ipynb">here</a>. As you can see they might be useful to present work to other people, but also to have a more dynamic environment where you can run just some pieces of the code, so standing as an intermediate player between the terminal an running code in IDEs.</p>
 
@@ -109,7 +106,7 @@ and you can run it by
 
 <p style="text-align: justify;">Another feature I like is notebook <a href="https://github.com/dunovank/jupyter-themes">themes</a>. Some of us don't like to code in a black on white schema (white background, black fonts) , though there is a lot of controversy about this. To be honest, before writing this post I always thought that it was healthier for my eyes, but it turns out that it depends on the environment light, and also everyone eyesight. In any case, if you feel better or at least the same with dark themes, you can do your bit and saving battery and energy, which is both good for your pocket and your planet. Instructions can be found at the link.</p>
 
- **Python in a terminal**
+ ## Python in a terminal
 
 <p style="text-align: justify;">I highly recommend working in an Integrated Development Environment (IDE) to develop code and use Version Control System (VCS). My favorites are <a href="https://www.jetbrains.com/pycharm/">Pycharm</a> and <a href="http://rogerdudler.github.io/git-guide/">Git</a>, respectively. They are free, popular, and enough for almost any task. However, in some situations we prefer/have to work in a python shell. Here I give you some tips and tricks to improve your experience in that situation.</p>
 
@@ -144,7 +141,7 @@ These alias just create shortcuts to save time, e.g:
   * <p style="text-align: justify;">control+z: send to sleep (background) current process. This can be useful if you want to try something in terminal without losing your workspace in Python. Or if you want to work with two different python environments at the same time, since typing Python will start a new and completely independent environment. To return to the last slept process, run <span style="font-family: 'courier new', courier, monospace;">fg</span> (foreground). A list of the current processes in a terminal can be obtained by running <span style="font-family: 'courier new', courier, monospace;">jobs</span>. More info about this <a href="http://www.thegeekstuff.com/2010/05/unix-background-job/">here</a>.</p>
   * <p style="text-align: justify;">I love using *home* and *end* buttons, but in my Mac I don't have them, and first days I was really disappointed. In some applications, such as in the browser, you can move cursor to beginning and end of line by pressing cmd+left/right cursor, but it doesn't work in the terminal. In such a case, the default shortcut is control+a and control+e. This works for the ipython shell as well.</p>
 
- **Conclusion**
+ ## Conclusion
 
 <p style="text-align: justify;">Today we have reviewed some tips and tricks for working with Python in a more agile way. There are many many other things that I could recommend, but they'll probably be matter of future posts. Mainly, we have reviewed the usefulness of ipython as a better interface to run python commands rather than the classical shell; notebooks as an innovate way of working and presenting work with Python; and finally some tips and tricks for using Python and related tools in a terminal.</p>
 

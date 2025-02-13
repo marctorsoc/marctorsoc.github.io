@@ -20,4 +20,4 @@ If everything looks fine:
 ```
 npm run deploy
 ```
-This will deploy the changes into the `gh-pages` branch, and the website will be updated in a few (2-3) minutes. We can check the status in the `Actions` tab in GitHub.
+This will deploy the changes into the `gh-pages` branch, and the website will be updated in a few (2-3) minutes. We can check the status in the [Actions](https://github.com/marctorsoc/marctorsoc.github.io/actions) tab in GitHub.

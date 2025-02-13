@@ -61,8 +61,12 @@ export default function Blog() {
   }, []);
 
   const filteredPosts = React.useMemo(() => {
-    if (selectedCategories.length === 0) return posts;
-    return posts.filter(post => 
+    // First filter out archived posts
+    const activePosts = posts.filter(post => !post.isArchived);
+    
+    // Then apply category filter if any
+    if (selectedCategories.length === 0) return activePosts;
+    return activePosts.filter(post => 
       post.categories.some(category => selectedCategories.includes(category))
     );
   }, [posts, selectedCategories]);
@@ -80,13 +84,15 @@ export default function Blog() {
         ? prev.filter(c => c !== category)
         : [...prev, category];
       
-      // Update URL parameters
-      if (newCategories.length === 1) {
-        setSearchParams({ category: newCategories[0] });
-      } else if (newCategories.length === 0) {
-        setSearchParams({});
-      }
-      
+      // Use a separate effect for updating URL params
+      setTimeout(() => {
+        const params = new URLSearchParams();
+        if (newCategories.length > 0) {
+          params.set('category', newCategories.sort().join('&'));
+        }
+        setSearchParams(params);
+      }, 0);
+  
       return newCategories;
     });
   };

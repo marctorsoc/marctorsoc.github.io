@@ -27,7 +27,7 @@ export default function Home() {
   }, []);
 
   const pinnedPosts = posts?.filter(post => post.isPinned) || [];
-  const recentPosts = posts?.slice(0, 6) || [];
+  const recentPosts = posts?.filter(post => !post.isArchived).slice(0, 6) || [];
 
   return (
     <div className="max-w-7xl mx-auto px-4 pb-8">

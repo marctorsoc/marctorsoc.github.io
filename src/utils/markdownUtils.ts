@@ -1,6 +1,8 @@
 import frontMatter from 'front-matter';
 import { Post } from '../types/Post';
 import { getPosts } from './PostLoader';
+import { TOC_MIN_DEPTH, TOC_MAX_DEPTH } from './constants';
+import { extractHeaders } from './tocUtils';
 
 export async function getAllPosts(): Promise<Post[]> {
   return getPosts();
@@ -16,7 +18,7 @@ interface PostAttributes {
   heroImageWidth?: string;
 }
 
-export async function getPost(slug: string): Promise<Post> {
+export async function getPost(slug: string, minDepth: number = TOC_MIN_DEPTH, maxDepth: number = TOC_MAX_DEPTH): Promise<Post> {
   const DEBUG = false;
   try {
     if (DEBUG) console.log('🔍 Looking for post with slug:', slug);
@@ -58,6 +60,8 @@ export async function getPost(slug: string): Promise<Post> {
       throw new Error('Invalid post format');
     }
 
+    const headers = extractHeaders(body, minDepth, maxDepth);
+
     // Now TypeScript knows the shape of attributes
     const post: Post = {
       title: attributes.title,
@@ -69,9 +73,11 @@ export async function getPost(slug: string): Promise<Post> {
         .replace('.md', ''),
       filename: filepath.split('/').pop() || '',
       heroImage: attributes.heroImage,
-      heroImageWidth: attributes.heroImageWidth
+      heroImageWidth: attributes.heroImageWidth,
+      toc: headers
     };
 
+    if (DEBUG) console.log('Post TOC:', post.toc);
     return post;
   } catch (error) {
     console.error('Error loading post:', error);
