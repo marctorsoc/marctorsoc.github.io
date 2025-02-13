@@ -5,7 +5,16 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import Math from './Math';
 import type { Components } from 'react-markdown';
 import { generateId } from '../utils/textUtils';
-import { useHeaderIndex } from '../context/HeaderIndexContext';
+
+interface ReactElementWithChildren {
+  props: {
+    children?: React.ReactNode;
+  };
+}
+
+function isReactElementWithChildren(obj: any): obj is ReactElementWithChildren {
+  return obj && typeof obj === 'object' && 'props' in obj && typeof obj.props === 'object';
+}
 
 function processMathInText(text: string) {
   const parts = text.split(/(\$\$[^\$]+\$\$|\\begin{[\s\S]*?\\end{[\s\S]*?}|\$[^\$]+\$)/g);
@@ -28,6 +37,21 @@ function processMathInText(text: string) {
   });
 }
 
+function getTextContent(children: React.ReactNode): string {
+  if (children === null || children === undefined) {
+    return '';
+  }
+  if (typeof children === 'string' || typeof children === 'number') {
+    return children.toString();
+  }
+  if (Array.isArray(children)) {
+    return children.map(getTextContent).join('');
+  }
+  if (isReactElementWithChildren(children)) {
+    return getTextContent(children.props.children || '');
+  }
+  return '';
+}
 
 const MarkdownComponents: Components = {
   code({ node, inline, className, children, ...props }: any) {
@@ -150,27 +174,33 @@ const MarkdownComponents: Components = {
   },
 
   h1: ({children}) => {
-    const id = generateId(children as string);
+    const text = getTextContent(children);
+    const id = generateId(text);
     return <h1 id={id}>{children}</h1>;
   },
   h2: ({children}) => {
-    const id = generateId(children as string);
+    const text = getTextContent(children);
+    const id = generateId(text);
     return <h2 id={id}>{children}</h2>;
   },
   h3: ({children}) => {
-    const id = generateId(children as string);
+    const text = getTextContent(children);
+    const id = generateId(text);
     return <h3 id={id}>{children}</h3>;
   },
   h4: ({children}) => {
-    const id = generateId(children as string);
+    const text = getTextContent(children);
+    const id = generateId(text);
     return <h4 id={id}>{children}</h4>;
   },
   h5: ({children}) => {
-    const id = generateId(children as string);
+    const text = getTextContent(children);
+    const id = generateId(text);
     return <h5 id={id}>{children}</h5>;
   },
   h6: ({children}) => {
-    const id = generateId(children as string);
+    const text = getTextContent(children);
+    const id = generateId(text);
     return <h6 id={id}>{children}</h6>;
   },
 };

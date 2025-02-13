@@ -19,24 +19,24 @@ function generateNumberedHeaders(headers: Header[]): NumberedHeader[] {
   const minLevel = Math.min(...headers.map(h => h.level));
   const result: NumberedHeader[] = [];
   const stack: NumberedHeader[] = [];
-  const counters: { [key: number]: number } = {};
+  const counters = new Map<number, number>();
 
   headers.forEach(header => {
     const relativeLevel = header.level - minLevel;
     
     // Initialize or increment counter for this level
-    counters[relativeLevel] = (counters[relativeLevel] || 0) + 1;
+    counters.set(relativeLevel, (counters.get(relativeLevel) || 0) + 1);
     
     // Reset counters for deeper levels
-    Object.keys(counters).forEach(level => {
-      if (Number(level) > relativeLevel) {
-        delete counters[level];
+    for (const [level, _] of counters) {
+      if (level > relativeLevel) {
+        counters.delete(level);
       }
-    });
+    }
 
     // Generate number based on all parent levels
     const number = Array.from({ length: relativeLevel + 1 }, (_, i) => 
-      counters[i] || 1
+      counters.get(i) || 1
     ).join('.');
 
     const numbered: NumberedHeader = {

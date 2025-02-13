@@ -1,7 +1,6 @@
 import frontMatter from 'front-matter';
 import { Post } from '../types/Post';
 import { getPosts } from './PostLoader';
-import { generateId } from './textUtils';
 import { TOC_MIN_DEPTH, TOC_MAX_DEPTH } from './constants';
 import { extractHeaders } from './tocUtils';
 

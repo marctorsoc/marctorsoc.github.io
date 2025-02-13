@@ -42,7 +42,7 @@ and for me, this means that I could remove `conda` and `pip-tools` from my workf
 ### Basic Commands
 There is great [documentation](https://docs.astral.sh/uv), and it's not really worth replicating it here. 
 
-#### 1. Project Initialization
+#### Project Initialization
    Create a new Python project with `uv init`, which generates a `pyproject.toml` file and basic project structure:
    ```bash
    uv init myproject  # Creates project files and a virtual environment 
@@ -60,7 +60,7 @@ There is great [documentation](https://docs.astral.sh/uv), and it's not really w
    ```
    After this, I recommend doing `uv run hello.py` so the environment is created in `.venv`. Note that every time you do `uv run`, if there are dependencies that are not installed in the virtual environment, they will be automatically installed. See all details in [the documentation](https://docs.astral.sh/uv/concepts/projects/init/#applications).
 
-#### 2. Dependency Management
+#### Dependency Management
    Add or remove packages with `uv add` and `uv remove`, which automatically update the `uv.lock` file for reproducible builds:
    ```bash
    uv add pandas  # Installs pandas and its dependencies 
@@ -72,17 +72,17 @@ There is great [documentation](https://docs.astral.sh/uv), and it's not really w
   To update a dependency, use also `uv add`.
 
 
-#### 3. Environment Synchronization
+#### Environment Synchronization
    Use `uv sync` to ensure the virtual environment matches the lockfile:
    ```bash
    uv sync  # Creates/updates .venv and resolves dependencies 
    ```
 
-#### 4. Updating the Python version
+#### Updating the Python version
 
 Simply go to the `.python-version` file and change the version number. Then, when you do `uv run`, it will automatically update the virtual environment and resolve dependencies.
 
-#### 5. A real example
+#### A real example
 
 This is a real example of `pyproject.toml` file for one of my personal projects:
 ```toml
