@@ -1,6 +1,8 @@
 import frontMatter from 'front-matter';
 import { Post } from '../types/Post';
 import { generateId } from './textUtils';
+import { TOC_MIN_DEPTH, TOC_MAX_DEPTH } from './constants';
+import { extractHeaders } from './tocUtils';
 
 const DEBUG = import.meta.env.DEV;
 
@@ -40,7 +42,7 @@ function validatePostAttributes(attributes: any): attributes is Post {
   return true;
 }
 
-async function importAll(): Promise<Post[]> {
+async function importAll(minDepth: number = TOC_MIN_DEPTH, maxDepth: number = TOC_MAX_DEPTH): Promise<Post[]> {
   if (DEBUG) console.log('🔄 Starting to load posts...');
   
   try {
@@ -75,33 +77,7 @@ async function importAll(): Promise<Post[]> {
           }
 
           const filename = filepath.split('/').pop() || '';
-          
-          const lines = body.split('\n');
-          const headers = [];
-          let inCodeBlock = false;
-          let headerIndex = 0;
-          const headerIds = new Map<string, number>();
-          
-          for (let line of lines) {
-            if (line.startsWith('```')) {
-              inCodeBlock = !inCodeBlock;
-              continue;
-            }
-            
-            if (!inCodeBlock && /^(### |## |# )/.test(line)) {
-              const level = line.startsWith('### ') ? 3 : line.startsWith('## ') ? 2 : 1;
-              const text = line.replace(/^### |^## |^# /, '');
-              
-              // Generate a unique ID for duplicate headers
-              const baseId = generateId(text);
-              const count = headerIds.get(baseId) || 0;
-              headerIds.set(baseId, count + 1);
-              const id = count === 0 ? baseId : `${baseId}-${count}`;
-              
-              if (DEBUG) console.log('Found header:', { level, text, id });
-              headers.push({ level, text, id });
-            }
-          }
+          const headers = extractHeaders(body, minDepth, maxDepth);
 
           return {
             ...attributes,
@@ -111,7 +87,7 @@ async function importAll(): Promise<Post[]> {
               .replace('/src/content/posts/', '')
               .replace('.md', ''),
             filename,
-            toc: headers  // Add this line to include the TOC
+            toc: headers
           };
         } catch (error) {
           console.error(`❌ Error processing ${filepath}:`, error);
@@ -135,4 +111,4 @@ async function importAll(): Promise<Post[]> {
   }
 }
 
-export const getPosts = importAll;
+export const getPosts = () => importAll();

@@ -10,4 +10,7 @@ export const categoryColors: { [key: string]: string } = {
   'AI': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-300'
 };
 
-export const CATEGORIES = Object.keys(categoryColors).sort(); 
+export const CATEGORIES = Object.keys(categoryColors).sort();
+
+export const TOC_MIN_DEPTH = 1;
+export const TOC_MAX_DEPTH = 4;

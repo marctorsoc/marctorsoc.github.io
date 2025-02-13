@@ -112,9 +112,9 @@ Running long processes remotely requires keeping them active even if the connect
 
 ## VS Code's Remote Development: A Game Changer
 
-If you checked my old posts, you'll see I was big proponent of Pycharm over VScode. However, I used to run notebooks on a Jupyter server, and then connected via browser after setting up a tunnel. You can check [here](/posts/jupyter-lab-on-a-remote-machine/) my old config if still useful at all. I really liked Pycharm's Git integration, especially for merges and comparing branches. And, to be honest, I still think it's a better inferface than the one in VScode. At least with all extensions I tried.
+If you checked my old posts, you'll see I was big proponent of Pycharm over VSCode. However, I used to run notebooks on a Jupyter server, and then connected via browser after setting up a tunnel. You can check [here](/posts/jupyter-lab-on-a-remote-machine/) my old config if still useful at all. I really liked Pycharm's Git integration, especially for merges and comparing branches. And, to be honest, I still think it's a better inferface than the one in VSCode. At least with all extensions I tried.
 
-But at some point I found VSCode's Remotes feature, and it really became a game changer for me. VScode supports:
+But at some point I found VSCode's Remotes feature, and it really became a game changer for me. VSCode supports:
 - Opening notebooks directly in the IDE, which means you get all the advantages of being an IDE (code and imports completion, error highlighting, search, debugging, etc.)
 - Running notebooks on the remote machine, with the same experience as if it was running locally
 - LLM-powered autocomplete within the notebook itself!

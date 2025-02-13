@@ -12,6 +12,7 @@ export interface Post {
     title: string;
     categories: string[];
     isPinned?: boolean;
+    isArchived?: boolean;
     heroImage?: string;
     heroImageWidth?: string;
     toc?: TOCHeader[];

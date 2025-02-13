@@ -50,6 +50,7 @@ function preprocessContent(content: string): string {
 interface PostCardProps {
   post: Post;
   isPinned?: boolean;
+  isArchived?: boolean;
   showFullContent?: boolean;
   maxPreviewChars?: number;
   compact?: boolean;

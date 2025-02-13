@@ -1,5 +1,5 @@
 ---
-title: Jupyterlab on a Remote Machine
+title: JupyterLab on a Remote Machine
 date: '2019-02-08 00:00:00 +0000'
 permalink: /posts/jupyter-lab-on-a-remote-machine/
 categories:
@@ -16,7 +16,7 @@ Today we'll see my config for running Jupyter notebooks when working on a Remote
 
 Jupyter notebooks are very powerful tools for easy prototyping in Python (or even R!), but also for intensive development. However, one typically runs the Jupyter server in local, and connect via browser. How do we do this when we want the Python to run in our remote box?
 
-1. Install Jupyter lab in the remote box to be able to run the notebook server, e.g. `conda install jupyterlab` if working with `conda`.
+1. Install JupyterLab in the remote box to be able to run the notebook server, e.g. `conda install jupyterlab` if working with `conda`.
 
 1. `jupyter lab --no-browser --port=8089.`
 
@@ -33,14 +33,14 @@ to your `~/.bashrc`. This will make the tunnel always active but in the backgrou
 To make it effective either restart the terminal or `source ~/.bashrc`.
 
 
-## Jupyter lab as a service
+## JupyterLab as a service
 
-Now you're able to run notebooks on the remote machine, and accessing to them via browser. So, even though it says `localhost:8000`, you're in the server! However, it's really annoying going to the remote machine and start the Jupyter lab server every time. This can be automated by running it as a service <a href="https://aichamp.wordpress.com/2017/06/13/setting-up-jupyter-notebook-server-as-service-in-ubuntu-16-04/">source</a>:
+Now you're able to run notebooks on the remote machine, and accessing to them via browser. So, even though it says `localhost:8000`, you're in the server! However, it's really annoying going to the remote machine and start the JupyterLab server every time. This can be automated by running it as a service <a href="https://aichamp.wordpress.com/2017/06/13/setting-up-jupyter-notebook-server-as-service-in-ubuntu-16-04/">source</a>:
 
 * Set the service file `/usr/lib/systemd/system/jupyter.service` (yes, you probably need to create some dirs) as in
 ```bash 
 [Unit]
-Description=Jupyter Lab
+Description=JupyterLab
 
 [Service]
 Type=simple

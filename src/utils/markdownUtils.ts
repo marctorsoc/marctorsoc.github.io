@@ -1,8 +1,9 @@
 import frontMatter from 'front-matter';
 import { Post } from '../types/Post';
 import { getPosts } from './PostLoader';
-import ReactMarkdown from 'react-markdown';
 import { generateId } from './textUtils';
+import { TOC_MIN_DEPTH, TOC_MAX_DEPTH } from './constants';
+import { extractHeaders } from './tocUtils';
 
 export async function getAllPosts(): Promise<Post[]> {
   return getPosts();
@@ -18,7 +19,7 @@ interface PostAttributes {
   heroImageWidth?: string;
 }
 
-export async function getPost(slug: string): Promise<Post> {
+export async function getPost(slug: string, minDepth: number = TOC_MIN_DEPTH, maxDepth: number = TOC_MAX_DEPTH): Promise<Post> {
   const DEBUG = false;
   try {
     if (DEBUG) console.log('🔍 Looking for post with slug:', slug);
@@ -60,34 +61,7 @@ export async function getPost(slug: string): Promise<Post> {
       throw new Error('Invalid post format');
     }
 
-    // Extract headers for TOC with enhanced debug logging
-    console.log('Content body length:', body.length);
-    console.log('First 500 chars of content:', body.substring(0, 500));
-    
-    const headerMatches = body.match(/^(### |## |# )(.*)$/gm);
-    console.log('Raw header matches:', headerMatches);
-
-    // Create a map to track header occurrences
-    const headerOccurrences = new Map<string, number>();
-
-    const headers = headerMatches?.map(header => {
-      const level = header.startsWith('### ') ? 3 : header.startsWith('## ') ? 2 : 1;
-      const text = header.replace(/^### |^## |^# /, '');
-      
-      // Generate base ID from the cleaned text
-      const baseId = generateId(text);
-      
-      // Track occurrences of this header
-      const count = headerOccurrences.get(baseId) || 0;
-      headerOccurrences.set(baseId, count + 1);
-      
-      // Add suffix if this is a duplicate
-      const id = count > 0 ? `${baseId}-${count}` : baseId;
-      
-      return { level, text, id };
-    }) || [];
-
-    console.log('Final TOC headers:', headers);
+    const headers = extractHeaders(body, minDepth, maxDepth);
 
     // Now TypeScript knows the shape of attributes
     const post: Post = {

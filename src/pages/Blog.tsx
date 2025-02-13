@@ -61,8 +61,12 @@ export default function Blog() {
   }, []);
 
   const filteredPosts = React.useMemo(() => {
-    if (selectedCategories.length === 0) return posts;
-    return posts.filter(post => 
+    // First filter out archived posts
+    const activePosts = posts.filter(post => !post.isArchived);
+    
+    // Then apply category filter if any
+    if (selectedCategories.length === 0) return activePosts;
+    return activePosts.filter(post => 
       post.categories.some(category => selectedCategories.includes(category))
     );
   }, [posts, selectedCategories]);
