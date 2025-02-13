@@ -6,6 +6,7 @@ import rehypeRaw from 'rehype-raw';
 import MarkdownComponents from './MarkdownComponents';
 import { categoryColors } from '../utils/constants';
 import { HeaderIndexProvider, useHeaderIndex } from '../context/HeaderIndexContext';
+import { TableOfContents } from './TableOfContents';
 
 function preprocessContent(content: string): string {
   // First, normalize line breaks in align environments
@@ -119,52 +120,10 @@ export function PostCard({ post, showFullContent = false, compact = false }: Pos
       </div>
       {showFullContent && post.toc && post.toc.length > 0 && (
         <>
-          <nav className="toc mb-4">
-            <h3 className="text-xl font-semibold mb-4">Table of Contents</h3>
-            <ul className="space-y-2 list-none p-0">
-              {post.toc.map(header => {
-                const minLevel = Math.min(...post.toc.map(h => h.level));
-                const adjustedLevel = header.level - minLevel;
-                
-                return (
-                  <li
-                    key={header.id}
-                    style={{ marginLeft: `${adjustedLevel * 1.5}rem` }}
-                    className="hover:text-blue-600 dark:hover:text-blue-400"
-                  >
-                    <a 
-                      href={`#${header.id}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        const element = document.getElementById(header.id);
-                        if (element) {
-                          element.scrollIntoView({ 
-                            behavior: 'smooth',
-                            block: 'start'
-                          });
-                          window.history.pushState(null, '', `#${header.id}`);
-                        }
-                      }}
-                      className="text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors no-underline"
-                    >
-                      <ReactMarkdown
-                        remarkPlugins={[remarkGfm]}
-                        components={{
-                          // Override default components to render plain text
-                          p: ({children}) => <>{children}</>,
-                          code: ({children}) => <>{children}</>,
-                          strong: ({children}) => <strong>{children}</strong>,
-                          em: ({children}) => <em>{children}</em>
-                        }}
-                      >
-                        {header.text}
-                      </ReactMarkdown>
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+          <TableOfContents 
+            headers={post.toc}
+            className="mb-8"
+          />
           <hr className="my-8 border-t border-gray-200 dark:border-gray-800" />
         </>
       )}
