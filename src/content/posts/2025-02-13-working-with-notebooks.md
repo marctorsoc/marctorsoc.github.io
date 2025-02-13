@@ -276,5 +276,168 @@ def get_prompt_template():
     """
 ```
 
-## Working with Dataframes in notebooks
+## Working with DataFrames in notebooks
 
+
+### DataFrames side by side
+
+```python
+import pandas as pd
+from IPython.display import display_html
+
+def display_side_by_side(*dfs: pd.DataFrame) -> None:
+    """Displays multiple DataFrames side by side in a Jupyter Notebook with top alignment."""
+    html_str = "".join(df.to_html() for df in dfs)
+    styled_html = html_str.replace("<table", '<table style="display:inline; vertical-align: top;"')
+    display_html(styled_html, raw=True)
+
+def display_side_by_side_dflist(dfs: list[pd.DataFrame], max_columns: int = 3) -> None:
+    """Displays a list of DataFrames side by side, limiting to max_columns per row."""
+    for start_idx in range(0, len(dfs), max_columns):
+        display_side_by_side(*dfs[start_idx:start_idx + max_columns])
+```
+and here an example:
+<div style="text-align: center">
+  <img src="/content/side_by_side_example.jpg" alt="" width="80%"/>
+</div>
+
+### Full display
+
+We often want to see the a DataFrame with full column width. This method allows to do this, and show all rows as well if desired: 
+
+```python
+def full_display(df, max_rows=None, max_colwidth=None):
+    with pd.option_context(
+        "display.max_rows",
+        max_rows,
+        "display.max_colwidth",
+        max_colwidth,
+    ):
+        display(df)
+```
+
+### Display foldable
+
+In order to show multiple dataframes after a cell, we can show them side by side as explained above, or we can show them one by one, and allow the user to fold / unfold each of them. This can be achieved with the code [here](https://github.com/marctorsoc/lang-examples/blob/main/lang-examples-common/lang_examples_common/utils/display_utils.py#L35). See an example:
+
+<div style="text-align: center">
+  <img src="/content/display-foldable.jpg" alt="" width="80%"/>
+</div>
+
+
+### Display foldable for nested structures
+
+Imagine you have an object like this
+```python
+movies = [
+    {
+        "Title": "Inception",
+        "Year": 2010,
+        "Genres": ["Action", "Sci-Fi", "Thriller"],
+        "Ratings": {"IMDB": 8.8, "Rotten Tomatoes": "87%"},
+        "Cast": [
+            {"Actor": "Leonardo DiCaprio", "Role": "Dom Cobb"},
+            {"Actor": "Joseph Gordon-Levitt", "Role": "Arthur"},
+        ],
+    },
+    {
+        "Title": "The Matrix",
+        "Year": 1999,
+        "Genres": ["Action", "Sci-Fi"],
+        "Ratings": {"IMDB": 8.7, "Rotten Tomatoes": "83%"},
+        "Cast": [
+            {"Actor": "Keanu Reeves", "Role": "Neo"},
+            {"Actor": "Laurence Fishburne", "Role": "Morpheus"},
+        ],
+    },
+]
+```
+In the following image, you can see how it would look if we just display:
+<div style="text-align: center">
+  <img src="/content/render-nested-false.jpg" alt="" width="100%"/>
+</div>
+
+and now if we use the power of `render_nested=True`:
+<div style="text-align: center">
+  <img src="/content/render-nested-true.jpg" alt="" width="35%"/>
+</div>
+
+### Pipes
+
+We often want to do some filtering on our data, and log the length of the dataframe at each step. This is where we can make use of pipes. I have two pipes that I use often:
+```python
+def log_len(df, message=""):
+    print(f"{message}: {len(df)}")
+    return df
+
+
+def log_df(df):
+    display(df)
+    return df
+```
+and here is an example:
+
+```python
+df = pd.DataFrame(
+    [
+        {"Title": "Superbad", "Year": 2007, "Rating": 7.6, "genre": "Comedy"},
+        {"Title": "Step Brothers", "Year": 2008, "Rating": 6.9, "genre": "Comedy"},
+        {"Title": "The Big Lebowski", "Year": 1998, "Rating": 8.1, "genre": "Comedy"},
+        {"Title": "The Shining", "Year": 1980, "Rating": 8.4, "genre": "Horror"},
+        {"Title": "Get Out", "Year": 2017, "Rating": 7.8, "genre": "Horror"},
+        {"Title": "It", "Year": 2017, "Rating": 7.3, "genre": "Horror"},
+        {"Title": "Interstellar", "Year": 2014, "Rating": 8.7, "genre": "Sci-Fi"},
+        {"Title": "The Martian", "Year": 2015, "Rating": 7.5, "genre": "Sci-Fi"},
+        {"Title": "Inception", "Year": 2010, "Rating": 8.8, "genre": "Sci-Fi"},
+        {"Title": "Blade Runner", "Year": 1982, "Rating": 9.3, "genre": "Sci-Fi"},
+        {"Title": "Blade Runner 2049", "Year": 2017, "Rating": 8.0, "genre": "Sci-Fi"},
+    ]
+)
+filtered_movies = (
+    movies.pipe(log_len, "Initial dataset")
+    .query("genre in ['Comedy', 'Sci-Fi']")
+    .pipe(log_len, "After filtering by Comedy or Sci-Fi")
+    .query("year > 2000")
+    .pipe(log_len, "After filtering movies older than 2000")
+    .pipe(log_df)
+)
+```
+which shows:
+<div style="text-align: center">
+  <img src="/content/pipes-example.jpg" alt="" width="40%"/>
+</div>
+
+### Visualizing dfs with multi-line texts
+
+If you use `full_display` when a cell in a dataframe contains a text with multiple lines, you will see the newline characters as part of the text. Here is a solution to show the text nicely:
+
+```python
+data = {
+    'title': ['Inception', 'The Matrix', 'Interstellar'],
+    'year': [2010, 1999, 2014],
+    'rating': [8.8, 8.7, 8.6],
+    'synopsis': [
+        "A thief who steals corporate secrets\nby entering the subconscious of his targets\nfaces his greatest challenge yet.",
+        "A computer hacker learns from mysterious rebels\nabout the true nature of his reality\nand his role in the war against its controllers.",
+        "A team of explorers travel through a wormhole\nin space in an attempt to ensure humanity's survival."
+    ]
+}
+
+df = pd.DataFrame(data)
+
+# Full display of the dataframe
+full_display(df)
+
+# Display the DataFrame with HTML rendering
+display(
+    HTML(
+        df
+        .assign(synopsis=lambda df: df.synopsis.str.replace("\n", "<br>"))
+        .to_html(escape=False, justify="left")
+    )
+)
+```
+which produces:
+<div style="text-align: center">
+  <img src="/content/render-df-with-multi-line-texts.jpg" alt="" width="100%"/>
+</div>
